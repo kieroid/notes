@@ -1,0 +1,35 @@
+#+TITLE: 1 - Introduction to Theory of Automata
+
+TEXTBOOK: Elements of the Theory of Computation (2nd Edition) by Harry R. Lewis and Christos H. Papadimitriou.
+- Introduction to the theory of computation by Michael Sipser
+
+* Regarding grading
+- No communication with classmates. It will be treated as cheating, which is -5 points for each warning.
+- No AI tools allowed.
+
+
+* Why study automata?
+** What is automata
+_Auto_ means *Moving*
+_Mata_ means *Machine*
+Therefore, *Moving Machine* or *Functioning Machine*
+
+- Robot, humanoid, computer, android, mechanism
+- For an *Algorithm* to execute, it needs a machine to execute it.
+- Our most standard and ancient intution on algorithm follows from a calculator. (computing automataon)
+  - Abbacus, Cash register, etc.
+
+** What is an algorithm.
+- The *automata* is the chef/cook.
+- The *algorithm* would be the recipe.
+
+For cheesecake, for example, you need to follow certain steps. Cream cheese, sugar, etc.
+You cannot make a cheesecake without someone/something to cook it. You cannot grow cheesecake.
+
+Each instruction is expressed by a finite number of symbols.
+If it is carried without error, it produces the same result.
+Whenever you design an algorithm, it is like designing a virtual machine.
+Exploring the possibilities of algorithms is like exploring the possibilities of machines.
+
+Example:
+- Automata (Algorithm 1.0) -> Pushdown Automata (Algorithm 2.0) -> Turing machine (Algorithm Final) -> ...
