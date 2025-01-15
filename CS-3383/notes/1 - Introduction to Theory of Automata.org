@@ -1,6 +1,6 @@
 #+TITLE: Introduction to Theory of Automata
 
-TEXTBOOK: 
+Taken from: 
 - *Elements of the Theory of Computation* (2nd Edition) by *Harry R. Lewis* and *Christos H. Papadimitriou*.
 - *Introduction to the Theory of Computation* by *Michael Sipser*.
 
@@ -11,8 +11,8 @@ TEXTBOOK:
 
 ** Why study automata?
 *** What is automata
-_Auto_ means *Moving*
-_Mata_ means *Machine*
+_Auto_ means *Moving*\\
+_Mata_ means *Machine*\\
 Therefore, *Moving Machine* or *Functioning Machine*
 
 - Robot, humanoid, computer, android, mechanism
