@@ -1,7 +1,8 @@
-#+TITLE: 1 - Introduction to Theory of Automata
+#+TITLE: Introduction to Theory of Automata
 
-TEXTBOOK: Elements of the Theory of Computation (2nd Edition) by Harry R. Lewis and Christos H. Papadimitriou.
-- Introduction to the theory of computation by Michael Sipser
+TEXTBOOK: 
+- *Elements of the Theory of Computation* (2nd Edition) by *Harry R. Lewis* and *Christos H. Papadimitriou*.
+- *Introduction to the Theory of Computation* by *Michael Sipser*.
 
 * Regarding grading
 - No communication with classmates. It will be treated as cheating, which is -5 points for each warning.
