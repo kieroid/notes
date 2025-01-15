@@ -4,13 +4,13 @@ TEXTBOOK:
 - *Elements of the Theory of Computation* (2nd Edition) by *Harry R. Lewis* and *Christos H. Papadimitriou*.
 - *Introduction to the Theory of Computation* by *Michael Sipser*.
 
-* Regarding grading
+** Regarding grading
 - No communication with classmates. It will be treated as cheating, which is -5 points for each warning.
 - No AI tools allowed.
 
 
-* Why study automata?
-** What is automata
+** Why study automata?
+*** What is automata
 _Auto_ means *Moving*
 _Mata_ means *Machine*
 Therefore, *Moving Machine* or *Functioning Machine*
@@ -20,7 +20,7 @@ Therefore, *Moving Machine* or *Functioning Machine*
 - Our most standard and ancient intution on algorithm follows from a calculator. (computing automataon)
   - Abbacus, Cash register, etc.
 
-** What is an algorithm.
+*** What is an algorithm.
 - The *automata* is the chef/cook.
 - The *algorithm* would be the recipe.
 
