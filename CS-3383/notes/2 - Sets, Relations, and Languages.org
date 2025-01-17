@@ -1,9 +1,8 @@
-#+OPTIONS: \n:t
-
 
 ** Sets
-A set is an undordered collection of objects.\n
-$S=\{a,b,c\}$ where $a,b,c$ are elements or members of the set $S$.\n
+A set is an undordered collection of objects.
+
+$S=\{a,b,c\}$ where $a,b,c$ are elements or members of the set $S$.
 
 An abstraction of an object can be numbers, points, lines, graphs, vectors, matricies.
 
@@ -17,8 +16,9 @@ An *Element* of a set may also be a set.
 - Empty set: $\emptyset$
 
 *** Cardinality
-Cardinality of a set is the number of elements in the set.\n
-Example:\n
+Cardinality of a set is the number of elements in the set.
+
+Example:
 - $|\{\text{a,b,c}\}|=3$
 - $|\{\text{a,b}\}|=2$
 - $|\{\{\text{a,b}\},c\}|=2$
@@ -26,7 +26,8 @@ Example:\n
 - $|\{\{\}\}|=1$
 
 *** Singleton
-Set with one element is called a singleton.\n
+Set with one element is called a singleton.
+
 Example:
 - $|\{\{\}\}|=1$
 - $|\{1\}|=1$

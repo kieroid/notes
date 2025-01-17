@@ -1,5 +1,4 @@
 #+TITLE: Introduction to Theory of Automata
-#+OPTIONS: \n:t
 
 Taken from: 
 - *Elements of the Theory of Computation* (2nd Edition) by *Harry R. Lewis* and *Christos H. Papadimitriou*.
@@ -11,8 +10,10 @@ Taken from:
 
 ** Why study automata?
 *** What is automata
-_Auto_ means *Moving*\n
-_Mata_ means *Machine*\n
+_Auto_ means *Moving*
+
+_Mata_ means *Machine*
+
 Therefore, *Moving Machine* or *Functioning Machine*
 
 - Robot, humanoid, computer, android, mechanism
@@ -24,10 +25,11 @@ Therefore, *Moving Machine* or *Functioning Machine*
 - The *automata* is the chef/cook.
 - The *algorithm* would be the recipe.
 
-For cheesecake, for example, you need to follow certain steps. Cream cheese, sugar, etc.\n
-You cannot make a cheesecake without someone/something to cook it. You cannot grow cheesecake.\n
+For cheesecake, for example, you need to follow certain steps. Cream cheese, sugar, etc.
 
-Each instruction is expressed by a finite number of symbols.\n
-If it is carried without error, it produces the same result.\n
-Whenever you design an algorithm, it is like designing a virtual machine.\n
+You cannot make a cheesecake without someone/something to cook it. You cannot grow cheesecake.
+
+Each instruction is expressed by a finite number of symbols.
+If it is carried without error, it produces the same result.
+Whenever you design an algorithm, it is like designing a virtual machine.
 Exploring the possibilities of algorithms is like exploring the possibilities of machines.
