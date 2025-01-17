@@ -1,0 +1,12 @@
+
+Textbook: Introduction to Algorithms (3rd Edition) by Cormen, T. et. al
+
+- Data structures and algorithms can be used in a lot of different code.
+- Critical thinking, etc.
+- Understanding different ways you can solve problems.
+
+
+** FROM DATA STRUCTURES: Notations of Time Complexities
+- $O$  (Big O) time complexity.
+- $\Omega$  (Big Omega) time complexity.
+- $\Theta$  (Big Theta)time complexity.
