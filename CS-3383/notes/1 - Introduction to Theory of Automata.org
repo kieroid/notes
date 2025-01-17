@@ -1,4 +1,5 @@
 #+TITLE: Introduction to Theory of Automata
+#+OPTIONS: \n:t
 
 Taken from: 
 - *Elements of the Theory of Computation* (2nd Edition) by *Harry R. Lewis* and *Christos H. Papadimitriou*.

@@ -1,3 +1,6 @@
+#+OPTIONS: \n:t
+
+
 ** Sets
 A set is an undordered collection of objects.\n
 $S=\{a,b,c\}$ where $a,b,c$ are elements or members of the set $S$.\n
