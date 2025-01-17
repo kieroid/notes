@@ -73,9 +73,17 @@ Examples:
 - $\{\text{red,blue}\}-\{\text{red},\{\text{red,blue}\}\}=\{\text{red},\{\text{red,blue}\}\}$
 
 ** Power Set
-Set of all subsets
+Set of all subsets.
+
+Examples:
 - $2^\text{S}=\{x:x\subseteq S\}$
 - $2^{\{a,b\}}=\{\emptyset,\{a,b\},\{a\},\{b\}\}$
 - $2^{\{\emptyset\}}=\emptyset$
 - $|2^S|=2^{|S|}$
--
+
+** Partition
+$\Pi$ is a partition of $S$ if:
+- $Pi \subseteq 2^S$
+- $\emptyset \not\in \Pi$
+- $A\cap B = \emptyset$ for any $A,B \in \Pi, A\not=B$
+- $\cup \Pi = S$
