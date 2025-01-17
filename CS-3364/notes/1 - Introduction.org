@@ -1,12 +1,24 @@
 
+* Introduction to Algorithms
+
 Textbook: Introduction to Algorithms (3rd Edition) by Cormen, T. et. al
 
 - Data structures and algorithms can be used in a lot of different code.
 - Critical thinking, etc.
 - Understanding different ways you can solve problems.
 
+** POLICIES
+*00-25* hours late, *20%* penalty\\
+*25-48* hours late, *50%* penalty\\
+*48-72* hours late, *75%* penalty\\
+*72+* hours late, *not accepted.*
 
-** FROM DATA STRUCTURES: Notations of Time Complexities
+** *DATA STRUCTURES:* Notations of Time Complexities
 - $O$  (Big O) time complexity.
 - $\Omega$  (Big Omega) time complexity.
 - $\Theta$  (Big Theta)time complexity.
+
+
+** What are Algorithms?
+Algorithms is the backbone of Computer Science.\\
+It enchances problem solving capabilities.
