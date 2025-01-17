@@ -8,11 +8,10 @@ Taken from:
 - No communication with classmates. It will be treated as cheating, which is -5 points for each warning.
 - No AI tools allowed.
 
-
 ** Why study automata?
 *** What is automata
-_Auto_ means *Moving*\\
-_Mata_ means *Machine*\\
+_Auto_ means *Moving*\n
+_Mata_ means *Machine*\n
 Therefore, *Moving Machine* or *Functioning Machine*
 
 - Robot, humanoid, computer, android, mechanism
@@ -24,13 +23,10 @@ Therefore, *Moving Machine* or *Functioning Machine*
 - The *automata* is the chef/cook.
 - The *algorithm* would be the recipe.
 
-For cheesecake, for example, you need to follow certain steps. Cream cheese, sugar, etc.
-You cannot make a cheesecake without someone/something to cook it. You cannot grow cheesecake.
+For cheesecake, for example, you need to follow certain steps. Cream cheese, sugar, etc.\n
+You cannot make a cheesecake without someone/something to cook it. You cannot grow cheesecake.\n
 
-Each instruction is expressed by a finite number of symbols.
-If it is carried without error, it produces the same result.
-Whenever you design an algorithm, it is like designing a virtual machine.
+Each instruction is expressed by a finite number of symbols.\n
+If it is carried without error, it produces the same result.\n
+Whenever you design an algorithm, it is like designing a virtual machine.\n
 Exploring the possibilities of algorithms is like exploring the possibilities of machines.
-
-Example:
-- Automata (Algorithm 1.0) -> Pushdown Automata (Algorithm 2.0) -> Turing machine (Algorithm Final) -> ...

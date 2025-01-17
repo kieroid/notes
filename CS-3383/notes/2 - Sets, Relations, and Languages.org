@@ -1,0 +1,81 @@
+** Sets
+A set is an undordered collection of objects.\n
+$S=\{a,b,c\}$ where $a,b,c$ are elements or members of the set $S$.\n
+
+An abstraction of an object can be numbers, points, lines, graphs, vectors, matricies.
+
+An *Element* of a set may also be a set.
+
+*** Examples
+- $\{\text{red,blue}\}=\{\text{blue,red}\}$
+- $\{\text{red,blue.red}\}=\{\text{red,blue}\}$
+- $\{\text{red},\{\text{red}\}\}\not\{\text{red}\}$
+- $\emptyset \not= \{\}$
+- Empty set: $\emptyset$
+
+*** Cardinality
+Cardinality of a set is the number of elements in the set.\n
+Example:\n
+- $|\{\text{a,b,c}\}|=3$
+- $|\{\text{a,b}\}|=2$
+- $|\{\{\text{a,b}\},c\}|=2$
+- $|\{\}|=0$
+- $|\{\{\}\}|=1$
+
+*** Singleton
+Set with one element is called a singleton.\n
+Example:
+- $|\{\{\}\}|=1$
+- $|\{1\}|=1$
+
+*** Membership
+Element $a$ contained in a set i$S = \{\text{a,b,c}\}:a\in S$
+- $3 \in \{1,3,5\}$
+- $a \not\in \{b,c,d\}$
+
+*** Describing
+Different ways of writing a set.
+- List all members: $S = \{a,b,c\}, S = \{2,3,4,5...\}$
+- $S = \{x:x \text{ has a certain property}\}$
+
+*** Subset
+$A$ is a subset of $B$, denoted as $A\subset B$ if:\n
+- Any element of $A$ is also in element $B$.
+- Any $(\forall)x\in A$ implies $\to)x\in B$
+
+Examples:
+- $\{a,b,c\}\subset\{a,b,c,d\}$
+- $\{1,3,5,7,...\}\subset \{1,2,3,4,5,...\}$
+- $\{\emptyset \subset A\}$ for any set $A$
+- $A \subset A$
+
+**** Proper Subset
+$A$ is a proper subset of $B$, denoted as $A \subseteq B$ and $B$ contains at least one element not in $A$.
+
+Examples:
+- $\{a,b,c\}\subseteq\{a,b,c,d\}$
+- $\{1,3,5,7,...\}\subseteq\{1,2,3,4,5,...\}$
+- $\emptyset \subseteq A$ for any set $A \not= \emptyset$
+- $A \not\subseteq A$
+
+** Operations
+*** Union
+- $A\cup B = \{x:x \in A \text{ or } x\in B\}$
+- $\{1,2,3\}\cup\{4,5\}=\{1,2,3,4,5\}$
+- $\{\text{red,blue}\}\cup\{\text{red},\{\text{red,blue}\}\}=\{\text{red,blue},\{\text{red,blue}\}\}$
+*** Intersection
+- $A\cap B = \{x:x\in A \text{ and } x\in B\}$
+- $\{1,2,3\}\cap\{2,3,4\}=\{2,3\}$
+- $\{\text{red,blue}\}\cap\{\{\text{red,blue}\}\}=\emptyset$
+*** Difference
+- $A-B=\{x:x\in A \text{ and }x\not\in B\}$
+- $\{1,3,9\}-\{3,5,7\}-\{1,9\}$
+- $\{\text{red,blue}\}-\{\text{red},\{\text{red,blue}\}\}=\{\text{red},\{\text{red,blue}\}\}$
+
+** Power Set
+Set of all subsets
+- $2^\text{S}=\{x:x\subseteq S\}$
+- $2^{\{a,b\}}=\{\emptyset,\{a,b\},\{a\},\{b\}\}$
+- $2^{\{\emptyset\}}=\emptyset$
+- $|2^S|=2^{|S|}$
+-

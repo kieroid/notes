@@ -8,9 +8,9 @@ Textbook: Introduction to Algorithms (3rd Edition) by Cormen, T. et. al
 - Understanding different ways you can solve problems.
 
 ** POLICIES
-*00-25* hours late, *20%* penalty\\
-*25-48* hours late, *50%* penalty\\
-*48-72* hours late, *75%* penalty\\
+*00-25* hours late, *20%* penalty\n
+*25-48* hours late, *50%* penalty\n
+*48-72* hours late, *75%* penalty\n
 *72+* hours late, *not accepted.*
 
 ** *DATA STRUCTURES:* Notations of Time Complexities
@@ -20,5 +20,5 @@ Textbook: Introduction to Algorithms (3rd Edition) by Cormen, T. et. al
 
 
 ** What are Algorithms?
-Algorithms is the backbone of Computer Science.\\
+Algorithms is the backbone of Computer Science.\n
 It enchances problem solving capabilities.
