@@ -1,0 +1,27 @@
+
+* Rationale for UAS for Medical Situations
+- Transport time
+- Accessing hard-to-reach locations
+- Addressing needs of resource limited regions
+- Cost-benefit analysis
+
+* Case study 1 - Zipline
+** Their claims
+- Ship 1 ton of product per hub each day.
+- 500 shipments per hub per day.
+- 2 minute launch time per shipment.
+- Run dozens of simulatneous deliveries in a 50 mile radius.
+
+** Facts
+- ~12ft wingspan
+- 4 lb payload weight.
+- 50 lb drone weight.
+
+** Ghana & Rawanda medical delivery
+- Can provide vaccines and treatments in the most isolated areas in ghana.
+- Runs 24/7/365
+  - Can reach the unreached.
+  - Snake antivenom, blood, vaccines, etc.
+  - Serves 1000s of hospitals directly.
+- Fully autonomus flight.
+  - 80 km distance.

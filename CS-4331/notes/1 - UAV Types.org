@@ -1,0 +1,71 @@
+#+TITLE: UAV Types
+
+* DJI Types
+
+** DJI Tello
+DJI is the primere company that makes recreation hobby drones, all the way up to professional drones.\\
+The small one is used for recreational purposes.
+
+*** Issues with DJI
+A Chinese company. Concerns that the video is sent back to china (telemetry and such.)
+Federal government banned universities buying DJI products.
+
+** DJI Mavic II Enterprise
+Can fold into a small handheld device. Easy and compact for travel.\\
+Around *$7000* for the whole package (including the remote control.)\\
+Lots of different attachments. Different canera systems between different models.
+
+** DJI Inspire
+One of the first models of DJI cameras. Allows two operators.
+- Drone operator
+- Camera operator
+
+** Other
+- Parrot
+- Sony
+- DJI AGRAS (Farming drones)
+
+* Info regarding
+
+** UAV TYPOLOGY
+- RC Helicopter
+- Coaxial Helicopter
+- Hexacopter
+- Quadcopter
+- Octocopter
+- Y6
+- Tricopter
+- Coax
+
+** CLASSES OF QUADCOPTERS
+- Whoop (camera on top)
+- Camera/Video
+- Large
+- Nano
+- Racing
+- Cinema
+
+** FIXED WING & HELICOPTERS
+- Quantum Systems Trinity F90+
+- Censys Technologies
+  - Flown in line-of-sight
+  - Could see a couple miles, but not which direction it's facing.
+  - Range around 55 miles. 45 mph
+  - 15 mph in max winds
+- Skyeton
+- UAVOS SAT-I
+  - Huge wingspan.
+  - Proprietary autopilot.
+  - 8 m/s
+- Standard UAVOS
+  - $1,000,000
+  - Hella expensive.
+- "Wing"
+  - Able to carry 1.5 kg
+
+** Imaging payload options
+- Sony A7RIII
+- Sony A6400
+- M2-DG64-HD EO/IR
+- MicaSense RedEdge-MX (agriculture)
+- Phase One
