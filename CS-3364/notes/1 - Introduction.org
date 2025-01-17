@@ -1,5 +1,3 @@
-#+OPTIONS: \n:t
-
 * Introduction to Algorithms
 
 Textbook: Introduction to Algorithms (3rd Edition) by Cormen, T. et. al
@@ -9,9 +7,12 @@ Textbook: Introduction to Algorithms (3rd Edition) by Cormen, T. et. al
 - Understanding different ways you can solve problems.
 
 ** POLICIES
-*00-25* hours late, *20%* penalty\n
-*25-48* hours late, *50%* penalty\n
-*48-72* hours late, *75%* penalty\n
+*00-25* hours late, *20%* penalty.
+
+*25-48* hours late, *50%* penalty.
+
+*48-72* hours late, *75%* penalty.
+
 *72+* hours late, *not accepted.*
 
 ** *DATA STRUCTURES:* Notations of Time Complexities
@@ -19,7 +20,7 @@ Textbook: Introduction to Algorithms (3rd Edition) by Cormen, T. et. al
 - $\Omega$  (Big Omega) time complexity.
 - $\Theta$  (Big Theta)time complexity.
 
-
 ** What are Algorithms?
-Algorithms is the backbone of Computer Science.\n
+Algorithms is the backbone of Computer Science.
+
 It enchances problem solving capabilities.
