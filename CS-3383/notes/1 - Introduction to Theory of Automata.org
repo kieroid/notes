@@ -1,5 +1,6 @@
 #+TITLE: Introduction to Theory of Automata
 
+
 Taken from: 
 - *Elements of the Theory of Computation* (2nd Edition) by *Harry R. Lewis* and *Christos H. Papadimitriou*.
 - *Introduction to the Theory of Computation* by *Michael Sipser*.
