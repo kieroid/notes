@@ -1,0 +1,69 @@
+
+* Introduction
+Why is software engineering important?
+- Economies of ALL developed nations are dependent on software.
+- More and more systems are software controlled.
+- Software engineering is concerned with theories, methods, and tools for professional software development.
+- More individuals and society rely on advanced software systems.
+
+Software costs:
+- Software costs often dominate computer system costs.
+- The costs of software on PC are often greater than the hardware cost.
+- Costs more to maintain and develop.
+- For systems with a long life, maintenance costs may be several times development costs.
+- Concerned with cost-effective software development.
+
+Software project failure is a consequence of two factors:
+- Increasing time complexity. As new software engineering techniques help us to build larger, more complex systems, the demands change. Systems have to be built and delivered more quickly.
+- Failure to use software engineering methods. Many companies have drifted into software development as their products and services have evolved.
+
+
+* Professional software development
+Common questions:
+- In the context of software engineering, what is software? Both the computer program + associated documentation.
+- What are the attributes of good software? It should provide all the functionalities that the customer asks for.
+- What are the fundamental software engineering activities? Software specification, Software development, Software validation, and Software evolution.
+- What is the difference between software engineering and computer science? Computer science focuses on theory and fundamentals. Software engineering is the application of such theories (developing and delivering useful software.)
+- What are the key challanges facing software engineering? Coping with increasing diversity, demands for reduced delivery times, and devoliping trustworthy software.
+- What are the costs of software engineering? Around 60% of software costs are development costs. Around 40% of the software costs are development costs.
+
+** Software Products
+Generic products:
+- Stand-alone systems that are marketed and sold to any customer who wishes to buy them.
+- Examples: PC software such as graphics programs, project management tools, photoshop software, software for specific markets such as appointment systems for dentists.
+- The specifications are governed by the programmers.
+
+Customized products:
+- Software that is commissioned by a specific customer to meet their own needs.
+- Examples: Air traffic control software, traffic monitoring systems, embedded control software.
+- The specifications are governed by the people who bought the software.
+
+** Attributes of software
+Good attributes:
+- Maintainability (easy to make changes going forward.)
+- Dependability and Security (reliability, security, and safety. is not dangerous to the computer.)
+- Efficiency (memory and storage efficent. do not waste resources.)
+- Acceptability (acceptable to the users for which it is designed for. user-friendly and compatable with other systems that they use.)
+
+* Software process acitivities.
+A software process is a sequence of activities that leads to the production of a software product.
+1. Software specification - Where customers and engineers define the software that is to be produced and the constraints on its operation.
+2. Software development - Where the software is designed and programmed.
+3. Software validation - Where the software is checked to ensure that it is what the customer requires.
+4. Software evolution - Where the software is modified to reflect changing customer and market requirements.
+
+There is no universal set of software techniques that is applicable to all of these.
+
+The techniques you use are dependent on the type of application, the requirements of the customer, and the background of the development team.
+
+There are various different type of applications:
+- Stand-alone application - Applications that include all neccisary functionality and do not need to be connected to a network.
+- Interactive transaction-based applications - Application that execute on a seperate computer away from their own PC. E-commerce applications, Amazon, Netflix, etc.
+- Embedded control systems - Software control systems that control and manage hardware devices. More likely than any other software system. Elevators, anti-lock braking in a car, and a microwave to cook. Often not possible to update (due to ROM.)
+- Batch processing systems - Business systems that are designed to process data in large batches. Process large numbers of individual inputs to create corresponding outputs. Electric billing systems, salary payment systems.
+- Entertainment systems - Often for personal use which are intended to entertain the user. Gaming consoles, netflix, etc.
+- Systems for modeling and simulation - Developed by scientests and engineers to model physical processes or situations which include many seperate, interacting objects. Require high-performance. Pilot software, Matlab, Gnu Octave, etc.
+- Data collection systems - Telemetry. Analyze "big data" which involves cloud-based systems carrying out systistical analysis and looking for relationships in such data.
+- Systems of systems - Systems that are composed of a number of other software systems. Military command and control systems (NORAD)
+
+Development of web browsers (around 2000) that could run small programs and do some local processing led to an evolution in business and organizational software. Instead of writing software and deploying it on users' PCs, the software was deployed on a web server. With the help of web browsers, instead of writing software and deploying it on users PCs, it could be deployed on a web server. It make it so much easier to change and upgrade the software. The fundamental ideas of software engineering apply to web-based software in the same way that they apply to other types of software system. Outlook, Microsoft Office 365, Amazon, and Adobe Creative Suite.
