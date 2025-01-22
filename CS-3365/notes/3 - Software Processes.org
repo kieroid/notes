@@ -1,0 +1,18 @@
+
+
+* The software process
+A software process is a set of related activities that leads to the production of a software system.
+
+Many different processes but all involve these 4 SE activities:
+- Specification (what should the system do?)
+- Design and implementation (how is it design/implemented?)
+- Validation (what does the customer want?)
+- Evolution (how can it be updated for the changing customer needs?)
+
+A software process model is an abstract representation of a process. It presents a description of a process from a particular perspective.
+
+In this chapter, we are going to go over how these 4 specifications can be defined beforehand.
+
+** Plan-driven and agile processed
+- Plan-driven processes are processes where all the process activities are planned in advance and progress is measured against this plan.
+- In agile processes, planning is incremental and easier to change the process.

@@ -1,0 +1,61 @@
+
+* Ethics
+do NOT distribute ransomware for a wonderful payout (unless you are UMC)
+
+Look at the IEEE/ACM code of ethics.
+
+** Ethical dilemmas
+- Disagreement with policies
+- Employer acting in an unethical way and releases a safety-critical system without finishing and testing the system.
+- Participating in the development in military weapons systems or nuclear systems.
+- Other conflicts of interest (between employer and employee.)
+
+** Case studies
+*** A personal insulin pump.
+Details:
+- Collects data from blood sugar sensor and calculates the amount of insulin required to be injected.
+- Sends signals to a micro-pump to deliver the correct dose of insulin.
+- Safety-critical system as low blood sugars can lead to brain malfunctioning, coma, and death.
+- High blood sugar levels have long-term effects such as kidney disease, etc.
+
+Since it's a safety-critical system, it must be designed and implemented to ensure that the system always meets these two requirements:
+1. The system shall be available to deliver insulin when required.
+2. The system shall perform reliably and deliver the correct amount of insulin to counteract the current level of blood sugar.
+
+Known as an embedded control system.
+*** A mental health case patient managment system
+Details:
+- A patient information system to support mental health care is a medical information system that maintains information about patients suffering from mental health problems and the treatments that they have received.
+- Most mental health patients do not require dedicated hospital treatment, but need to attend specialist clinics regularly where they can meet a doctor who has detailed knowledge of their problems.
+- To make it easier for patients to attend, these clinics are not just run in hospitals.
+
+Two purposes for this system:
+1. To generate management information that allows health service managers to assess performance against local and government targets.
+2. To provide medical staff with timely information to support the treatment of patients.
+
+Features:
+- Individual care management (create and maintain records, treatments, etc.)
+- Patient monitoring (records problems if present)
+- Administrative reporting
+- Privacy
+- Safety (mental illnesses, government laws, etc.)
+2nd system.
+*** A wilderness weather station.
+Details:
+- The government of a country with large areas of wilderness decides to deploy several hundred weather stations in remote areas.
+- Weather stations collect data from a set of instruments that measure temperature, pressure ,sunshine, rainfall, wind speed, wind direction (over a 24 hour period.)
+
+Features:
+1. Weather station system (for collecting weather data/telemetry.)
+2. Data management and archiving system (collecting data from all of the wilderness and archives it.)
+3. Station maintenance system (for communicating via satellite.)
+
+Data collection system.
+
+*** iLearn System
+Details:
+- A digital learning enviorment is a framework in which a set of general purpose and specially made software.
+- Browser-based user interface, app
+- Configuration services such as group management, application, and identity man.
+
+System of systems.
