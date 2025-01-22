@@ -93,3 +93,20 @@ $\Pi$ is a partition of $S$ if:
 - $A\cap B = \emptyset$ for any $A,B \in \Pi, A\not=B$
 - $\cup \Pi = S$
 
+Essentially, with a partition, when you have a set, you are partitioning parts of the set.
+
+For example:
+- i$\{\{a\},\{b\},\{c\}\}$ is a partition of $\{a,b,c\}$.
+- $\{\{a,b\},\{c\}\}$ is also a partition of $\{a,b,c\}$.
+- $\{\{a,b,c\}\}$ is also a partition of $\{a,b,c\}$.
+
+** Proof format
+For two arbitrary sets $A,B$, show
+- $(A\cap B)\cup C = (A\cup C)\cap (B \cup C)$
+- $A$ and $B$ are subsets of $C$. Therefore, $A$ is a subset of $C$, and $B$ is a subset of $C$.
+
+What does it mean by $X-Y$?
+- Any element of $X$ is also an element of $Y$, and every element of $Y$ is also an element of $X$.
+- This means that $X\subset Y$ and $Y \subset X$.
+
+FYI: *Homework* will be posted this week.

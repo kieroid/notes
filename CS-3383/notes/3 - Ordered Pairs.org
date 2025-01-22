@@ -1,0 +1,45 @@
+
+
+* Ordered Pairs
+$(x,y)$ is an ordered pair.
+$x,y$ are called components (of the ordered pair.)
+Order matters:
+- $(x,y)\not=(y,x)$
+
+** Cartesian product
+Definition:
+- $A\times B = \{(x,y):x\in A \text{ and } y \in B\}$
+- $\{a,b\}\times\{c,d\}=\{(a,c),(a,d),(b,c),(b,d)\}$
+
+
+
+$2^{\{a\}}\times 2^{\{b\}} = \text{?}$
+
+$\{\emptyset,\{a\}\}\times\{\emptyset,\{b\}\}=\{(\emptyset,\emptyset),(\emptyset,\{b\}),(\{a\},\emptyset),(\{a\},\{b\})\}$
+
+
+Visual:
+\begin{matrix}
+{ } & c & d\\
+a & ac & ad\\
+b & bc & bd
+\end{matrix}
+
+** Ordered Tuple
+Definition:
+- $(a_1,a_2,a_3,...,a_n)$ is an ordered n-tuple
+- Each $a_i$ is called the i'th component of the ordered tuple.
+- The ordered 2-tuple is ordered pair.
+
+A relation $R$ is a set of ordered pairs.
+- Attendence sheet produces a relation $\{(\text{Alice},X),(\text{Bob},\text{-})...\}$
+
+* Functions
+Definition:
+- A function is a special kind of relation (all functions are relations, but not all relations are functions.)
+- A relation $R\subset A\times B$ is a function if: For each $a \subset A$, there is exactly one ordered pair in $R$ with the first component $a$.
+
+Example:
+- $R_1=\{(x,y):x\in C,y\in S, \text{x is a city in state y}\}$
+- $R_2=\{(x,y):x\in S,y\in C, \text{y is a city in state x}\}$
+- Which one is a function?

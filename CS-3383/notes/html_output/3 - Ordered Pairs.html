@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-01-22 Wed 15:23 -->
+<!-- 2025-01-22 Wed 15:40 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -232,272 +232,106 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org3d7e7d0">1. Sets</a>
+<li><a href="#org8e514b5">1. Ordered Pairs</a>
 <ul>
-<li><a href="#org640d9ee">1.1. Examples</a></li>
-<li><a href="#org542835a">1.2. Cardinality</a></li>
-<li><a href="#org1d0a672">1.3. Singleton</a></li>
-<li><a href="#orgcf70678">1.4. Membership</a></li>
-<li><a href="#org1bdd434">1.5. Describing</a></li>
-<li><a href="#org62281de">1.6. Subset</a>
-<ul>
-<li><a href="#orgbf2dd13">1.6.1. Proper Subset</a></li>
+<li><a href="#org0bdb466">1.1. Cartesian product</a></li>
+<li><a href="#orgaabf318">1.2. Ordered Tuple</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#org1146bce">2. Operations</a>
-<ul>
-<li><a href="#org870eb16">2.1. Union</a></li>
-<li><a href="#org24e7816">2.2. Intersection</a></li>
-<li><a href="#org7af5cc7">2.3. Difference</a></li>
-</ul>
-</li>
-<li><a href="#org5a1ec1d">3. Power Set</a></li>
-<li><a href="#orge423785">4. Partition</a></li>
-<li><a href="#orgf0e998e">5. Proof format</a></li>
+<li><a href="#org4fd0828">2. Functions</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org3d7e7d0" class="outline-2">
-<h2 id="org3d7e7d0"><span class="section-number-2">1.</span> Sets</h2>
+<div id="outline-container-org8e514b5" class="outline-2">
+<h2 id="org8e514b5"><span class="section-number-2">1.</span> Ordered Pairs</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-A set is an undordered collection of objects.
+\((x,y)\) is an ordered pair.
+\(x,y\) are called components (of the ordered pair.)
+Order matters:
 </p>
-
-<p>
-\(S=\{a,b,c\}\) where \(a,b,c\) are elements or members of the set \(S\).
-</p>
-
-<p>
-An abstraction of an object can be numbers, points, lines, graphs, vectors, matricies.
-</p>
-
-<p>
-An <b>Element</b> of a set may also be a set.
-</p>
-</div>
-<div id="outline-container-org640d9ee" class="outline-3">
-<h3 id="org640d9ee"><span class="section-number-3">1.1.</span> Examples</h3>
-<div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
-<li>\(\{\text{red,blue}\}=\{\text{blue,red}\}\)</li>
-<li>\(\{\text{red,blue.red}\}=\{\text{red,blue}\}\)</li>
-<li>\(\{\text{red},\{\text{red}\}\}\not=\{\text{red}\}\)</li>
-<li>\(\emptyset \not= \{\}\)</li>
-<li>Empty set: \(\emptyset\)</li>
+<li>\((x,y)\not=(y,x)\)</li>
 </ul>
 </div>
+<div id="outline-container-org0bdb466" class="outline-3">
+<h3 id="org0bdb466"><span class="section-number-3">1.1.</span> Cartesian product</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Definition:
+</p>
+<ul class="org-ul">
+<li>\(A\times B = \{(x,y):x\in A \text{ and } y \in B\}\)</li>
+<li>\(\{a,b\}\times\{c,d\}=\{(a,c),(a,d),(b,c),(b,d)\}\)</li>
+</ul>
+
+
+
+<p>
+\(2^{\{a\}}\times 2^{\{b\}} = \text{?}\)
+</p>
+
+<p>
+\(\{\emptyset,\{a\}\}\times\{\emptyset,\{b\}\}=\{(\emptyset,\emptyset),(\emptyset,\{b\}),(\{a\},\emptyset),(\{a\},\{b\})\}\)
+</p>
+
+
+<p>
+Visual:
+</p>
+\begin{matrix}
+{ } & c & d\\
+a & ac & ad\\
+b & bc & bd
+\end{matrix}
 </div>
-<div id="outline-container-org542835a" class="outline-3">
-<h3 id="org542835a"><span class="section-number-3">1.2.</span> Cardinality</h3>
+</div>
+<div id="outline-container-orgaabf318" class="outline-3">
+<h3 id="orgaabf318"><span class="section-number-3">1.2.</span> Ordered Tuple</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
-Cardinality of a set is the number of elements in the set.
-</p>
-
-<p>
-Example:
+Definition:
 </p>
 <ul class="org-ul">
-<li>\(|\{\text{a,b,c}\}|=3\)</li>
-<li>\(|\{\text{a,b}\}|=2\)</li>
-<li>\(|\{\{\text{a,b}\},c\}|=2\)</li>
-<li>\(|\{\}|=0\)</li>
-<li>\(|\{\{\}\}|=1\)</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org1d0a672" class="outline-3">
-<h3 id="org1d0a672"><span class="section-number-3">1.3.</span> Singleton</h3>
-<div class="outline-text-3" id="text-1-3">
-<p>
-Set with one element is called a singleton.
-</p>
-
-<p>
-Example:
-</p>
-<ul class="org-ul">
-<li>\(|\{\{\}\}|=1\)</li>
-<li>\(|\{1\}|=1\)</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-orgcf70678" class="outline-3">
-<h3 id="orgcf70678"><span class="section-number-3">1.4.</span> Membership</h3>
-<div class="outline-text-3" id="text-1-4">
-<p>
-Element \(a\) contained in a set i\(S = \{\text{a,b,c}\}:a\in S\)
-</p>
-<ul class="org-ul">
-<li>\(3 \in \{1,3,5\}\)</li>
-<li>\(a \not\in \{b,c,d\}\)</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org1bdd434" class="outline-3">
-<h3 id="org1bdd434"><span class="section-number-3">1.5.</span> Describing</h3>
-<div class="outline-text-3" id="text-1-5">
-<p>
-Different ways of writing a set.
-</p>
-<ul class="org-ul">
-<li>List all members: \(S = \{a,b,c\}, S = \{2,3,4,5...\}\)</li>
-<li>\(S = \{x:x \text{ has a certain property}\}\)</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org62281de" class="outline-3">
-<h3 id="org62281de"><span class="section-number-3">1.6.</span> Subset</h3>
-<div class="outline-text-3" id="text-1-6">
-<p>
-\(A\) is a subset of \(B\), denoted as \(A\subset B\) if:
-</p>
-<ul class="org-ul">
-<li>Any element of \(A\) is also in element \(B\).</li>
-<li>Any \((\forall)x\in A\) implies \(\to)x\in B\)</li>
+<li>\((a_1,a_2,a_3,...,a_n)\) is an ordered n-tuple</li>
+<li>Each \(a_i\) is called the i&rsquo;th component of the ordered tuple.</li>
+<li>The ordered 2-tuple is ordered pair.</li>
 </ul>
 
 <p>
-Examples:
+A relation \(R\) is a set of ordered pairs.
 </p>
 <ul class="org-ul">
-<li>\(\{a,b,c\}\subset\{a,b,c,d\}\)</li>
-<li>\(\{1,3,5,7,...\}\subset \{1,2,3,4,5,...\}\)</li>
-<li>\(\{\emptyset \subset A\}\) for any set \(A\)</li>
-<li>\(A \subset A\)</li>
-</ul>
-</div>
-<div id="outline-container-orgbf2dd13" class="outline-4">
-<h4 id="orgbf2dd13"><span class="section-number-4">1.6.1.</span> Proper Subset</h4>
-<div class="outline-text-4" id="text-1-6-1">
-<p>
-\(A\) is a proper subset of \(B\), denoted as \(A \subseteq B\) and \(B\) contains at least one element not in \(A\).
-</p>
-
-<p>
-Examples:
-</p>
-<ul class="org-ul">
-<li>\(\{a,b,c\}\subseteq\{a,b,c,d\}\)</li>
-<li>\(\{1,3,5,7,...\}\subseteq\{1,2,3,4,5,...\}\)</li>
-<li>\(\emptyset \subseteq A\) for any set \(A \not= \emptyset\)</li>
-<li>\(A \not\subseteq A\)</li>
+<li>Attendence sheet produces a relation \(\{(\text{Alice},X),(\text{Bob},\text{-})...\}\)</li>
 </ul>
 </div>
 </div>
 </div>
-</div>
-<div id="outline-container-org1146bce" class="outline-2">
-<h2 id="org1146bce"><span class="section-number-2">2.</span> Operations</h2>
+<div id="outline-container-org4fd0828" class="outline-2">
+<h2 id="org4fd0828"><span class="section-number-2">2.</span> Functions</h2>
 <div class="outline-text-2" id="text-2">
-</div>
-<div id="outline-container-org870eb16" class="outline-3">
-<h3 id="org870eb16"><span class="section-number-3">2.1.</span> Union</h3>
-<div class="outline-text-3" id="text-2-1">
-<ul class="org-ul">
-<li>\(A\cup B = \{x:x \in A \text{ or } x\in B\}\)</li>
-<li>\(\{1,2,3\}\cup\{4,5\}=\{1,2,3,4,5\}\)</li>
-<li>\(\{\text{red,blue}\}\cup\{\text{red},\{\text{red,blue}\}\}=\{\text{red,blue},\{\text{red,blue}\}\}\)</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org24e7816" class="outline-3">
-<h3 id="org24e7816"><span class="section-number-3">2.2.</span> Intersection</h3>
-<div class="outline-text-3" id="text-2-2">
-<ul class="org-ul">
-<li>\(A\cap B = \{x:x\in A \text{ and } x\in B\}\)</li>
-<li>\(\{1,2,3\}\cap\{2,3,4\}=\{2,3\}\)</li>
-<li>\(\{\text{red,blue}\}\cap\{\{\text{red,blue}\}\}=\emptyset\)</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org7af5cc7" class="outline-3">
-<h3 id="org7af5cc7"><span class="section-number-3">2.3.</span> Difference</h3>
-<div class="outline-text-3" id="text-2-3">
-<ul class="org-ul">
-<li>\(A-B=\{x:x\in A \text{ and }x\not\in B\}\)</li>
-<li>\(\{1,3,9\}-\{3,5,7\}-\{1,9\}\)</li>
-<li>\(\{\text{red,blue}\}-\{\text{red},\{\text{red,blue}\}\}=\{\text{red},\{\text{red,blue}\}\}\)</li>
-</ul>
-</div>
-</div>
-</div>
-<div id="outline-container-org5a1ec1d" class="outline-2">
-<h2 id="org5a1ec1d"><span class="section-number-2">3.</span> Power Set</h2>
-<div class="outline-text-2" id="text-3">
 <p>
-Set of all subsets.
-</p>
-
-<p>
-Examples:
+Definition:
 </p>
 <ul class="org-ul">
-<li>\(2^\text{S}=\{x:x\subseteq S\}\)</li>
-<li>\(2^{\{a,b\}}=\{\emptyset,\{a,b\},\{a\},\{b\}\}\)</li>
-<li>\(2^{\{\emptyset\}}=\emptyset\)</li>
-<li>\(|2^S|=2^{|S|}\)</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-orge423785" class="outline-2">
-<h2 id="orge423785"><span class="section-number-2">4.</span> Partition</h2>
-<div class="outline-text-2" id="text-4">
-<p>
-\(\Pi\) is a partition of \(S\) if:
-</p>
-<ul class="org-ul">
-<li>\(Pi \subseteq 2^S\)</li>
-<li>\(\emptyset \not\in \Pi\)</li>
-<li>\(A\cap B = \emptyset\) for any \(A,B \in \Pi, A\not=B\)</li>
-<li>\(\cup \Pi = S\)</li>
+<li>A function is a special kind of relation (all functions are relations, but not all relations are functions.)</li>
+<li>A relation \(R\subset A\times B\) is a function if: For each \(a \subset A\), there is exactly one ordered pair in \(R\) with the first component \(a\).</li>
 </ul>
 
 <p>
-Essentially, with a partition, when you have a set, you are partitioning parts of the set.
-</p>
-
-<p>
-For example:
+Example:
 </p>
 <ul class="org-ul">
-<li>i\(\{\{a\},\{b\},\{c\}\}\) is a partition of \(\{a,b,c\}\).</li>
-<li>\(\{\{a,b\},\{c\}\}\) is also a partition of \(\{a,b,c\}\).</li>
-<li>\(\{\{a,b,c\}\}\) is also a partition of \(\{a,b,c\}\).</li>
+<li>\(R_1=\{(x,y):x\in C,y\in S, \text{x is a city in state y}\}\)</li>
+<li>\(R_2=\{(x,y):x\in S,y\in C, \text{y is a city in state x}\}\)</li>
+<li>Which one is a function?</li>
 </ul>
-</div>
-</div>
-<div id="outline-container-orgf0e998e" class="outline-2">
-<h2 id="orgf0e998e"><span class="section-number-2">5.</span> Proof format</h2>
-<div class="outline-text-2" id="text-5">
-<p>
-For two arbitrary sets \(A,B\), show
-</p>
-<ul class="org-ul">
-<li>\((A\cap B)\cup C = (A\cup C)\cap (B \cup C)\)</li>
-<li>\(A\) and \(B\) are subsets of \(C\). Therefore, \(A\) is a subset of \(C\), and \(B\) is a subset of \(C\).</li>
-</ul>
-
-<p>
-What does it mean by \(X-Y\)?
-</p>
-<ul class="org-ul">
-<li>Any element of \(X\) is also an element of \(Y\), and every element of \(Y\) is also an element of \(X\).</li>
-<li>This means that \(X\subset Y\) and \(Y \subset X\).</li>
-</ul>
-
-<p>
-FYI: <b>Homework</b> will be posted this week.
-</p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Kieran Lavato</p>
-<p class="date">Created: 2025-01-22 Wed 15:23</p>
+<p class="date">Created: 2025-01-22 Wed 15:40</p>
 </div>
 </body>
 </html>
