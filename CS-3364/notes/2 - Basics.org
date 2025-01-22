@@ -1,0 +1,120 @@
+
+** DEFINE ALGORITHMS
+An algorithm is a step-by-step procedure to solve a computationally-hard problem.
+
+The differences between algorithms are the following:
+- *Algorithms* are made in the design phase.
+- *Programs* convert the design into a working implementation.
+
+The initial phase of any product you try to develop is the *design* phase of a product. The algorithm-designing part is part of the initial phase. Programming, however, is created after the algorithm is made.
+
+The person that writes the algorithms requires *domain knowledge.*
+- Can be written in ANY language
+- Chinese, English, German, etc.
+
+The programmer may or may not have *domain knowledge.*
+- Needs a programming language to achieve the end result.
+- Java, C, C++, Rust, Python...
+
+An algorithm is independent from the hardware and software running on the computer. It isn't specific.
+- MacOS, Windows, Linux, etc.
+- RISC-V, x86_64, ARM, etc.
+- Requires prior analysis.
+
+The program is dependent on the hardware and software running on the computer.
+- x86_64 + Linux + GCC
+- ARM + MacOS + Clang
+- RISC-V + BSD + GCC
+- Requires constant testing.
+
+*** CHARACTERISTICS of ALGORITHMS
+*Input*:
+- Algorithm takes an input.
+
+*Output*:
+- Must generate at least one output.
+
+*Definiteness*:
+- Every line of the algorithm must be unambiguous.
+- You cannot just write $\sqrt{-1}$. You must explain it.
+
+*Finiteness*:
+- Algorithm should be finite and stop at some point.
+
+**** Important things to keep in mind:
+*Time*:
+- Time function
+
+*Space*:
+- Memory space the program is taking up.
+
+*Network Consumption*
+
+*Power Consumption*
+
+*CPU Registers Consumption*
+
+**in terms of this class, we will only be talking about time and space.**
+
+*** EXAMPLE ALGORITHM TO MAKE A PEANUT BUTTER AND JELLY SANDWITCH:
+Ingredients/Inputs:
+- 2 Slices of white, american "loaf" bread
+- 1 jar/container of Strawberry Jelly
+- 1 jar/container of Crunchy Peanut Butter
+- 1 standard butter knife
+
+Algorithm:
+- First, take one slice of bread. Put it on the table.
+- Second, on top of the bread, apply around a tablespoon of peanut butter on a single side of the bread. Ensure the side you apply it on does not touch the table.
+- Third, take another slice of bread. Put it beside the other slice of bread, but do not allow them to touch.
+- On the new piece of bread, apply a tablespoon of Strawberry jelly.
+- ...
+
+*** WRITE AN ALGORITHM TO SWAP 2 NUMBERS:
+Variables:
+- Variable "A"
+- Variable "B"
+- Unknown Variable "C"
+
+#+BEGIN_EXAMPLE
+BEGIN:
+{
+     C <- A;
+     A <- B;
+     B <- C;
+}
+
+$f(n) = 1 + 1 + 1 = 3$
+#+END_EXAMPLE
+
+*** ALGORITHM FOR FREQUENCY COUNT METHOD:
+
+#+BEGIN_EXAMPLE
+Algo Sum(A,n)
+{
+        s = 0;
+        for(i = 0; i < n; i++)
+        {
+                s = s + A[i]
+        }
+}
+#+END_EXAMPLE
+
+where:
+\begin{matrix}
+        \text{A} & 8 & 3 & 1 & 4 & 5\\
+        \text{ } & 0 & 1 & 2 & 3 & 4
+\end{matrix
+
+Space:
+- A -> n elements
+- i -> 1
+- s -> 1
+- n -> 1
+
+S(n) = n+3
+O(n)
+
+* NEXT CLASS:
+1. Write an algorithm to add 2 matricies.
+2. Write an algorithm to multiply 2 matricies.

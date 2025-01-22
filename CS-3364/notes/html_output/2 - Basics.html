@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-01-22 Wed 14:43 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="Kieran Lavato" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org7d9f223">0.1. DEFINE ALGORITHMS</a>
+<ul>
+<li><a href="#org3ed36d9">0.1.1. CHARACTERISTICS of ALGORITHMS</a></li>
+<li><a href="#org9220721">0.1.2. EXAMPLE ALGORITHM TO MAKE A PEANUT BUTTER AND JELLY SANDWITCH:</a></li>
+<li><a href="#org9703d45">0.1.3. WRITE AN ALGORITHM TO SWAP 2 NUMBERS:</a></li>
+<li><a href="#org9394f78">0.1.4. ALGORITHM FOR FREQUENCY COUNT METHOD:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org0cdbf9b">1. NEXT CLASS:</a></div>
+</div>
+<div id="outline-container-org7d9f223" class="outline-3">
+<h3 id="org7d9f223"><span class="section-number-3">0.1.</span> DEFINE ALGORITHMS</h3>
+<div class="outline-text-3" id="text-0-1">
+<p>
+An algorithm is a step-by-step procedure to solve a computationally-hard problem.
+</p>
+
+<p>
+The differences between algorithms are the following:
+</p>
+<ul class="org-ul">
+<li><b>Algorithms</b> are made in the design phase.</li>
+<li><b>Programs</b> convert the design into a working implementation.</li>
+</ul>
+
+<p>
+The initial phase of any product you try to develop is the <b>design</b> phase of a product. The algorithm-designing part is part of the initial phase. Programming, however, is created after the algorithm is made.
+</p>
+
+<p>
+The person that writes the algorithms requires <b>domain knowledge.</b>
+</p>
+<ul class="org-ul">
+<li>Can be written in ANY language</li>
+<li>Chinese, English, German, etc.</li>
+</ul>
+
+<p>
+The programmer may or may not have <b>domain knowledge.</b>
+</p>
+<ul class="org-ul">
+<li>Needs a programming language to achieve the end result.</li>
+<li>Java, C, C++, Rust, Python&#x2026;</li>
+</ul>
+
+<p>
+An algorithm is independent from the hardware and software running on the computer. It isn&rsquo;t specific.
+</p>
+<ul class="org-ul">
+<li>MacOS, Windows, Linux, etc.</li>
+<li>RISC-V, x86<sub>64</sub>, ARM, etc.</li>
+<li>Requires prior analysis.</li>
+</ul>
+
+<p>
+The program is dependent on the hardware and software running on the computer.
+</p>
+<ul class="org-ul">
+<li>x86<sub>64</sub> + Linux + GCC</li>
+<li>ARM + MacOS + Clang</li>
+<li>RISC-V + BSD + GCC</li>
+<li>Requires constant testing.</li>
+</ul>
+</div>
+<div id="outline-container-org3ed36d9" class="outline-4">
+<h4 id="org3ed36d9"><span class="section-number-4">0.1.1.</span> CHARACTERISTICS of ALGORITHMS</h4>
+<div class="outline-text-4" id="text-0-1-1">
+<p>
+<b>Input</b>:
+</p>
+<ul class="org-ul">
+<li>Algorithm takes an input.</li>
+</ul>
+
+<p>
+<b>Output</b>:
+</p>
+<ul class="org-ul">
+<li>Must generate at least one output.</li>
+</ul>
+
+<p>
+<b>Definiteness</b>:
+</p>
+<ul class="org-ul">
+<li>Every line of the algorithm must be unambiguous.</li>
+<li>You cannot just write \(\sqrt{-1}\). You must explain it.</li>
+</ul>
+
+<p>
+<b>Finiteness</b>:
+</p>
+<ul class="org-ul">
+<li>Algorithm should be finite and stop at some point.</li>
+</ul>
+</div>
+<ol class="org-ol">
+<li><a id="org58a296f"></a>Important things to keep in mind:<br />
+<div class="outline-text-5" id="text-0-1-1-1">
+<p>
+<b>Time</b>:
+</p>
+<ul class="org-ul">
+<li>Time function</li>
+</ul>
+
+<p>
+<b>Space</b>:
+</p>
+<ul class="org-ul">
+<li>Memory space the program is taking up.</li>
+</ul>
+
+<p>
+<b>Network Consumption</b>
+</p>
+
+<p>
+<b>Power Consumption</b>
+</p>
+
+<p>
+<b>CPU Registers Consumption</b>
+</p>
+
+<p>
+<b><b>in terms of this class, we will only be talking about time and space.</b></b>
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org9220721" class="outline-4">
+<h4 id="org9220721"><span class="section-number-4">0.1.2.</span> EXAMPLE ALGORITHM TO MAKE A PEANUT BUTTER AND JELLY SANDWITCH:</h4>
+<div class="outline-text-4" id="text-0-1-2">
+<p>
+Ingredients/Inputs:
+</p>
+<ul class="org-ul">
+<li>2 Slices of white, american &ldquo;loaf&rdquo; bread</li>
+<li>1 jar/container of Strawberry Jelly</li>
+<li>1 jar/container of Crunchy Peanut Butter</li>
+<li>1 standard butter knife</li>
+</ul>
+
+<p>
+Algorithm:
+</p>
+<ul class="org-ul">
+<li>First, take one slice of bread. Put it on the table.</li>
+<li>Second, on top of the bread, apply around a tablespoon of peanut butter on a single side of the bread. Ensure the side you apply it on does not touch the table.</li>
+<li>Third, take another slice of bread. Put it beside the other slice of bread, but do not allow them to touch.</li>
+<li>On the new piece of bread, apply a tablespoon of Strawberry jelly.</li>
+<li>&#x2026;</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9703d45" class="outline-4">
+<h4 id="org9703d45"><span class="section-number-4">0.1.3.</span> WRITE AN ALGORITHM TO SWAP 2 NUMBERS:</h4>
+<div class="outline-text-4" id="text-0-1-3">
+<p>
+Variables:
+</p>
+<ul class="org-ul">
+<li>Variable &ldquo;A&rdquo;</li>
+<li>Variable &ldquo;B&rdquo;</li>
+<li>Unknown Variable &ldquo;C&rdquo;</li>
+</ul>
+
+<pre class="example" id="org2fe71fe">
+BEGIN:
+{
+     C &lt;- A;
+     A &lt;- B;
+     B &lt;- C;
+}
+
+$f(n) = 1 + 1 + 1 = 3$
+</pre>
+</div>
+</div>
+<div id="outline-container-org9394f78" class="outline-4">
+<h4 id="org9394f78"><span class="section-number-4">0.1.4.</span> ALGORITHM FOR FREQUENCY COUNT METHOD:</h4>
+<div class="outline-text-4" id="text-0-1-4">
+<pre class="example" id="orge6f69a7">
+Algo Sum(A,n)
+{
+        s = 0;
+        for(i = 0; i &lt; n; i++)
+        {
+                s = s + A[i]
+        }
+}
+</pre>
+
+<p>
+where:
+\begin{matrix}
+        \text{A} &amp; 8 &amp; 3 &amp; 1 &amp; 4 &amp; 5<br />
+        \text{ } &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4
+\end{matrix
+</p>
+
+<p>
+Space:
+</p>
+<ul class="org-ul">
+<li>A -&gt; n elements</li>
+<li>i -&gt; 1</li>
+<li>s -&gt; 1</li>
+<li>n -&gt; 1</li>
+</ul>
+
+<p>
+S(n) = n+3
+O(n)
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org0cdbf9b" class="outline-2">
+<h2 id="org0cdbf9b"><span class="section-number-2">1.</span> NEXT CLASS:</h2>
+<div class="outline-text-2" id="text-1">
+<ol class="org-ol">
+<li>Write an algorithm to add 2 matricies.</li>
+<li>Write an algorithm to multiply 2 matricies.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Kieran Lavato</p>
+<p class="date">Created: 2025-01-22 Wed 14:43</p>
+</div>
+</body>
+</html>
