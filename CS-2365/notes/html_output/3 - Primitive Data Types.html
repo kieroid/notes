@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-01-22 Wed 13:39 -->
+<!-- 2025-01-22 Wed 13:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -193,119 +193,84 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="content" class="content">
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#orgc38b4f5">1. Java Virtual Machine</a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-orgc38b4f5" class="outline-2">
-<h2 id="orgc38b4f5"><span class="section-number-2">1.</span> Java Virtual Machine</h2>
-<div class="outline-text-2" id="text-1">
 <p>
-Definition of JVM: A program emulating a microprocessor. It only executes byte code instructions. It is an interpreter, and Java would be referred to as an interpreted language.
+Primitive data types are data types which are built into the Java language and not derived from classes.
 </p>
 
 <p>
-JRE = Java Runtime Enviorment
+There are 8 primitive data types in Java.
 </p>
-<ul class="org-ul">
-<li>Contains several libraries as well as the JVM</li>
-</ul>
+<ol class="org-ol">
+<li>Byte
+A byte can only hold a limited number of data.</li>
+<li>Short</li>
+<li>Int</li>
+<li>Long</li>
+<li>Float</li>
+<li>Double</li>
+<li>Boolean</li>
+<li>Char</li>
+</ol>
+
 
 <p>
-JDK = Java Development (tool) Kit
+Two `char` standards exist:
 </p>
 <ul class="org-ul">
-<li>Contains the JRE as well as compilers, tools, etc.</li>
+<li>Unicode</li>
+<li>ANSII</li>
 </ul>
 
 <p>
-What is a compiler?
+Java uses Unicode, which the characters are stored as numbers. The unicode character set can consist of 65535 (\(2^{16}\)) individual characters. With Unicode, a single character is held in 2 bytes of memory unlike ASCII&rsquo;s 1
+</p>
+
+<p>
+Commenting code:
 </p>
 <ul class="org-ul">
-<li>A compiler converts <b>source code</b> into code of which is executable.</li>
-<li>Examples would be GCC compiling a C file to create a program which can run on x86<sub>64</sub>/arm64 architecture.</li>
+<li>Single line comment (`//`)</li>
+<li>Multi-line comment (`/* &#x2026; */`)</li>
 </ul>
-
-<p>
-Java needs both:
-</p>
-<ul class="org-ul">
-<li>A compiler</li>
-<li>The JVM (java virtual machine)</li>
-</ul>
-
-<p>
-Why would anyone want to use java?
-</p>
-<ul class="org-ul">
-<li>Can be used to run consumer applications.</li>
-<li>Can work on a multiple of architectures without having to compile new binaries for each architectures.</li>
-<li>Java Virtual Machine emulates a microprocessor to achieve such hardware compatability.</li>
-</ul>
-
-
-<p>
-What is in a Java program?
-</p>
-<ul class="org-ul">
-<li>A java source code file contains one or more java classes.</li>
-<li>Only one of them may be a <b>public</b> class. You cannot have more than 1 public class.</li>
-</ul>
-
-<p>
-An example of java code (funkyburger.java) would be the following:
-</p>
-<div class="org-src-container">
-<pre class="src src-java"><span style="color: #DFDFDF; font-weight: bold;">public</span> <span style="color: #DFDFDF; font-weight: bold;">class</span> <span style="color: #DFDFDF; font-weight: bold;">funkyburger</span> {<span style="color: #98be65;">//</span><span style="color: #98be65;">Public class</span>
-    <span style="color: #DFDFDF; font-weight: bold;">public</span> <span style="color: #DFDFDF; font-weight: bold;">static</span> <span style="color: #DFDFDF; font-weight: bold;">void</span> <span style="color: #DFDFDF; font-weight: bold;">main</span>(<span style="color: #DFDFDF; font-weight: bold;">String</span>[] <span style="color: #bbc2cf;">args</span>) { <span style="color: #98be65;">//</span><span style="color: #98be65;">Method header for the main method. Java application begins here.</span>
-        System.out.print(<span style="color: #b4916d;">"burger"</span>);<span style="color: #98be65;">//</span><span style="color: #98be65;">Code from the body of the main method.</span>
-    }
-}
-</pre>
-</div>
-
-<p>
-When generated/compiled (using `javac`), a class file is created.
-This is known as a bytecode instruction. With the previous example, if you ran `javac funkyburger.java`,
-`funkyburger.class` is generated.
-</p>
-
-<p>
-To run this class file, you can use the command `java`.
-</p>
-
-<p>
-The `main` <b>method</b>:
-</p>
-<ul class="org-ul">
-<li>The line of code that java command will run first.</li>
-</ul>
-
-<p>
-Java <b>statements</b>:
-</p>
-<ul class="org-ul">
-<li>The statements executed within the main method.</li>
-<li>Ex: `System.out.println(&ldquo;burger&rdquo;)`</li>
-</ul>
-
-<p>
-`out` is an object of the `System` class.
-`print` and `println` are methods which are members of the `out` object.
-</p>
-</div>
-</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Kieran Lavato</p>
-<p class="date">Created: 2025-01-22 Wed 13:39</p>
+<p class="date">Created: 2025-01-22 Wed 13:47</p>
 </div>
 </body>
 </html>

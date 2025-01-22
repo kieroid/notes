@@ -1,0 +1,24 @@
+
+Primitive data types are data types which are built into the Java language and not derived from classes.
+
+There are 8 primitive data types in Java.
+1. Byte
+   A byte can only hold a limited number of data.
+2. Short
+3. Int
+4. Long
+5. Float
+6. Double
+7. Boolean
+8. Char
+
+
+Two `char` standards exist:
+- Unicode
+- ANSII
+
+Java uses Unicode, which the characters are stored as numbers. The unicode character set can consist of 65535 ($2^{16}$) individual characters. With Unicode, a single character is held in 2 bytes of memory unlike ASCII's 1
+
+Commenting code:
+- Single line comment (`//`)
+- Multi-line comment (`/* ... */`)

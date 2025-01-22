@@ -1,1 +1,52 @@
 
+** Java Virtual Machine
+Definition of JVM: A program emulating a microprocessor. It only executes byte code instructions. It is an interpreter, and Java would be referred to as an interpreted language.
+
+JRE = Java Runtime Enviorment
+- Contains several libraries as well as the JVM
+
+JDK = Java Development (tool) Kit
+- Contains the JRE as well as compilers, tools, etc.
+
+What is a compiler?
+- A compiler converts *source code* into code of which is executable.
+- Examples would be GCC compiling a C file to create a program which can run on x86_64/arm64 architecture.
+
+Java needs both:
+- A compiler
+- The JVM (java virtual machine)
+
+Why would anyone want to use java?
+- Can be used to run consumer applications.
+- Can work on a multiple of architectures without having to compile new binaries for each architectures.
+- Java Virtual Machine emulates a microprocessor to achieve such hardware compatability.
+
+
+What is in a Java program?
+- A java source code file contains one or more java classes.
+- Only one of them may be a *public* class. You cannot have more than 1 public class.
+
+An example of java code (funkyburger.java) would be the following:
+#+begin_src java
+public class funkyburger {//Public class
+    public static void main(String[] args) { //Method header for the main method. Java application begins here.
+        System.out.print("burger");//Code from the body of the main method.
+    }
+}
+#+end_src
+
+When generated/compiled (using `javac`), a class file is created.
+This is known as a bytecode instruction. With the previous example, if you ran `javac funkyburger.java`,
+`funkyburger.class` is generated.
+
+To run this class file, you can use the command `java`.
+
+The `main` *method*:
+- The line of code that java command will run first.
+
+Java *statements*:
+- The statements executed within the main method.
+- Ex: `System.out.println("burger")`
+
+`out` is an object of the `System` class.
+`print` and `println` are methods which are members of the `out` object.
