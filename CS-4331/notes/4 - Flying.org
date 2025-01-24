@@ -77,3 +77,11 @@ Flight Modes:
 - Manual (like flying a helicopter)
 - Attitude (auto-level)
 - GPS Hold (returns to the quadcopters position once the sticks have been centered)
+
+Away vs Towards
+- Flying a drone away from you vs toward you, the controls are reversed.
+- You need to flip a switch in your mind.
+
+
+*** Conclusions
+Look it up.
