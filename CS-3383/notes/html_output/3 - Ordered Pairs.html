@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-01-22 Wed 15:40 -->
+<!-- 2025-01-24 Fri 15:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -232,18 +232,28 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8e514b5">1. Ordered Pairs</a>
+<li><a href="#org3fc0fc4">1. Ordered Pairs</a>
 <ul>
-<li><a href="#org0bdb466">1.1. Cartesian product</a></li>
-<li><a href="#orgaabf318">1.2. Ordered Tuple</a></li>
+<li><a href="#org70faf59">1.1. Cartesian product</a></li>
+<li><a href="#org057abdc">1.2. Ordered Tuple</a></li>
 </ul>
 </li>
-<li><a href="#org4fd0828">2. Functions</a></li>
+<li><a href="#orgac95f08">2. Functions</a></li>
+<li><a href="#org7066aac">3. Graphs</a>
+<ul>
+<li><a href="#org2ec3341">3.1. Relations</a>
+<ul>
+<li><a href="#org114a06d">3.1.1. Cardinality</a></li>
+<li><a href="#org6c2762b">3.1.2. Sets</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8e514b5" class="outline-2">
-<h2 id="org8e514b5"><span class="section-number-2">1.</span> Ordered Pairs</h2>
+<div id="outline-container-org3fc0fc4" class="outline-2">
+<h2 id="org3fc0fc4"><span class="section-number-2">1.</span> Ordered Pairs</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 \((x,y)\) is an ordered pair.
@@ -254,8 +264,8 @@ Order matters:
 <li>\((x,y)\not=(y,x)\)</li>
 </ul>
 </div>
-<div id="outline-container-org0bdb466" class="outline-3">
-<h3 id="org0bdb466"><span class="section-number-3">1.1.</span> Cartesian product</h3>
+<div id="outline-container-org70faf59" class="outline-3">
+<h3 id="org70faf59"><span class="section-number-3">1.1.</span> Cartesian product</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Definition:
@@ -286,8 +296,8 @@ b & bc & bd
 \end{matrix}
 </div>
 </div>
-<div id="outline-container-orgaabf318" class="outline-3">
-<h3 id="orgaabf318"><span class="section-number-3">1.2.</span> Ordered Tuple</h3>
+<div id="outline-container-org057abdc" class="outline-3">
+<h3 id="org057abdc"><span class="section-number-3">1.2.</span> Ordered Tuple</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Definition:
@@ -307,8 +317,8 @@ A relation \(R\) is a set of ordered pairs.
 </div>
 </div>
 </div>
-<div id="outline-container-org4fd0828" class="outline-2">
-<h2 id="org4fd0828"><span class="section-number-2">2.</span> Functions</h2>
+<div id="outline-container-orgac95f08" class="outline-2">
+<h2 id="orgac95f08"><span class="section-number-2">2.</span> Functions</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Definition:
@@ -325,13 +335,166 @@ Example:
 <li>\(R_1=\{(x,y):x\in C,y\in S, \text{x is a city in state y}\}\)</li>
 <li>\(R_2=\{(x,y):x\in S,y\in C, \text{y is a city in state x}\}\)</li>
 <li>Which one is a function?</li>
+<li>The first one! Not the second.</li>
 </ul>
+
+<p>
+A function \(f\) that is a subset of \(A \times B\) is written as:
+</p>
+<ul class="org-ul">
+<li>\(f: A \to B\)</li>
+</ul>
+
+<p>
+\((a,b) \in f\) is written as \(f(a)=b\)
+</p>
+
+<p>
+\(A\) is the domain of the function
+</p>
+<ul class="org-ul">
+<li>if \(A' \subseteq A, f(A')=\{b:f(a)=b\text{ for some } a \in A'\}\) is the image of \(A'\)</li>
+<li>the range of a function is the image of its domain.</li>
+</ul>
+
+<p>
+A function \(f: A \to B\) is:
+</p>
+<ul class="org-ul">
+<li><b>one-to-one</b>, if no elements in \(A\) match to the same element in \(B\).</li>
+<li><b>onto</b>, if each element in \(B\) is mapped to by at least one element in \(A\).</li>
+<li><b>bijection</b>, if it is both one-to-one and onto.</li>
+</ul>
+
+<p>
+The inverse of a binary relation \(R \subseteq A \times B\) is \(\{(b,a): (a,b) \in R\}\) and denoted as \(R^{-1}\)
+The inverse of a relation, which is not a function, can be a function.
+</p>
+</div>
+</div>
+<div id="outline-container-org7066aac" class="outline-2">
+<h2 id="org7066aac"><span class="section-number-2">3.</span> Graphs</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Relation graph:
+</p>
+<ul class="org-ul">
+<li>Representing a relation \(R \subseteq A\times A\) using a <b>directed graph</b></li>
+<li>Use nodes to represent elements</li>
+<li>Use directed edge to represent an ordered pair.</li>
+<li>\(R=\{(a,b),(b,c),(c,d),(d,e)\}\) can essentially be transformed into a diagram.</li>
+</ul>
+</div>
+<div id="outline-container-org2ec3341" class="outline-3">
+<h3 id="org2ec3341"><span class="section-number-3">3.1.</span> Relations</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+A relation \(R\subseteq A\times A\) is <b>reflexive</b> if:
+</p>
+<ul class="org-ul">
+<li>\((a,a)\exists R if\)&#x2026;</li>
+</ul>
+
+<p>
+A relation \(R\subseteq A\times A\) is <b>symmetric</b> if:
+</p>
+<ul class="org-ul">
+<li>\((a,b)\in R\) or \((b,a) \in R\)</li>
+<li>Equivalently, every edge between two nodes is &ldquo;two-ways&rdquo;</li>
+</ul>
+
+<p>
+A relation \(R\subseteq A\times A\) is <b>antisymmetric</b> if:
+</p>
+<ul class="org-ul">
+<li>\((a,b)\in R\) and \(a \not= b\), then \((b,a)\not\in R\)</li>
+<li>Equivalently, every edge between two different nodes is &ldquo;one-way&rdquo;</li>
+</ul>
+
+<p>
+A relation \(R\subseteq A\times A\) is <b>transitive</b> if:
+</p>
+<ul class="org-ul">
+<li>\((a,b)\in R\) and \((b,c)\in R\), then \((a,c)\in R\)</li>
+<li>Equivalently, you can always &ldquo;shortcut&rdquo;</li>
+</ul>
+
+<p>
+A releation \(R\subseteq A\times A\) is an <b>equivalence relation</b> if:
+</p>
+<ul class="org-ul">
+<li>It is relfexive, symmetric, and transitive.</li>
+<li>Example: \(A\) (all english words,) \((w_1,w_2) \in R\) if they start with the same letter.</li>
+</ul>
+
+<p>
+A relation \(R\subseteq A\times A\) is a <b>partial order</b> if:
+</p>
+<ul class="org-ul">
+<li>it is reflexive, antisymmetric, and transitive.</li>
+<li>Example. \(R=\{(a,b):a,b\text{ are persons and } a \text{ is an ancestor of } b\}\). \(\leq\) defined by natural numbers.</li>
+<li>\(5 \not< 5\). \(5 \leq 5\).</li>
+</ul>
+
+
+<p>
+A relation \(R\subseteq A\times A\) is a <b>total order</b> if:
+</p>
+<ul class="org-ul">
+<li>It is a partial order and</li>
+<li>\(\forall a,b \in A\), exists either \((a,b)\in R\) or \((b,a)\in R\)</li>
+</ul>
+
+<p>
+A set \(A\subseteq B\) is <b>closed</b> under a relation \(R \subseteq ((B\times B)\times B)\) if:
+</p>
+<ul class="org-ul">
+<li>\(a_1, a_2\in A\) and \(((a_1,a_2),c)\in R \implies c \in A\)</li>
+<li>That is, if \(a_1, a_2\) are both in \(A\), and \(((a_1,a_2),c)\) is in the relation, then \(c\) is also in A.</li>
+<li>\(N\) is closed under addition.</li>
+<li>\(N\) is not closed under subtraction or division.</li>
+</ul>
+</div>
+<div id="outline-container-org114a06d" class="outline-4">
+<h4 id="org114a06d"><span class="section-number-4">3.1.1.</span> Cardinality</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+How can we tell if two sets \(A\) and \(B\) have the same cardinality?
+</p>
+<ul class="org-ul">
+<li>Calculate \(|A|\) and \(|B|\) to see if the two numbers are equal.</li>
+</ul>
+
+<p>
+What if I don&rsquo;t do the calculation?
+</p>
+<ul class="org-ul">
+<li>Pick up one apple from one basket, then pick one from another.</li>
+<li>If both of them become empty at the same step, they have the same cardinality.</li>
+<li>Create a bijection \(f: A\to B\)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6c2762b" class="outline-4">
+<h4 id="org6c2762b"><span class="section-number-4">3.1.2.</span> Sets</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<p>
+A set is countable if it is equinemerous with \(N\).
+</p>
+<ul class="org-ul">
+<li>Even numbers of \(N\). \(f(x)=2x\)</li>
+<li>All integers. \(f(x)=[\frac{x}{2}]\times(-1)^x\)</li>
+<li>Union of two disjoint contable sets</li>
+<li>\(N\times N, \text{ where } f(x,y)=\frac{(x+y)(x+y+1)}{2}+x\)</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Kieran Lavato</p>
-<p class="date">Created: 2025-01-22 Wed 15:40</p>
+<p class="date">Created: 2025-01-24 Fri 15:47</p>
 </div>
 </body>
 </html>

@@ -43,3 +43,80 @@ Example:
 - $R_1=\{(x,y):x\in C,y\in S, \text{x is a city in state y}\}$
 - $R_2=\{(x,y):x\in S,y\in C, \text{y is a city in state x}\}$
 - Which one is a function?
+- The first one! Not the second.
+
+A function $f$ that is a subset of $A \times B$ is written as:
+- $f: A \to B$
+
+$(a,b) \in f$ is written as $f(a)=b$
+
+$A$ is the domain of the function
+- if $A' \subseteq A, f(A')=\{b:f(a)=b\text{ for some } a \in A'\}$ is the image of $A'$
+- the range of a function is the image of its domain.
+
+A function $f: A \to B$ is:
+- *one-to-one*, if no elements in $A$ match to the same element in $B$.
+- *onto*, if each element in $B$ is mapped to by at least one element in $A$.
+- *bijection*, if it is both one-to-one and onto.
+
+The inverse of a binary relation $R \subseteq A \times B$ is $\{(b,a): (a,b) \in R\}$ and denoted as $R^{-1}$
+The inverse of a relation, which is not a function, can be a function.
+
+* Graphs
+Relation graph:
+- Representing a relation $R \subseteq A\times A$ using a *directed graph*
+- Use nodes to represent elements
+- Use directed edge to represent an ordered pair.
+- $R=\{(a,b),(b,c),(c,d),(d,e)\}$ can essentially be transformed into a diagram.
+
+** Relations
+A relation $R\subseteq A\times A$ is *reflexive* if:
+- $(a,a)\exists R if$...
+
+A relation $R\subseteq A\times A$ is *symmetric* if:
+- $(a,b)\in R$ or $(b,a) \in R$
+- Equivalently, every edge between two nodes is "two-ways"
+
+A relation $R\subseteq A\times A$ is *antisymmetric* if:
+- $(a,b)\in R$ and $a \not= b$, then $(b,a)\not\in R$
+- Equivalently, every edge between two different nodes is "one-way"
+
+A relation $R\subseteq A\times A$ is *transitive* if:
+- $(a,b)\in R$ and $(b,c)\in R$, then $(a,c)\in R$
+- Equivalently, you can always "shortcut"
+
+A releation $R\subseteq A\times A$ is an *equivalence relation* if:
+- It is relfexive, symmetric, and transitive.
+- Example: $A$ (all english words,) $(w_1,w_2) \in R$ if they start with the same letter.
+
+A relation $R\subseteq A\times A$ is a *partial order* if:
+- it is reflexive, antisymmetric, and transitive.
+- Example. $R=\{(a,b):a,b\text{ are persons and } a \text{ is an ancestor of } b\}$. $\leq$ defined by natural numbers.
+- $5 \not< 5$. $5 \leq 5$.
+
+
+A relation $R\subseteq A\times A$ is a *total order* if:
+- It is a partial order and
+- $\forall a,b \in A$, exists either $(a,b)\in R$ or $(b,a)\in R$
+
+A set $A\subseteq B$ is *closed* under a relation $R \subseteq ((B\times B)\times B)$ if:
+- $a_1, a_2\in A$ and $((a_1,a_2),c)\in R \implies c \in A$
+- That is, if $a_1, a_2$ are both in $A$, and $((a_1,a_2),c)$ is in the relation, then $c$ is also in A.
+- $N$ is closed under addition.
+- $N$ is not closed under subtraction or division.
+
+*** Cardinality
+How can we tell if two sets $A$ and $B$ have the same cardinality?
+- Calculate $|A|$ and $|B|$ to see if the two numbers are equal.
+
+What if I don't do the calculation?
+- Pick up one apple from one basket, then pick one from another.
+- If both of them become empty at the same step, they have the same cardinality.
+- Create a bijection $f: A\to B$
+
+*** Sets
+A set is countable if it is equinemerous with $N$.
+- Even numbers of $N$. $f(x)=2x$
+- All integers. $f(x)=[\frac{x}{2}]\times(-1)^x$
+- Union of two disjoint contable sets
+- $N\times N, \text{ where } f(x,y)=\frac{(x+y)(x+y+1)}{2}+x$
