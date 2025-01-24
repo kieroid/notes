@@ -101,10 +101,10 @@ Algo Sum(A,n)
 #+END_EXAMPLE
 
 where:
-\begin{matrix}
+\[\begin{matrix}
         \text{A} & 8 & 3 & 1 & 4 & 5\\
         \text{ } & 0 & 1 & 2 & 3 & 4
-\end{matrix
+\end{matrix}\]
 
 Space:
 - A -> n elements
@@ -115,6 +115,91 @@ Space:
 S(n) = n+3
 O(n)
 
-* NEXT CLASS:
-1. Write an algorithm to add 2 matricies.
-2. Write an algorithm to multiply 2 matricies.
+There is an order of growth within time functions.
+- $O(log(n))$ is logarithmic.
+- $O(n^2)$ is quadratic.
+- $O(n)$ is linear.
+- $O(n^3)$ is qubic.
+- $O(2^n)$ is exponential.
+
+Write this in notes later:
+- $1 < log(n) < \sqrt{n} < n < n\times log(n) < n^2 < n^3 < \cdots < 2^n < 3^n < \cdots < n^n$
+- For a lot of these, it $2^n$ may start off smaller than $n^3$, but it progressivly gets bigger.
+
+Asymptotic Notations:
+- $\mathcal{O}$ (big o) - upperbound of a function.
+- $\Omega$ (big Omega) - lowerbound of a function.
+- $\Theta$ (big Theta) - average/tightbound of a function.
+
+*** Big oh ($\mathcal{O}$)
+A function $F(n) \in \mathcal{O}(g(n))$ iff the constants $c$ and $n_0$ such that  $F(n) < c\times g(n) \forall n \geq n_0$
+
+Example:
+- $F(n) = 2n+3$
+- $2n+3\leq ?$
+- Rule 1: Replace all lower order terms into equalivent higher order terms.
+- $2n+3 \leq 2n+3n \forall n \geq 1$
+- $2n+3 \leq 2n^2+3n^2$
+- $n < \cdots < n^n$ is the upper bound of the function.
+- $1 < \cdots < \sqrt{n}$ is the lower bound of the function.
+
+
+*** Omega ($\Omega$)
+A function $f(n) \in \Omega(g(n))$ iff $\exists$ tve constants c and no such that $f(n) \geq c\times g(n) \forall n\geq n_0$
+
+*** Theta ($\Theta$)
+A function $f(n) \in \Theta (g(n))$ iff $\exists$ ive constants $c_1$ and $c_2, n_0$ ST
+
+(i have no idea what she is saying)
+
+
+** Examples:
+Matrix Addition:
+#+begin_src c
+for(i = 0; i < n; i++) { // n + 1
+    for(j = 0l j < n; i++) { // n(n+1)
+        c[i,j]=A[i,j]+B[i,j] // time complexity is n^2
+    }
+}
+#+end_src
+
+Matrix Multipiciation:
+#+begin_src c
+for(i = 0; i < n; i++){ // n + 1
+    for(j = 0; j < n; j++){ // n(n + 1)
+        c[i,j]=0 // n * n
+        for(k = 0; k < n; k++){ // n * n(n + 1)
+            c[i,j]=c[i,j]+A[i,k]*B[i,k] // n * n * n
+        } // time complexity is 3n^2+4
+}
+#+end_src
+
+Question 1: $O(n)$
+#+begin_src c
+for(i = 0; i < n; i++){...} // time complexity is n + 1 (O(n))
+#+end_src
+
+Question 2: $O(n)$
+#+begin_src c
+for(i = n ; i > 0; i--){...} //time complexity is n + 1 (O(n))
+#+end_src
+
+Question 3: $O(n)$
+#+begin_src c
+for(i = 0; i < n ; i + 2){...} // time complexity is n/2 (O(n))
+#+end_src
+
+Question 4: $O(n^2)$
+#+begin_src c
+for(i = 0; i < n; i++){ // n + 1
+    for(j = 0; j < i; j++){...} // n(n+1)
+} // time complexity is n(n+1)/2 (O(n^2))
+#+end_src
+
+Question 5: $O(\sqrt{n})$
+#+begin_src c
+p = 0; // P = (K(K+1))/2 > n. Therefore, k > sqrt(n)
+for(i = 1; p <= n; i++){ // f(n) = O(sqrt(n))
+    p = p + i;
+}
+#+end_src
