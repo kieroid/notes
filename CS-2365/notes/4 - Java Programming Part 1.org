@@ -1,0 +1,60 @@
+
+** Java is a strongly typed language
+- In java, every variable, expression, or object in java has a defined type, and the language ensures that the operations on these types are safe and consistent.
+- It enforces strict type checking during both compile-time and runtime.
+- Java allows type conversions, bust they must be explicit in certain cases, ensuring that the programmer is aware of potential data loss or changes in value.
+
+#+begin_src java
+double b = 100.45;
+int a = b; //will show an error
+int a = (int) b; //this will not show an error
+#+end_src
+
+** `String` class
+In java, there is no primitive data type that holds a series of characters.
+- `String` class from the Java standard library is used for this purpose.
+- In order to be useful, the variable must be created to reference a `String` object.
+  `String number;`
+- Notice the `S` in `String` is upper case.
+
+** Primitive vs. Reference Vars
+Primitive variables actually contain the value that they have been assigned.
+
+#+begin_src java
+int number = 25;
+#+end_src
+
+- The value 25 will be stored in the memory location associated with the variable Number.
+- Objects are not stored in variables, however. Instead, they are *referenced* by variables.
+- When a variable references and object, it contains the memory address of the object's location.
+- Then it is said that the variable references the object.
+
+#+begin_src java
+String cityName = "Charleston";
+#+end_src
+
+`cityName` Address to the object $\to$ `Charleston` The object that contains the character string "Charleston"
+
+** The `Scanner` class
+`Scanner` class
+- To read input from keyboard
+- Defined in `java.util`
+- Use the following statement at the top of the programs: `impott java.util.Scanner;`
+- Scanner objects work in `System.in`
+
+To create a `Scanner` object:
+- `Scanner keyboard = new Scanner (System.in);`
+
+The purpose of `Scanner.nextLine();` is to take the next possible input and store it as a variable.
+There also exists different inputs for different datatypes.
+- `Scanner.nextLine();`
+- `Scanner.nextInt();`
+- `Scanner.nextDouble();`
+- ...
+
+#+begin_src java
+Scanner keyboard = new Scanner (System.in); //create the new object
+System.out.println("What is your name?");
+name = keyboard.nextLine(); //take the input from the user
+System.out.println("Your name is " + name); //print the input
+#+end_src
