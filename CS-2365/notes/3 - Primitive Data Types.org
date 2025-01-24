@@ -3,7 +3,6 @@ Primitive data types are data types which are built into the Java language and n
 
 There are 8 primitive data types in Java.
 1. Byte
-   A byte can only hold a limited number of data.
 2. Short
 3. Int
 4. Long
