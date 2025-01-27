@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-01-22 Wed 17:44 -->
+<!-- 2025-01-24 Fri 17:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -200,16 +200,17 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgf0cbe59">1. The software process</a>
+<li><a href="#org5d684f9">1. The software process</a>
 <ul>
-<li><a href="#org9460b71">1.1. Plan-driven and agile processed</a></li>
+<li><a href="#orgd09945a">1.1. Plan-driven and agile processes</a></li>
+<li><a href="#org743fec2">1.2. Software process models</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf0cbe59" class="outline-2">
-<h2 id="orgf0cbe59"><span class="section-number-2">1.</span> The software process</h2>
+<div id="outline-container-org5d684f9" class="outline-2">
+<h2 id="org5d684f9"><span class="section-number-2">1.</span> The software process</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 A software process is a set of related activities that leads to the production of a software system.
@@ -233,8 +234,8 @@ A software process model is an abstract representation of a process. It presents
 In this chapter, we are going to go over how these 4 specifications can be defined beforehand.
 </p>
 </div>
-<div id="outline-container-org9460b71" class="outline-3">
-<h3 id="org9460b71"><span class="section-number-3">1.1.</span> Plan-driven and agile processed</h3>
+<div id="outline-container-orgd09945a" class="outline-3">
+<h3 id="orgd09945a"><span class="section-number-3">1.1.</span> Plan-driven and agile processes</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>Plan-driven processes are processes where all the process activities are planned in advance and progress is measured against this plan.</li>
@@ -242,11 +243,71 @@ In this chapter, we are going to go over how these 4 specifications can be defin
 </ul>
 </div>
 </div>
+<div id="outline-container-org743fec2" class="outline-3">
+<h3 id="org743fec2"><span class="section-number-3">1.2.</span> Software process models</h3>
+<div class="outline-text-3" id="text-1-2">
+<ol class="org-ol">
+<li><p>
+The Waterfall Model
+Plan-driven model. Separate and istinct phases of specification and development.
+</p>
+<ul class="org-ul">
+<li>Requirements, analysis, and definition.</li>
+<li>System and software design.</li>
+<li>Implementation and unit testing.</li>
+<li>Integration and system testing.</li>
+<li>Operation and maintenance.</li>
+</ul>
+
+<p>
+Flaws:
+</p>
+<ul class="org-ul">
+<li>Inflexible partitioning of the project into distinct stages makes it difficult to changing customer requirements.</li>
+<li>The waterfall model is mostly used for large systems of engineering projects where a system is developed at several sites.</li>
+</ul></li>
+
+<li><p>
+Incremental Development
+Specification, development, and validation are interleaved. The system is developed as a series of versions (increments), with each version adding functionality to the previous version.
+</p>
+<ul class="org-ul">
+<li>Gather requirements</li>
+<li>Work on seperate versions/designs of your product</li>
+<li>Incremental until the final version is developed</li>
+</ul>
+
+<p>
+Flaws:
+</p>
+<ul class="org-ul">
+<li>The process is not visible. Managers need regular devloperables. If systems are developed quickly, it is not cost-effective to produce documents that reflect every version of the system.</li>
+<li>The system structure tends to degrade as new increments are added. Regular change leads to messy code as new functionality is added in whatever way possible.</li>
+</ul></li>
+
+<li><p>
+Integration and Configuration
+Reused elements of systems are integrated from existing components or application systems.
+You are not going to develop a programming language, standard libraries, etc. from the ground up.
+You are going to re-use, etc.
+</p>
+
+<p>
+Flaws:
+</p>
+<ul class="org-ul">
+<li>Requirements compromises are inevitable.</li>
+<li>The software may not meet the needs of users.</li>
+<li>Loss of control over the evolution of reused system elements.</li>
+</ul></li>
+</ol>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Kieran Lavato</p>
-<p class="date">Created: 2025-01-22 Wed 17:44</p>
+<p class="date">Created: 2025-01-24 Fri 17:38</p>
 </div>
 </body>
 </html>

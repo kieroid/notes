@@ -1,4 +1,5 @@
 
+* Basics
 ** Java is a strongly typed language
 - In java, every variable, expression, or object in java has a defined type, and the language ensures that the operations on these types are safe and consistent.
 - It enforces strict type checking during both compile-time and runtime.
@@ -58,3 +59,114 @@ System.out.println("What is your name?");
 name = keyboard.nextLine(); //take the input from the user
 System.out.println("Your name is " + name); //print the input
 #+end_src
+
+* Classes
+A class is a template which is used to define a new type of data.
+- Variables (data) and methods defined within a class.
+- Members of class
+
+#+begin_src java
+class classname {
+    type instance-variable1;
+    //...
+    type instance-variableN;
+    type methodname1(parameter-list) {
+        //body of the method
+    }
+}
+#+end_src
+
+* Object
+Objects of classes
+- An object is an instance of a class
+- Two-step process obtaining object of a class.
+  - Declare a variable of the class type, acquire and actual physical copy of the object using `new` operator.
+
+#+begin_src java
+Box mybox;
+MyBox = new mybox;
+#+end_src
+
+
+To taccess both the variables and methods within an object
+- Dot(.) operator called as a seperator
+- objectName.variable
+- objectName.method()
+
+#+begin_src java
+Box mybox; //creates empty box
+//vs
+mybox = new Box() //creates "box" with the "box" object (including components)
+
+//components
+mybox.width()
+mybox.height()
+mybox.length()
+#+end_src
+
+*new* operator.
+- Dynamically allocates memory for an object during run time.
+
+To create a class, you do not need a "void main" method.
+Here is an example:
+#+begin_src java
+public class Box{ //without public static void.
+    double width;
+    double depth;
+    double height;
+
+    double volume() {
+        return width * depth * height;
+    }
+}
+
+public static void main() { //public static void
+    Box b1;
+    b1 = new Box();
+
+    Box b2;
+    b2 = new Box();
+
+    b1.depth = 23;
+    b1.height = 3;
+    b1.width = 2;
+
+    System.out.println("Volume of Box b1 is " + b1.volume);
+
+    Box b3,b4;
+    b3 = new Box();
+    b4 = b2; // due to this
+
+    // the `new` operator has not been called. therefore, it's simply a copy (as if it was a variable.)
+    // it's simply just a pointer. a symbolic link. something silly like that.
+
+    b2.depth = 2;
+    b2.height = 3;
+    b2.width = 4;
+
+    // b2 and b4 remain the same
+    System.out.println(b2.volume());
+    System.out.println(b4.volume());
+
+    b4.depth = 2;
+    b4.height = 1;
+    b4.width = 4;
+
+    // b2 and b4 remain the same
+    System.out.println(b2.volume());
+    System.out.println(b2.volume());
+}
+#+end_src
+
+** Constructor
+Primitive types do not need a `new` operator. (int, float, char, boolean)
+- implemented as "normal" variable
+- do not need to use `new` operator.
+
+However, wrapper classes for primitive types:
+#+begin_src java
+String str = new String("Lubbock");
+String str1 = "Lubbock";
+#+end_src
+
+** Object Reference Variable

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-01-24 Fri 13:47 -->
+<!-- 2025-01-27 Mon 13:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -232,16 +232,31 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org92846e9">1. Java is a strongly typed language</a></li>
-<li><a href="#orgf466cc9">2. `String` class</a></li>
-<li><a href="#orgea062f1">3. Primitive vs. Reference Vars</a></li>
-<li><a href="#org892f27e">4. The `Scanner` class</a></li>
+<li><a href="#org4d0e702">1. Basics</a>
+<ul>
+<li><a href="#org8bdd1d0">1.1. Java is a strongly typed language</a></li>
+<li><a href="#org3510d28">1.2. `String` class</a></li>
+<li><a href="#org2f61fcb">1.3. Primitive vs. Reference Vars</a></li>
+<li><a href="#orgbf1a67c">1.4. The `Scanner` class</a></li>
+</ul>
+</li>
+<li><a href="#org2b387f5">2. Classes</a></li>
+<li><a href="#org91918c2">3. Object</a>
+<ul>
+<li><a href="#org0993788">3.1. Constructor</a></li>
+<li><a href="#orgfbcc4a8">3.2. Object Reference Variable</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org92846e9" class="outline-2">
-<h2 id="org92846e9"><span class="section-number-2">1.</span> Java is a strongly typed language</h2>
+<div id="outline-container-org4d0e702" class="outline-2">
+<h2 id="org4d0e702"><span class="section-number-2">1.</span> Basics</h2>
 <div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org8bdd1d0" class="outline-3">
+<h3 id="org8bdd1d0"><span class="section-number-3">1.1.</span> Java is a strongly typed language</h3>
+<div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
 <li>In java, every variable, expression, or object in java has a defined type, and the language ensures that the operations on these types are safe and consistent.</li>
 <li>It enforces strict type checking during both compile-time and runtime.</li>
@@ -256,9 +271,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgf466cc9" class="outline-2">
-<h2 id="orgf466cc9"><span class="section-number-2">2.</span> `String` class</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org3510d28" class="outline-3">
+<h3 id="org3510d28"><span class="section-number-3">1.2.</span> `String` class</h3>
+<div class="outline-text-3" id="text-1-2">
 <p>
 In java, there is no primitive data type that holds a series of characters.
 </p>
@@ -270,9 +285,9 @@ In java, there is no primitive data type that holds a series of characters.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgea062f1" class="outline-2">
-<h2 id="orgea062f1"><span class="section-number-2">3.</span> Primitive vs. Reference Vars</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org2f61fcb" class="outline-3">
+<h3 id="org2f61fcb"><span class="section-number-3">1.3.</span> Primitive vs. Reference Vars</h3>
+<div class="outline-text-3" id="text-1-3">
 <p>
 Primitive variables actually contain the value that they have been assigned.
 </p>
@@ -299,9 +314,9 @@ Primitive variables actually contain the value that they have been assigned.
 </p>
 </div>
 </div>
-<div id="outline-container-org892f27e" class="outline-2">
-<h2 id="org892f27e"><span class="section-number-2">4.</span> The `Scanner` class</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-orgbf1a67c" class="outline-3">
+<h3 id="orgbf1a67c"><span class="section-number-3">1.4.</span> The `Scanner` class</h3>
+<div class="outline-text-3" id="text-1-4">
 <p>
 `Scanner` class
 </p>
@@ -340,9 +355,162 @@ System.out.println<span style="color: #0170bf;">(</span><span style="color: #b49
 </div>
 </div>
 </div>
+<div id="outline-container-org2b387f5" class="outline-2">
+<h2 id="org2b387f5"><span class="section-number-2">2.</span> Classes</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+A class is a template which is used to define a new type of data.
+</p>
+<ul class="org-ul">
+<li>Variables (data) and methods defined within a class.</li>
+<li>Members of class</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #DFDFDF; font-weight: bold;">class</span> <span style="color: #DFDFDF; font-weight: bold;">classname</span> <span style="color: #0170bf;">{</span>
+    type instance-variable1;
+    <span style="color: #98be65;">//</span><span style="color: #98be65;">...</span>
+    type instance-variableN;
+    <span style="color: #DFDFDF; font-weight: bold;">type</span> <span style="color: #DFDFDF; font-weight: bold;">methodname1</span><span style="color: #c678dd;">(</span>parameter-list<span style="color: #c678dd;">)</span> <span style="color: #c678dd;">{</span>
+        <span style="color: #98be65;">//</span><span style="color: #98be65;">body of the method</span>
+    <span style="color: #c678dd;">}</span>
+<span style="color: #0170bf;">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org91918c2" class="outline-2">
+<h2 id="org91918c2"><span class="section-number-2">3.</span> Object</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Objects of classes
+</p>
+<ul class="org-ul">
+<li>An object is an instance of a class</li>
+<li>Two-step process obtaining object of a class.
+<ul class="org-ul">
+<li>Declare a variable of the class type, acquire and actual physical copy of the object using `new` operator.</li>
+</ul></li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #DFDFDF; font-weight: bold;">Box</span> <span style="color: #bbc2cf;">mybox</span>;
+MyBox = <span style="color: #DFDFDF; font-weight: bold;">new</span> <span style="color: #DFDFDF; font-weight: bold;">mybox</span>;
+</pre>
+</div>
+
+
+<p>
+To taccess both the variables and methods within an object
+</p>
+<ul class="org-ul">
+<li>Dot(.) operator called as a seperator</li>
+<li>objectName.variable</li>
+<li>objectName.method()</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #DFDFDF; font-weight: bold;">Box</span> <span style="color: #bbc2cf;">mybox</span>; <span style="color: #98be65;">//</span><span style="color: #98be65;">creates empty box</span>
+<span style="color: #98be65;">//</span><span style="color: #98be65;">vs</span>
+mybox = <span style="color: #DFDFDF; font-weight: bold;">new</span> <span style="color: #DFDFDF; font-weight: bold;">Box</span><span style="color: #0170bf;">()</span> <span style="color: #98be65;">//</span><span style="color: #98be65;">creates "box" with the "box" object (including components)</span>
+
+<span style="color: #98be65;">//</span><span style="color: #98be65;">components</span>
+mybox.width<span style="color: #0170bf;">()</span>
+mybox.height<span style="color: #0170bf;">()</span>
+mybox.length<span style="color: #0170bf;">()</span>
+</pre>
+</div>
+
+<p>
+<b>new</b> operator.
+</p>
+<ul class="org-ul">
+<li>Dynamically allocates memory for an object during run time.</li>
+</ul>
+
+<p>
+To create a class, you do not need a &ldquo;void main&rdquo; method.
+Here is an example:
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #DFDFDF; font-weight: bold;">public</span> <span style="color: #DFDFDF; font-weight: bold;">class</span> <span style="color: #DFDFDF; font-weight: bold;">Box</span><span style="color: #0170bf;">{</span> <span style="color: #98be65;">//</span><span style="color: #98be65;">without public static void.</span>
+    <span style="color: #DFDFDF; font-weight: bold;">double</span> <span style="color: #bbc2cf;">width</span>;
+    <span style="color: #DFDFDF; font-weight: bold;">double</span> <span style="color: #bbc2cf;">depth</span>;
+    <span style="color: #DFDFDF; font-weight: bold;">double</span> <span style="color: #bbc2cf;">height</span>;
+
+    <span style="color: #DFDFDF; font-weight: bold;">double</span> <span style="color: #DFDFDF; font-weight: bold;">volume</span><span style="color: #c678dd;">()</span> <span style="color: #c678dd;">{</span>
+        <span style="color: #DFDFDF; font-weight: bold;">return</span> width * depth * height;
+    <span style="color: #c678dd;">}</span>
+<span style="color: #0170bf;">}</span>
+
+<span style="color: #DFDFDF; font-weight: bold;">public</span> <span style="color: #DFDFDF; font-weight: bold;">static</span> <span style="color: #DFDFDF; font-weight: bold;">void</span> <span style="color: #DFDFDF; font-weight: bold;">main</span><span style="color: #0170bf;">()</span> <span style="color: #0170bf;">{</span> <span style="color: #98be65;">//</span><span style="color: #98be65;">public static void</span>
+    <span style="color: #DFDFDF; font-weight: bold;">Box</span> <span style="color: #bbc2cf;">b1</span>;
+    b1 = <span style="color: #DFDFDF; font-weight: bold;">new</span> <span style="color: #DFDFDF; font-weight: bold;">Box</span><span style="color: #c678dd;">()</span>;
+
+    <span style="color: #DFDFDF; font-weight: bold;">Box</span> <span style="color: #bbc2cf;">b2</span>;
+    b2 = <span style="color: #DFDFDF; font-weight: bold;">new</span> <span style="color: #DFDFDF; font-weight: bold;">Box</span><span style="color: #c678dd;">()</span>;
+
+    b1.depth = <span style="color: #b4916d; font-weight: bold;">23</span>;
+    b1.height = <span style="color: #b4916d; font-weight: bold;">3</span>;
+    b1.width = <span style="color: #b4916d; font-weight: bold;">2</span>;
+
+    System.out.println<span style="color: #c678dd;">(</span><span style="color: #b4916d;">"Volume of Box b1 is "</span> + b1.volume<span style="color: #c678dd;">)</span>;
+
+    <span style="color: #DFDFDF; font-weight: bold;">Box</span> <span style="color: #bbc2cf;">b3</span>,<span style="color: #bbc2cf;">b4</span>;
+    b3 = <span style="color: #DFDFDF; font-weight: bold;">new</span> <span style="color: #DFDFDF; font-weight: bold;">Box</span><span style="color: #c678dd;">()</span>;
+    b4 = b2; <span style="color: #98be65;">// </span><span style="color: #98be65;">due to this</span>
+
+    <span style="color: #98be65;">// </span><span style="color: #98be65;">the `new` operator has not been called. therefore, it's simply a copy (as if it was a variable.)</span>
+    <span style="color: #98be65;">// </span><span style="color: #98be65;">it's simply just a pointer. a symbolic link. something silly like that.</span>
+
+    b2.depth = <span style="color: #b4916d; font-weight: bold;">2</span>;
+    b2.height = <span style="color: #b4916d; font-weight: bold;">3</span>;
+    b2.width = <span style="color: #b4916d; font-weight: bold;">4</span>;
+
+    <span style="color: #98be65;">// </span><span style="color: #98be65;">b2 and b4 remain the same</span>
+    System.out.println<span style="color: #c678dd;">(</span>b2.volume<span style="color: #98be65;">()</span><span style="color: #c678dd;">)</span>;
+    System.out.println<span style="color: #c678dd;">(</span>b4.volume<span style="color: #98be65;">()</span><span style="color: #c678dd;">)</span>;
+
+    b4.depth = <span style="color: #b4916d; font-weight: bold;">2</span>;
+    b4.height = <span style="color: #b4916d; font-weight: bold;">1</span>;
+    b4.width = <span style="color: #b4916d; font-weight: bold;">4</span>;
+
+    <span style="color: #98be65;">// </span><span style="color: #98be65;">b2 and b4 remain the same</span>
+    System.out.println<span style="color: #c678dd;">(</span>b2.volume<span style="color: #98be65;">()</span><span style="color: #c678dd;">)</span>;
+    System.out.println<span style="color: #c678dd;">(</span>b2.volume<span style="color: #98be65;">()</span><span style="color: #c678dd;">)</span>;
+<span style="color: #0170bf;">}</span>
+</pre>
+</div>
+</div>
+<div id="outline-container-org0993788" class="outline-3">
+<h3 id="org0993788"><span class="section-number-3">3.1.</span> Constructor</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Primitive types do not need a `new` operator. (int, float, char, boolean)
+</p>
+<ul class="org-ul">
+<li>implemented as &ldquo;normal&rdquo; variable</li>
+<li>do not need to use `new` operator.</li>
+</ul>
+
+<p>
+However, wrapper classes for primitive types:
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #DFDFDF; font-weight: bold;">String</span> <span style="color: #bbc2cf;">str</span> = <span style="color: #DFDFDF; font-weight: bold;">new</span> <span style="color: #DFDFDF; font-weight: bold;">String</span><span style="color: #0170bf;">(</span><span style="color: #b4916d;">"Lubbock"</span><span style="color: #0170bf;">)</span>;
+<span style="color: #DFDFDF; font-weight: bold;">String</span> <span style="color: #bbc2cf;">str1</span> = <span style="color: #b4916d;">"Lubbock"</span>;
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfbcc4a8" class="outline-3">
+<h3 id="orgfbcc4a8"><span class="section-number-3">3.2.</span> Object Reference Variable</h3>
+</div>
+</div>
+</div>
 <div id="postamble" class="status">
 <p class="author">Author: Kieran Lavato</p>
-<p class="date">Created: 2025-01-24 Fri 13:47</p>
+<p class="date">Created: 2025-01-27 Mon 13:47</p>
 </div>
 </body>
 </html>

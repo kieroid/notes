@@ -13,6 +13,39 @@ A software process model is an abstract representation of a process. It presents
 
 In this chapter, we are going to go over how these 4 specifications can be defined beforehand.
 
-** Plan-driven and agile processed
+** Plan-driven and agile processes
 - Plan-driven processes are processes where all the process activities are planned in advance and progress is measured against this plan.
 - In agile processes, planning is incremental and easier to change the process.
+
+** Software process models
+1. The Waterfall Model
+   Plan-driven model. Separate and istinct phases of specification and development.
+   - Requirements, analysis, and definition.
+   - System and software design.
+   - Implementation and unit testing.
+   - Integration and system testing.
+   - Operation and maintenance.
+
+   Flaws:
+   - Inflexible partitioning of the project into distinct stages makes it difficult to changing customer requirements.
+   - The waterfall model is mostly used for large systems of engineering projects where a system is developed at several sites.
+
+2. Incremental Development
+   Specification, development, and validation are interleaved. The system is developed as a series of versions (increments), with each version adding functionality to the previous version.
+   - Gather requirements
+   - Work on seperate versions/designs of your product
+   - Incremental until the final version is developed
+
+   Flaws:
+   - The process is not visible. Managers need regular devloperables. If systems are developed quickly, it is not cost-effective to produce documents that reflect every version of the system.
+   - The system structure tends to degrade as new increments are added. Regular change leads to messy code as new functionality is added in whatever way possible.
+
+3. Integration and Configuration
+   Reused elements of systems are integrated from existing components or application systems.
+   You are not going to develop a programming language, standard libraries, etc. from the ground up.
+   You are going to re-use, etc.
+
+   Flaws:
+   - Requirements compromises are inevitable.
+   - The software may not meet the needs of users.
+   - Loss of control over the evolution of reused system elements.

@@ -71,7 +71,8 @@ Relation graph:
 
 ** Relations
 A relation $R\subseteq A\times A$ is *reflexive* if:
-- $(a,a)\exists R if$...
+- $(a,a)\exists R$ for every $a \in A$
+- Equivalently, every node has a self-loop.
 
 A relation $R\subseteq A\times A$ is *symmetric* if:
 - $(a,b)\in R$ or $(b,a) \in R$
@@ -120,3 +121,38 @@ A set is countable if it is equinemerous with $N$.
 - All integers. $f(x)=[\frac{x}{2}]\times(-1)^x$
 - Union of two disjoint contable sets
 - $N\times N, \text{ where } f(x,y)=\frac{(x+y)(x+y+1)}{2}+x$
+
+**** Uncountable sets
+A set is countable if it is equinumerous with $N$.
+- There exist uncountable sets, e.g., the rean number between $(0,1)$.
+- Suppose there is a bijection:
+
+0. 0.134728...
+1. 0.237592...
+2. 0.994134...
+3. 0.284146...
+   ...
+
+You can get an average between two numbers within this uncountable set and get a completely new number.
+
+**** Proof techniques
+***** Induction
+Claim: Can create exact postage for any amount $\geq 0.08$ dollars using only $3$ cent and $5$ cent stamps.
+
+Inductive case: If we can create exact postage for $x using only 3-cent and 5-cent stamps, we can create exact postage for $x + 0.01 using 3-cent and 5-cent stamps.
+
+Two cases:
+1. Exact postage for $x uses at least 5 cent stamp.
+2. Exact postage for $x uses no 5-cent stamps.
+
+***** Pigeonhold Principle
+$A,B$ are finite sets, with $|A| > |B|$, then there is no one-to-one function from $A$ to $B$.
+
+If you have $n$ pigeonholes, and $> n$ pigeons, and every pigeon is in a pigeonhole, then there must be one hole with $> 1$ pigeon.
+
+Claim: Let $R \subseteq A\times A$ be a relation. If there exists a path in the directed graph representation of $R$, then there exists a path of length at most $|A|$.
+
+- Suppose on the contrary the shortest path has length $\geq |A| + 1$
+- In this path $(a_1,a_2,\cdots,a_n)$ there must be some node appears at least twice (pigeonhole principle.)
+- $(a_1,a_2,\cdots, a_i, a_{i+1},\cdots, a_j = a_i, a_{j+1},\cdots,a_n)$
+- $(a_1,a_2,\cdots,a_i,\cdots, a_{j+1}, \cdots, a_n)$ is shorter.
