@@ -1,0 +1,98 @@
+
+** Process Activities
+The four basic process activities are:
+- Specification
+- Development (Design and Implementation)
+- Validation
+- Evolution
+
+*** Specification
+The characteristic of the waterfall model is that everything is pre-planned. It is beneficial to know everything upfront, as it will reduce later problems.
+
+We come up with a *Requirements document* near the end of the waterfall model for a contract between *you* and your *customer*.
+
+*** Development
+Software design and implementation.
+
+Software design:
+- A software design is a description of the structure of the software to be implemented.
+- We design a software structure that realizes the specification.
+
+Implementation:
+- Translate this structure into an executable program.
+
+The activities of design and implemetation are closely related and may be inter-leaved.
+- The software is implemented either by developing a program (or programs) by configuring an application system.
+- Design and implementation are interleaved activities for most types of software system
+
+*** Validation
+Verification and Validation (V&V) are intended to show that a system conforms to its specification and meets the standards.
+
+Testing stages:
+- Component
+- System
+- Customer
+
+*** Evolution
+Software is flexible and can change. This is why more and more software is being incorporated into large, complex systems.
+- Software that supports a business must also evolve and change (as business requirements change.)
+- Fewer and fewer systems are completely new in the current day.
+
+It's cheaper to keep software going (as in being developed/changed) compared to making a completely new project to replace it.
+
+
+** Coping with Change
+How do we cope with the changes in software and technology.
+- It is inevitable.
+- Business change (new changed system requirements.)
+- New technologies open (telegraph -> telephone -> internet ...)
+- Changing platforms require application changes.
+
+To reduce the costs of rework:
+- Change anticipation, where the software process includes activities that can anticipate possible changes. (fucking windows microsoft ahh)
+- Change tolerance, where the process is designed so that changes can be easily made to the system. (incremental development rolling release)
+
+*AI!!! BLOCKCHAIN!!! NFT!!!*
+
+1. System prototyping, where a version of the software is developed quickly to check the customers requirements (and the feasability of design decisions.)
+2. Incremental delivery, where system increments are delivered to the customer for comment and experimentation.
+
+*** Software Prototyping
+A prototype is an initial version of a system used to demonstrate concepts and try out design options.
+- Requirements engineering process to help with requirements and elicitation and validation.
+- In design processes to explore and develop UI and design.
+- In the testing process to run back-to-back tests.
+
+Benefits:
+- Improved system usability.
+- Closer match to users' real needs.
+- Improved design quality.
+- Improved maintainability.
+- Reduced developemnt effort.
+
+1. Establish objectives (plan)
+2. Define functionality (outline definition)
+3. Develop prototype
+4. Evaluate prototype
+
+Decide what to put into and what to leave out of the prototype system.
+
+May involve leaving out functionality to reduce prototyping cost.
+- Focus on areas of the product that are not well understood.
+- Error checking and recovery is unneeded.
+- Focus on functionality rather than looks.
+
+Throw-away:
+- Code will be messy.
+- Won't have documentation.
+- Structure will degrade, as it's simply untested.
+- Will probably not meet organisational quality standards.
+
+Incremental Delivery advantages:
+- j
+
+Incremental Delivery disadvantages:
+- *PIZZA HUT*
+- hard to identify facilities that are needed by all incremental development.
+- usually unwilling to experiment with an incomplete new system.
+- conflicts with the idea where the complete system specification is part of the system development contract.
