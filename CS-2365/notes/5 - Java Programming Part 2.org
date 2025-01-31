@@ -1,0 +1,71 @@
+
+* What the fuck am I doing with this?
+
+You cannot have two variables with the same name.
+
+Instance variables can be accessed by any instance method.
+
+Shadowing
+- A method may have a local variable with the same name as an instance field
+- The local variable will hide the value of the instance field.
+
+** Constructors
+*Constructors do not have a return type.*
+A constructor in java is a *special method* that is used to initialize objects.
+
+The default constructor
+- When an object is created, its constructor is _always_ called.
+- Has no parameters to initialize an object.
+- Sets all the objects numeric fields to 0.
+- Sets all the objects `boolean` fields to `false`.
+- Sets all of the object's reference variable to the special value `null`.
+
+User-defined constructors.
+- User can define constructors for different purposes.
+- Initializing fields, copying objects.
+#+begin_src java
+public Rectangle(double w, double, l) {
+    width = w;
+    length = l;
+}
+
+Rectangle r2 = new Rectangle(5,5);
+System.out.println("r2 length: " + r2.getLength());
+#+end_src
+
+No-arg constructors.
+- User can define constructor without any argument.
+- Mostly used for initialize of object fields.
+#+begin_src java
+public Rectangle() {
+    width = 1;
+    length = 1;
+}
+#+end_src
+
+Method overloading
+- Two or more methods javing the same name
+- Need for several different ways to perform the same operation.
+- As long as their parameter lists are different.
+- Also applies to constructors.
+#+begin_src java
+public int add(int num1, int num2) {
+    return(num1 + num2);
+}
+
+public int add(int num1, int num2, int num3) {
+    return(num1 + num2 + num3);
+}
+
+public String add(String part1, String part2) {
+    return(part1 + part2);
+}
+#+end_src
+
+#+BEGIN_EXAMPLE
+int add(int, int)
+double add(int, int) //will error
+
+int add(int, int)
+double add(double, double) //will not error
+#+END_EXAMPLE

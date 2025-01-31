@@ -169,4 +169,14 @@ String str = new String("Lubbock");
 String str1 = "Lubbock";
 #+end_src
 
-** Object Reference Variable
+** UML Diagram
+Standard for Unified Modeling Language
+
+Provides a set of standard diagrams for graphically depicting object-oriented systems.
+
+The constructors go in the `methods` area.
+*They do not have return type.*
+
+_| class name |_
+_| fields     |_   format: (+ or - depending on public or private)(name): (return type)
+_| methods    |_   format: (+ or - depending on public or private)(name)((var type):(data type)): (return type)

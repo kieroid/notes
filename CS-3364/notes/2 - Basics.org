@@ -220,7 +220,7 @@ $2n^2+3n+4 \in O(n^4)$ when $n = 2$.
 
 $2n^2+3n+4 \leq 2n^4+3n^4+4n^4$.
 
-$2n^2+3n&4 \leq 9n^4$ where $c=9$ and $n_0 = 1$.
+$2n^2+3n^4 \leq 9n^4$ where $c=9$ and $n_0 = 1$.
 
 *** Example 7a:
 $\log_4(4n^2+5n+8) \in O(\log_4(n))$.
