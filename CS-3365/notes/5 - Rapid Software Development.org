@@ -1,0 +1,15 @@
+* Rapid Software Development
+Rapid development and delivery is now often the most important requirement for software systems.
+- Businesses operate in a fast, changing requirements and it is practically impossible to produce a set of stable software requirements.
+- Software has to evolve quickly to reflect changing business needs.
+
+Plan-driven development is essential for some types of system, but does not meet these business needs.
+
+Agile development methods emerged in the late 1990's whose aim was to radically reduce the delivery time for working software systems.
+
+Principles of agile methods:
+- Customer involvment
+- Incremental delivery
+- People, not process
+- Embrace change
+- Maintain simplicity

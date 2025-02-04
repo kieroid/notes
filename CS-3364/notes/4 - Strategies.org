@@ -1,3 +1,149 @@
 
 * Strategies
 ** Divide & Conqurer
+Given of problem of size $n$.
+Suppose we have $k$ subproblems.
+
+(essentially $k \subseteq n$)
+
+Suppose we have a set of solutions to these problems where $s_1$ is a solution to $p_1$, $s_2$ is a solution to $p_2$, $\cdots$, $s_k$ is a solution to $p_k$.
+- Should be solving the same problem that the original problem is solving.
+- $s_k$ should be able to obtain solutions for $p_k$.
+- We should be able to write a method to combine all of the solutions.
+
+Examples:
+- Binary Search.
+- Merge Sort.
+- Finding Max and Min elements.
+- Quick Sort.
+- Strassen's Matrix Multipication.
+
+
+#+begin_src C
+#include <stdio.h>
+void Test(int n) {
+    if(n > 0){
+        printf("%d\n", n);
+        Test(n - 1);
+    }
+}
+
+Test(3);
+#+end_src
+
+#+RESULTS:
+| 3 |
+| 2 |
+| 1 |
+
+How many times is it printing? $n$ times.
+
+** Factorial example
+$n!=1\times2\times3\times\cdots\times(n-1)\times n$
+
+$n!= n\times (n-1)!$
+
+Rule: $0! := 1$
+
+Let's say there's an algorithm $F(n)$:
+#+BEGIN_EXAMPLE
+Algo F(n):
+        if(n==0):
+                return 1
+        else
+                return n * F(n-1)
+#+END_EXAMPLE
+
+In C:
+#+begin_src C
+#include <stdio.h>
+int numOfMult;
+int F(int n){
+    numOfMult++;
+    if(n == 0){
+        return(1);
+    } else {
+        return(n * F(n - 1));
+    }
+}
+
+int factorial = F(3);
+printf("Total: %d, Number of Multipications: %d", factorial, numOfMult);
+#+end_src
+
+#+RESULTS:
+| Total: 6 | Number of Multipications: 4 |
+
+$T(n)=1+T(n-1)$
+
+$T(3)= 1 + 1 + 1 + 1$, where $F(3) = 3 \times 2 \times 1 \times 1$.
+
+
+** Repeated Substutition
+Example:
+- $T(0)=0$
+- $T(n)=1+T(n-1)$
+- $T(n)=2+T(n-2)$
+- $T(n)=3+T(n-3)$
+- $\vdots$
+- $T(n)=K+T(n-K)$
+
+Overall, the equation gained from this is:
+- $T(n)=K+T(n-K)$ where $T(0)=0$
+- $T(n)=?+T(k)$
+- How large does $n-K$ have to have to get to $0$?
+- $n-K=0\implies n=K$
+- You have to recurse $n$ times to get to the base case.
+- $\therefore T(n)=n$ s.t. $\theta(n)$
+
+** Algorithms
+1. Identify the Input Size
+2. Identify the Basic Operation
+3. Setup a recurrence relation that expresses how many time the basic operation executes as a function of $n$.
+4. Solve or at least determine the order of growth. Find $\theta$.
+
+Professors way:
+$T(n)=\text{(some function)}\times T(\text{(some function of n)}+\text{(some function of n)})$
+$T(n_0)=\text{(something)}$
+
+1. Rewrite the relation. Replace $n$ with $x$.
+   $T(n)=\cdots$
+2. Using $T(x)$, workout a new expression to replace the reoccurence part $T(?)$
+3. Plug new expression back into the original recurrence relation.
+4. Repeat step 2 and step 3 several more times until you see a pattern.
+
+Pattern:
+- $T(n)=F(n,k)+T(G(n,k)+H(n,k))$ where $F(n,k)$ is some function of $n,k$
+
+*** Example
+Connect the pattern back to the initial condition.
+
+Anchor: Connect the pattern expression to the base case
+$T(G(n,k))=T(n_0)$ where
+- $T(n_0)$ is the amount of time taken to complete the base case.
+- Solve $T(G(n,k))$ to obtain what $k$ is.
+
+Plug $K(\text{value})$ back into the pattern expression from step 4.
+
+**** Ex. 1
+- $T(n)=T(\frac{n}{2})$
+- $T(1)=c$ where $c$ is some number $>0$.
+- Substitute
+- $T(x)=T(\frac{x}{2})$
+- $T(\frac{n}{2})=T(\frac{\frac{n}{2}}{2})=T(\frac{n}{4})$
+- $\vdots$
+- $\implies T(n)=T(\frac{n}{8})=T(\frac{n}{2^3})$
+- $\implies T(n)=T(\frac{n}{2^k})$
+- $T(1)=c$
+- $T(\frac{n}{2^k})=T(1)$
+- $\implies \frac{n}{2^k}=1$
+- $\implies n=2^k$
+- $\implies k=\log(n)$
+- $T(n)=T(\frac{n}{2^{\log_2(n)}})\implies T(n)=T(1)$
+- $\therefore T(n)=T(1)=c(\text{some constant more than 0.})$
+
+- $\therefore T(n)=\theta(1)$
+
+**** Ex. 2
+- $T(n)=T(\frac{n}{2})+c_1$
+- $T(1)=c_2$

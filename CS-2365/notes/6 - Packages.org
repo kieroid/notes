@@ -1,0 +1,27 @@
+
+** Packages
+Packages are containers for classes.
+- Keep the class name space compartmentalized.
+- `package pkg;`
+- It's kind of hard to keep coming up with new names for classes. Packages solve this by putting them in a container.
+- Classes(with no access specifier) inside a package are not accessible by the code outside the package.
+
+No package satement
+- Classes put into the default package.
+
+Importing packages
+- To bring certain classes or entire packages into visibility.
+- Import pkg1[.pkg2].(classname|*);
+- `import java.util.Scanner;`
+- `import java.util.*;`
+
+#+begin_src java
+import shapes.*; // using * to import all functions from `shapes`
+import shapes.rectangle; // importing `rectangle` from shapes
+import shapes.triangle; // importing `triangle` from shapes
+#+end_src
+
+`java.lang`
+- Basic language functions stored in the java.lang package.
+- Implicitly imported by the compiler for all programs
+- If a class with the same name exists in two different packages you import, a compile-time error happens.

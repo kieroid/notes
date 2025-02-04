@@ -1,0 +1,96 @@
+
+Usage stories do not give you the whole picture of how your software works.
+- Go to a store and watch the process happen.
+- The customer will leave out common things and make it seem as if the uncommon issues happen more often than they do.
+
+* Test-first development
+Testing is central to XP and XP has developed an approach where the program is tested after every change has been made. Development cannot proceed until test cases have been developed.
+
+The key features of testing in XP are:
+- Test-first development
+- ... (refer to the slides)
+
+All previous and new tests are run automatically when new functionality is added, thus checking that the new functionality has not introduced errors. Also known as test-driven development.
+- Writing tests before code clarifies the requirements to be implemented.
+- Each task generates one or more unit tests that check the implementation described in that task.
+- Tests are written as programs rather than data so that they can be executed automatically. This usually relies on a testing framework such as *Junit*.
+
+** Customer involvment
+The role of the customer in the testing process
+- To help develop tests for the stories that are to be implemented in the next release.
+- Customers who are part of the team writes tests as development proceeds.
+- All new code is validated to ensure it is what the customer needs.
+
+*** Example: Dose checking
+A shortened description of a test case (based on a task) that has been developed to check that the perscribed dose of a drug does not fall outside known safe limits.
+
+Input:
+1. A number in mg representing a single dose of the drug.
+2. A number representing the number of single doses in a day.
+
+Tests:
+1. Test for inputs where the single dose is correct but the frequency is too high.
+2. Test for inputs where the single dose is too high and too low.
+3. Test for inputs where the single dose * frequency is too high and too low.
+4. Test for inputs where single dose * frequency is in the permitted range.
+
+Output:
+- OK or error message indicating that the dose is outside of the safe range.
+
+* Pair Programming
+Pair programming has a number of advantages.
+- *Work in pairs*; developing code together; teamwork.
+- *Common ownership of code*; a team spreading knowledge
+- *Informal review process*; each line of code is looked at by more than 1 person.
+- *Encourages refactoring*; whole team can benefit from improving code.
+
+Programmers sit together, program together.
+If you pair a knowledgable person with a non-knowledgable person, the team can be more productive.
+There are benefits from Pair Programming.
+
+Flaws:
+- Responsibility is given to the developers.
+- Managers have no idea what is happening.
+
+* Scrum
+Scrum is an agile method that focuses on managing iterative development.
+
+Three roles:
+- Product owner (idea guy)
+- Scrum master (keeps team from distraction)
+- Team (the people who work. developers)
+
+** Three phases
+- *Product backlog*; Initial phase is an outline; Objectives for a project are outlined
+- *Sprint*; A series of sprint cycles. A time frame is set to complete work. DAILY SCRUM.
+- *Review*; Work should be potentially shippable.
+
+Retrospective -> Sprint Planning -> Sprint -> Sprint Review/Preview
+
+
+Programmers sit together, program together.
+If you pair a knowledgable person with a non-knowledgable person, the team can be more productive.
+There are benefits from Pair Programming.
+
+After each sprint, the developers are reffered back to the product backlog/wishlist.
+
+Scrum - Daily meeting of the Scrum team
+ScrumMaster - Bug fixer clearly. Let the scrum master take care of it. (this is a joke)
+Sprint - A development interation (usually 2-4 weeks long.)
+Velocity - How much can we cover in a single sprint?
+
+** Benefits
+- Product is broken down into simple chunks.
+- Unstable requirements do not hold up progress.
+- Whole team has visibility of everything.
+- Customers see on-time delivery of increments and gain feedback on how the product works.
+- Trust between customers and developers is established.
+- Positive culture is created in which everyone expects the project to succeed.
+
+
+* EXAM QUESTION
+Why agile development is not a good choice for long-lifetime systems?
+
+ANSWER: For long-lifetime systems, this is a real problem as the original developers will not always work.
+
+Original developers will not always stay at the same job. People move around and info becomes unknown, especially with funky documentation.

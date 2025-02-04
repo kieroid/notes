@@ -145,7 +145,7 @@ Two cases:
 1. Exact postage for $x uses at least 5 cent stamp.
 2. Exact postage for $x uses no 5-cent stamps.
 
-***** Pigeonhold Principle
+***** Pigeonhole Principle
 $A,B$ are finite sets, with $|A| > |B|$, then there is no one-to-one function from $A$ to $B$.
 
 If you have $n$ pigeonholes, and $> n$ pigeons, and every pigeon is in a pigeonhole, then there must be one hole with $> 1$ pigeon.

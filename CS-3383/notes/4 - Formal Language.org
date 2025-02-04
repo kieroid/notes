@@ -1,0 +1,74 @@
+
+* Formal Language
+Suffix, Prefix, Strings
+
+Kleene star language operation.
+
+Complement: For $L \in \Sigma^*, \bar L = \Sigma^* - L$
+$L^*$: The set of all strings obtained by concatenating zero or more strings of $L$
+- $\Sigma^*$: $w\in\Sigma^*$
+- $\Sigma^*$: $w\in\Sigma$ = all the strings
+
+* Finite Automata
+Automata are automatic machines. Example:
+- An automatic door that opens in one direction. Not a sliding door, but rather an opening one (in one direction.)
+- What is a door? An entrance/exit.
+- What is an automatic door? A door which requires no human interaction.
+
+*** Basic model for this "door" machine:
+- Open to let people in
+- Do not knock people on opening side.
+- Check front people? Yes/no
+- Check rear people? Yes/no
+- Check current status? Open/close
+- Determine the next status? Open/close
+
+$Q$ is a finite set of states
+$\Sigma$ is an alphabet
+$q_0 \in Q$ is the initial state.
+$F\subseteq Q$ is the set of final/accept states (can be multiple.)
+
+$\delta$
+
+Example:
+- $Q=\{q_1,q_2,q_3\}$
+- $\Sigma=\{0,1\}$
+- $\delta$
+- $q_0=q_1$
+- $F=\{q_2\}$
+
+$\delta=\cdots$
+| $q_n$ | 0 | 1 |
+|----+----+----|
+| $q_1$ | $q_1$ | $q_2$ |
+| $q_2$ | $q_3$ | $q_2$ |
+| $q_3$ | $q_2$ | $q_2$ |
+
+** Deterministic Finite Automata
+A deterministic finite automaton $M$ can be viewed as a classifier that filters out all the strings it accepts.
+- The set $A$ of all the strings $M$ accepts is the *language of machine* $M$.
+- Denote as $L(M)=A$. (language of your automata $M$.)
+- $M$ recognises/accepts $A$.
+
+*** DFA Configuratons
+Configuration for a DFA $M=(K,\Sigma,\delta,s,F)$
+- any element of $K\times\Sigma^*$
+- The state of DFA currently
+- The remaining part of the string to be processed.
+
+*** Examples
+**** Example 1
+- $Q=\{q_0,q_1,q_2,q_3\}$
+- $\Sigma=\{a,b\}$
+- $\delta= \{((q_0,a),q_1),((q_0,b),q_0),\cdots,((q_3,b),q_3)\}$
+- $\cdots$
+**** Example 2
+Input string: $aabba$
+
+\begin{matrix}
+$(q_0,aabba)\implies$ & $(q_0,abba)$\\
+$\cdots\implies$ & $(q_0,bba)$\\
+$\cdots\implies$ & $(q_1,ba)$\\
+$\cdots\implies$ & $(q_0,a)$\\
+$\cdots\implies$ & $(q_0,e)$\\
+\end{matrix}

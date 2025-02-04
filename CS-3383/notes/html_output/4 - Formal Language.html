@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-03 Mon 14:48 -->
+<!-- 2025-02-03 Mon 15:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -232,14 +232,18 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5d93082">1. Strategies</a>
+<li><a href="#orgc1e27e3">1. Formal Language</a></li>
+<li><a href="#orgf80ebea">2. Finite Automata</a>
 <ul>
-<li><a href="#org51362a7">1.1. Divide &amp; Conqurer</a></li>
-<li><a href="#orgd0466f0">1.2. Factorial example</a></li>
-<li><a href="#orgc84946e">1.3. Repeated Substutition</a></li>
-<li><a href="#org1869987">1.4. Algorithms</a>
+<li>
 <ul>
-<li><a href="#orgcb26b95">1.4.1. Example</a></li>
+<li><a href="#org2202959">2.0.1. Basic model for this &ldquo;door&rdquo; machine:</a></li>
+</ul>
+</li>
+<li><a href="#org1569d08">2.1. Deterministic Finite Automata</a>
+<ul>
+<li><a href="#org679573e">2.1.1. DFA Configuratons</a></li>
+<li><a href="#org7e841e7">2.1.2. Examples</a></li>
 </ul>
 </li>
 </ul>
@@ -247,225 +251,168 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org5d93082" class="outline-2">
-<h2 id="org5d93082"><span class="section-number-2">1.</span> Strategies</h2>
+<div id="outline-container-orgc1e27e3" class="outline-2">
+<h2 id="orgc1e27e3"><span class="section-number-2">1.</span> Formal Language</h2>
 <div class="outline-text-2" id="text-1">
-</div>
-<div id="outline-container-org51362a7" class="outline-3">
-<h3 id="org51362a7"><span class="section-number-3">1.1.</span> Divide &amp; Conqurer</h3>
-<div class="outline-text-3" id="text-1-1">
 <p>
-Given of problem of size \(n\).
-Suppose we have \(k\) subproblems.
+Suffix, Prefix, Strings
 </p>
 
 <p>
-(essentially \(k \subseteq n\))
+Kleene star language operation.
 </p>
 
 <p>
-Suppose we have a set of solutions to these problems where \(s_1\) is a solution to \(p_1\), \(s_2\) is a solution to \(p_2\), \(\cdots\), \(s_k\) is a solution to \(p_k\).
+Complement: For \(L \in \Sigma^*, \bar L = \Sigma^* - L\)
+\(L^*\): The set of all strings obtained by concatenating zero or more strings of \(L\)
 </p>
 <ul class="org-ul">
-<li>Should be solving the same problem that the original problem is solving.</li>
-<li>\(s_k\) should be able to obtain solutions for \(p_k\).</li>
-<li>We should be able to write a method to combine all of the solutions.</li>
+<li>\(\Sigma^*\): \(w\in\Sigma^*\)</li>
+<li>\(\Sigma^*\): \(w\in\Sigma\) = all the strings</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf80ebea" class="outline-2">
+<h2 id="orgf80ebea"><span class="section-number-2">2.</span> Finite Automata</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Automata are automatic machines. Example:
+</p>
+<ul class="org-ul">
+<li>An automatic door that opens in one direction. Not a sliding door, but rather an opening one (in one direction.)</li>
+<li>What is a door? An entrance/exit.</li>
+<li>What is an automatic door? A door which requires no human interaction.</li>
+</ul>
+</div>
+<div id="outline-container-org2202959" class="outline-4">
+<h4 id="org2202959"><span class="section-number-4">2.0.1.</span> Basic model for this &ldquo;door&rdquo; machine:</h4>
+<div class="outline-text-4" id="text-2-0-1">
+<ul class="org-ul">
+<li>Open to let people in</li>
+<li>Do not knock people on opening side.</li>
+<li>Check front people? Yes/no</li>
+<li>Check rear people? Yes/no</li>
+<li>Check current status? Open/close</li>
+<li>Determine the next status? Open/close</li>
 </ul>
 
 <p>
-Examples:
-</p>
-<ul class="org-ul">
-<li>Binary Search.</li>
-<li>Merge Sort.</li>
-<li>Finding Max and Min elements.</li>
-<li>Quick Sort.</li>
-<li>Strassen&rsquo;s Matrix Multipication.</li>
-</ul>
-
-
-<div class="org-src-container">
-<pre class="src src-C"><span style="color: #bbc2cf; font-weight: bold;">#include</span> <span style="color: #0170bf;">&lt;</span><span style="color: #b4916d;">stdio.h</span><span style="color: #0170bf;">&gt;</span>
-<span style="color: #DFDFDF; font-weight: bold;">void</span> <span style="color: #DFDFDF; font-weight: bold;">Test</span><span style="color: #0170bf;">(</span><span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #bbc2cf;">n</span><span style="color: #0170bf;">)</span> <span style="color: #0170bf;">{</span>
-    <span style="color: #DFDFDF; font-weight: bold;">if</span><span style="color: #c678dd;">(</span>n &gt; <span style="color: #b4916d; font-weight: bold;">0</span><span style="color: #c678dd;">){</span>
-        printf<span style="color: #98be65;">(</span><span style="color: #b4916d;">"%d\n"</span>, n<span style="color: #98be65;">)</span>;
-        Test<span style="color: #98be65;">(</span>n - <span style="color: #b4916d; font-weight: bold;">1</span><span style="color: #98be65;">)</span>;
-    <span style="color: #c678dd;">}</span>
-<span style="color: #0170bf;">}</span>
-
-Test<span style="color: #0170bf;">(</span><span style="color: #b4916d; font-weight: bold;">3</span><span style="color: #0170bf;">)</span>;
-</pre>
-</div>
-
-<p>
-How many times is it printing? \(n\) times.
-</p>
-</div>
-</div>
-<div id="outline-container-orgd0466f0" class="outline-3">
-<h3 id="orgd0466f0"><span class="section-number-3">1.2.</span> Factorial example</h3>
-<div class="outline-text-3" id="text-1-2">
-<p>
-\(n!=1\times2\times3\times\cdots\times(n-1)\times n\)
+\(Q\) is a finite set of states
+\(\Sigma\) is an alphabet
+\(q_0 \in Q\) is the initial state.
+\(F\subseteq Q\) is the set of final/accept states (can be multiple.)
 </p>
 
 <p>
-\(n!= n\times (n-1)!\)
+\(\delta\)
 </p>
 
-<p>
-Rule: \(0! := 1\)
-</p>
-
-<p>
-Let&rsquo;s say there&rsquo;s an algorithm \(F(n)\):
-</p>
-<pre class="example" id="orgfdc4e45">
-Algo F(n):
-        if(n==0):
-                return 1
-        else
-                return n * F(n-1)
-</pre>
-
-<p>
-In C:
-</p>
-<div class="org-src-container">
-<pre class="src src-C"><span style="color: #bbc2cf; font-weight: bold;">#include</span> <span style="color: #0170bf;">&lt;</span><span style="color: #b4916d;">stdio.h</span><span style="color: #0170bf;">&gt;</span>
-<span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #bbc2cf;">numOfMult</span>;
-<span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #DFDFDF; font-weight: bold;">F</span><span style="color: #0170bf;">(</span><span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #bbc2cf;">n</span><span style="color: #0170bf;">){</span>
-    numOfMult++;
-    <span style="color: #DFDFDF; font-weight: bold;">if</span><span style="color: #c678dd;">(</span>n == <span style="color: #b4916d; font-weight: bold;">0</span><span style="color: #c678dd;">){</span>
-        <span style="color: #DFDFDF; font-weight: bold;">return</span><span style="color: #98be65;">(</span><span style="color: #b4916d; font-weight: bold;">1</span><span style="color: #98be65;">)</span>;
-    <span style="color: #c678dd;">}</span> <span style="color: #DFDFDF; font-weight: bold;">else</span> <span style="color: #c678dd;">{</span>
-        <span style="color: #DFDFDF; font-weight: bold;">return</span><span style="color: #98be65;">(</span>n * F<span style="color: #a9a1e1;">(</span>n - <span style="color: #b4916d; font-weight: bold;">1</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>;
-    <span style="color: #c678dd;">}</span>
-<span style="color: #0170bf;">}</span>
-
-<span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #bbc2cf;">factorial</span> = F<span style="color: #0170bf;">(</span><span style="color: #b4916d; font-weight: bold;">3</span><span style="color: #0170bf;">)</span>;
-printf<span style="color: #0170bf;">(</span><span style="color: #b4916d;">"Total: %d, Number of Multipications: %d"</span>, factorial, numOfMult<span style="color: #0170bf;">)</span>;
-</pre>
-</div>
-
-<p>
-\(T(n)=1+T(n-1)\)
-</p>
-
-<p>
-\(T(3)= 1 + 1 + 1 + 1\), where \(F(3) = 3 \times 2 \times 1 \times 1\).
-</p>
-</div>
-</div>
-<div id="outline-container-orgc84946e" class="outline-3">
-<h3 id="orgc84946e"><span class="section-number-3">1.3.</span> Repeated Substutition</h3>
-<div class="outline-text-3" id="text-1-3">
 <p>
 Example:
 </p>
 <ul class="org-ul">
-<li>\(T(0)=0\)</li>
-<li>\(T(n)=1+T(n-1)\)</li>
-<li>\(T(n)=2+T(n-2)\)</li>
-<li>\(T(n)=3+T(n-3)\)</li>
-<li>\(\vdots\)</li>
-<li>\(T(n)=K+T(n-K)\)</li>
+<li>\(Q=\{q_1,q_2,q_3\}\)</li>
+<li>\(\Sigma=\{0,1\}\)</li>
+<li>\(\delta\)</li>
+<li>\(q_0=q_1\)</li>
+<li>\(F=\{q_2\}\)</li>
 </ul>
 
 <p>
-Overall, the equation gained from this is:
+\(\delta=\cdots\)
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">\(q_n\)</th>
+<th scope="col" class="org-left">0</th>
+<th scope="col" class="org-left">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">\(q_1\)</td>
+<td class="org-left">\(q_1\)</td>
+<td class="org-left">\(q_2\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(q_2\)</td>
+<td class="org-left">\(q_3\)</td>
+<td class="org-left">\(q_2\)</td>
+</tr>
+
+<tr>
+<td class="org-left">\(q_3\)</td>
+<td class="org-left">\(q_2\)</td>
+<td class="org-left">\(q_2\)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org1569d08" class="outline-3">
+<h3 id="org1569d08"><span class="section-number-3">2.1.</span> Deterministic Finite Automata</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+A deterministic finite automaton \(M\) can be viewed as a classifier that filters out all the strings it accepts.
 </p>
 <ul class="org-ul">
-<li>\(T(n)=K+T(n-K)\) where \(T(0)=0\)</li>
-<li>\(T(n)=?+T(k)\)</li>
-<li>How large does \(n-K\) have to have to get to \(0\)?</li>
-<li>\(n-K=0\implies n=K\)</li>
-<li>You have to recurse \(n\) times to get to the base case.</li>
-<li>\(\therefore T(n)=n\) s.t. \(\theta(n)\)</li>
+<li>The set \(A\) of all the strings \(M\) accepts is the <b>language of machine</b> \(M\).</li>
+<li>Denote as \(L(M)=A\). (language of your automata \(M\).)</li>
+<li>\(M\) recognises/accepts \(A\).</li>
+</ul>
+</div>
+<div id="outline-container-org679573e" class="outline-4">
+<h4 id="org679573e"><span class="section-number-4">2.1.1.</span> DFA Configuratons</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+Configuration for a DFA \(M=(K,\Sigma,\delta,s,F)\)
+</p>
+<ul class="org-ul">
+<li>any element of \(K\times\Sigma^*\)</li>
+<li>The state of DFA currently</li>
+<li>The remaining part of the string to be processed.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1869987" class="outline-3">
-<h3 id="org1869987"><span class="section-number-3">1.4.</span> Algorithms</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-org7e841e7" class="outline-4">
+<h4 id="org7e841e7"><span class="section-number-4">2.1.2.</span> Examples</h4>
+<div class="outline-text-4" id="text-2-1-2">
+</div>
 <ol class="org-ol">
-<li>Identify the Input Size</li>
-<li>Identify the Basic Operation</li>
-<li>Setup a recurrence relation that expresses how many time the basic operation executes as a function of \(n\).</li>
-<li>Solve or at least determine the order of growth. Find \(\theta\).</li>
-</ol>
-
-<p>
-Professors way:
-\(T(n)=\text{(some function)}\times T(\text{(some function of n)}+\text{(some function of n)})\)
-\(T(n_0)=\text{(something)}\)
-</p>
-
-<ol class="org-ol">
-<li>Rewrite the relation. Replace \(n\) with \(x\).
-\(T(n)=\cdots\)</li>
-<li>Using \(T(x)\), workout a new expression to replace the reoccurence part \(T(?)\)</li>
-<li>Plug new expression back into the original recurrence relation.</li>
-<li>Repeat step 2 and step 3 several more times until you see a pattern.</li>
-</ol>
-
-<p>
-Pattern:
-</p>
+<li><a id="org4bdfd6c"></a>Example 1<br />
+<div class="outline-text-5" id="text-2-1-2-1">
 <ul class="org-ul">
-<li>\(T(n)=F(n,k)+T(G(n,k)+H(n,k))\) where \(F(n,k)\) is some function of \(n,k\)</li>
-</ul>
-</div>
-<div id="outline-container-orgcb26b95" class="outline-4">
-<h4 id="orgcb26b95"><span class="section-number-4">1.4.1.</span> Example</h4>
-<div class="outline-text-4" id="text-1-4-1">
-<p>
-Connect the pattern back to the initial condition.
-</p>
-
-<p>
-Anchor: Connect the pattern expression to the base case
-\(T(G(n,k))=T(n_0)\) where
-</p>
-<ul class="org-ul">
-<li>\(T(n_0)\) is the amount of time taken to complete the base case.</li>
-<li>Solve \(T(G(n,k))\) to obtain what \(k\) is.</li>
-</ul>
-
-<p>
-Plug \(K(\text{value})\) back into the pattern expression from step 4.
-</p>
-</div>
-<ol class="org-ol">
-<li><a id="orge231049"></a>Ex. 1<br />
-<div class="outline-text-5" id="text-1-4-1-1">
-<ul class="org-ul">
-<li>\(T(n)=T(\frac{n}{2})\)</li>
-<li>\(T(1)=c\) where \(c\) is some number \(>0\).</li>
-<li>Substitute</li>
-<li>\(T(x)=T(\frac{x}{2})\)</li>
-<li>\(T(\frac{n}{2})=T(\frac{\frac{n}{2}}{2})=T(\frac{n}{4})\)</li>
-<li>\(\vdots\)</li>
-<li>\(\implies T(n)=T(\frac{n}{8})=T(\frac{n}{2^3})\)</li>
-<li>\(\implies T(n)=T(\frac{n}{2^k})\)</li>
-<li>\(T(1)=c\)</li>
-<li>\(T(\frac{n}{2^k})=T(1)\)</li>
-<li>\(\implies \frac{n}{2^k}=1\)</li>
-<li>\(\implies n=2^k\)</li>
-<li>\(\implies k=\log(n)\)</li>
-<li>\(T(n)=T(\frac{n}{2^{\log_2(n)}})\implies T(n)=T(1)\)</li>
-<li>\(\therefore T(n)=T(1)=c(\text{some constant more than 0.})\)</li>
-
-<li>\(\therefore T(n)=\theta(1)\)</li>
+<li>\(Q=\{q_0,q_1,q_2,q_3\}\)</li>
+<li>\(\Sigma=\{a,b\}\)</li>
+<li>\(\delta= \{((q_0,a),q_1),((q_0,b),q_0),\cdots,((q_3,b),q_3)\}\)</li>
+<li>\(\cdots\)</li>
 </ul>
 </div>
 </li>
-<li><a id="orgd1c699a"></a>Ex. 2<br />
-<div class="outline-text-5" id="text-1-4-1-2">
-<ul class="org-ul">
-<li>\(T(n)=T(\frac{n}{2})+c_1\)</li>
-<li>\(T(1)=c_2\)</li>
-</ul>
+<li><a id="org2a4c706"></a>Example 2<br />
+<div class="outline-text-5" id="text-2-1-2-2">
+<p>
+Input string: \(aabba\)
+</p>
+
+\begin{matrix}
+$(q_0,aabba)\implies$ & $(q_0,abba)$\\
+$\cdots\implies$ & $(q_0,bba)$\\
+$\cdots\implies$ & $(q_1,ba)$\\
+$\cdots\implies$ & $(q_0,a)$\\
+$\cdots\implies$ & $(q_0,e)$\\
+\end{matrix}
 </div>
 </li>
 </ol>
@@ -475,7 +422,7 @@ Plug \(K(\text{value})\) back into the pattern expression from step 4.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: kiera</p>
-<p class="date">Created: 2025-02-03 Mon 14:48</p>
+<p class="date">Created: 2025-02-03 Mon 15:47</p>
 </div>
 </body>
 </html>

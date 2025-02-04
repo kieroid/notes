@@ -6,8 +6,9 @@ You cannot have two variables with the same name.
 Instance variables can be accessed by any instance method.
 
 Shadowing
-- A method may have a local variable with the same name as an instance field
+- A method may have a local variable with the same name as an instance field.
 - The local variable will hide the value of the instance field.
+- Class and method have the same name.
 
 ** Constructors
 *Constructors do not have a return type.*
@@ -19,6 +20,9 @@ The default constructor
 - Sets all the objects numeric fields to 0.
 - Sets all the objects `boolean` fields to `false`.
 - Sets all of the object's reference variable to the special value `null`.
+- Method with the same name as the class.
+- Default values are 0, null, etc.
+
 
 User-defined constructors.
 - User can define constructors for different purposes.
@@ -48,6 +52,7 @@ Method overloading
 - Need for several different ways to perform the same operation.
 - As long as their parameter lists are different.
 - Also applies to constructors.
+- The method signature includes the name type and parameter types.
 #+begin_src java
 public int add(int num1, int num2) {
     return(num1 + num2);
@@ -69,3 +74,46 @@ double add(int, int) //will error
 int add(int, int)
 double add(double, double) //will not error
 #+END_EXAMPLE
+
+
+** Copy an object
+Assignment operator cannot be used for copying an object.
+
+
+Can we pass an object(class type variable) to a method as an argument like a primitive variable?
+- When we pass an object as an argument, the thing that is passed into the parameter variable is the object's memory address.
+- The parameter variable references the object, and the receiving method has access to the object.
+
+#+begin_src java
+public String add(String str1, String str2) {
+    String combined = str1 + str2;
+    return combined;
+}
+#+end_src
+
+There is no easy way to copy an object.
+One of the ways people do it is to create a copy constructor.
+
+*** Copy Constructor
+
+This is a constructor that takes an object of the same type as an argument and copies its fields.
+
+#+begin_src java
+// parameterized constructor
+public Rectangle(double w, double l) {
+    width = w;
+    length = l;
+}
+
+// no-arg constructor
+public Rectangle() {
+    width=1;
+    length=1;
+}
+
+// copy constructor
+public Rectangle(Rectangle other) {
+    width=other.width;
+    length=other.length;
+}
+#+end_src

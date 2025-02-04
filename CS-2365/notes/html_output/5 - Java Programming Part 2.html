@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-01-31 Fri 13:49 -->
+<!-- 2025-02-03 Mon 13:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -200,16 +200,21 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgeb624c9">1. What the fuck am I doing with this?</a>
+<li><a href="#orgdef425b">1. What the fuck am I doing with this?</a>
 <ul>
-<li><a href="#org86261fa">1.1. Constructors</a></li>
+<li><a href="#org0b8a221">1.1. Constructors</a></li>
+<li><a href="#org53b2f56">1.2. Copy an object</a>
+<ul>
+<li><a href="#org79fd438">1.2.1. Copy Constructor</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgeb624c9" class="outline-2">
-<h2 id="orgeb624c9"><span class="section-number-2">1.</span> What the fuck am I doing with this?</h2>
+<div id="outline-container-orgdef425b" class="outline-2">
+<h2 id="orgdef425b"><span class="section-number-2">1.</span> What the fuck am I doing with this?</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 You cannot have two variables with the same name.
@@ -223,12 +228,13 @@ Instance variables can be accessed by any instance method.
 Shadowing
 </p>
 <ul class="org-ul">
-<li>A method may have a local variable with the same name as an instance field</li>
+<li>A method may have a local variable with the same name as an instance field.</li>
 <li>The local variable will hide the value of the instance field.</li>
+<li>Class and method have the same name.</li>
 </ul>
 </div>
-<div id="outline-container-org86261fa" class="outline-3">
-<h3 id="org86261fa"><span class="section-number-3">1.1.</span> Constructors</h3>
+<div id="outline-container-org0b8a221" class="outline-3">
+<h3 id="org0b8a221"><span class="section-number-3">1.1.</span> Constructors</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 <b>Constructors do not have a return type.</b>
@@ -244,7 +250,10 @@ The default constructor
 <li>Sets all the objects numeric fields to 0.</li>
 <li>Sets all the objects `boolean` fields to `false`.</li>
 <li>Sets all of the object&rsquo;s reference variable to the special value `null`.</li>
+<li>Method with the same name as the class.</li>
+<li>Default values are 0, null, etc.</li>
 </ul>
+
 
 <p>
 User-defined constructors.
@@ -287,6 +296,7 @@ Method overloading
 <li>Need for several different ways to perform the same operation.</li>
 <li>As long as their parameter lists are different.</li>
 <li>Also applies to constructors.</li>
+<li>The method signature includes the name type and parameter types.</li>
 </ul>
 <div class="org-src-container">
 <pre class="src src-java"><span style="color: #DFDFDF; font-weight: bold;">public</span> <span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #DFDFDF; font-weight: bold;">add</span><span style="color: #0170bf;">(</span><span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #bbc2cf;">num1</span>, <span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #bbc2cf;">num2</span><span style="color: #0170bf;">)</span> <span style="color: #0170bf;">{</span>
@@ -303,7 +313,7 @@ Method overloading
 </pre>
 </div>
 
-<pre class="example" id="org11a8df3">
+<pre class="example" id="orgb55e043">
 int add(int, int)
 double add(int, int) //will error
 
@@ -312,11 +322,70 @@ double add(double, double) //will not error
 </pre>
 </div>
 </div>
+<div id="outline-container-org53b2f56" class="outline-3">
+<h3 id="org53b2f56"><span class="section-number-3">1.2.</span> Copy an object</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Assignment operator cannot be used for copying an object.
+</p>
+
+
+<p>
+Can we pass an object(class type variable) to a method as an argument like a primitive variable?
+</p>
+<ul class="org-ul">
+<li>When we pass an object as an argument, the thing that is passed into the parameter variable is the object&rsquo;s memory address.</li>
+<li>The parameter variable references the object, and the receiving method has access to the object.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #DFDFDF; font-weight: bold;">public</span> <span style="color: #DFDFDF; font-weight: bold;">String</span> <span style="color: #DFDFDF; font-weight: bold;">add</span><span style="color: #0170bf;">(</span><span style="color: #DFDFDF; font-weight: bold;">String</span> <span style="color: #bbc2cf;">str1</span>, <span style="color: #DFDFDF; font-weight: bold;">String</span> <span style="color: #bbc2cf;">str2</span><span style="color: #0170bf;">)</span> <span style="color: #0170bf;">{</span>
+    <span style="color: #DFDFDF; font-weight: bold;">String</span> <span style="color: #bbc2cf;">combined</span> = str1 + str2;
+    <span style="color: #DFDFDF; font-weight: bold;">return</span> combined;
+<span style="color: #0170bf;">}</span>
+</pre>
+</div>
+
+<p>
+There is no easy way to copy an object.
+One of the ways people do it is to create a copy constructor.
+</p>
+</div>
+<div id="outline-container-org79fd438" class="outline-4">
+<h4 id="org79fd438"><span class="section-number-4">1.2.1.</span> Copy Constructor</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+This is a constructor that takes an object of the same type as an argument and copies its fields.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #98be65;">// </span><span style="color: #98be65;">parameterized constructor</span>
+<span style="color: #DFDFDF; font-weight: bold;">public</span> Rectangle<span style="color: #0170bf;">(</span><span style="color: #DFDFDF; font-weight: bold;">double</span> <span style="color: #bbc2cf;">w</span>, <span style="color: #DFDFDF; font-weight: bold;">double</span> <span style="color: #bbc2cf;">l</span><span style="color: #0170bf;">)</span> <span style="color: #0170bf;">{</span>
+    width = w;
+    length = l;
+<span style="color: #0170bf;">}</span>
+
+<span style="color: #98be65;">// </span><span style="color: #98be65;">no-arg constructor</span>
+<span style="color: #DFDFDF; font-weight: bold;">public</span> Rectangle<span style="color: #0170bf;">()</span> <span style="color: #0170bf;">{</span>
+    width=<span style="color: #b4916d; font-weight: bold;">1</span>;
+    length=<span style="color: #b4916d; font-weight: bold;">1</span>;
+<span style="color: #0170bf;">}</span>
+
+<span style="color: #98be65;">// </span><span style="color: #98be65;">copy constructor</span>
+<span style="color: #DFDFDF; font-weight: bold;">public</span> Rectangle<span style="color: #0170bf;">(</span>Rectangle other<span style="color: #0170bf;">)</span> <span style="color: #0170bf;">{</span>
+    width=other.width;
+    length=other.length;
+<span style="color: #0170bf;">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: kiera</p>
-<p class="date">Created: 2025-01-31 Fri 13:49</p>
+<p class="date">Created: 2025-02-03 Mon 13:28</p>
 </div>
 </body>
 </html>
