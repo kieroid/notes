@@ -87,6 +87,46 @@ Velocity - How much can we cover in a single sprint?
 - Trust between customers and developers is established.
 - Positive culture is created in which everyone expects the project to succeed.
 
+Scaling out and scaling up:
+- Scaling up: concerned using agile methods for developing large software systems that cannot be developed by a small team.
+- Scaling out: concerned with how agile methods can be introduced across a large organization with many years of software development experience.
+- When scaling agile methods, it is important to maintain agile fundamentals.
+
+Problems with agile methods:
+- Good for new software rather than existing software.
+- Majority of software costs in large companies come from maintaining their existing software systems.
+- Agile methods are designed for small co-located teams, yet much software development now involves worldwise distributed teams.
+- The informality of agile development is incompatabile with the legal approach to contract definition that is commonly used in large companies.
+
+Most software contracts for custom systems are based around specification, which sets out what has to be implemented by the system developer for the system customer.
+- Precludes interleaving specification and development as is the norm in agile development.
+- A contract that pays for developer time rather than functionality is required.
+- High risk by many legal departments because what has to be delivered is not always guranteed.
+
+Most organizations spend more on maintaining existing software than on new software.
+- Are systems that are developed using an agile approach maintainable given the emphasis in the development process of minimizing formal documentation?
+- Can agile methods be used effectively for evolving a system in response to customer change requests?
+- Problems arise if original development team cannot be maintained.
+
+Key problems:
+- Lack of documentation.
+- Keeping customers involved in the development process.
+- Maintaining the continuity of the development team.
+
+Deciding on balance depends on:
+- Is it important to have a very detailed specification and design before moving to implementation?
+- Is incremental delivery strategy where you deliver the software to customers and get rapid feedback from them, realistic? If so, consider using agile methods.
+- How large is the system that is being developed?
+
+*** Multi-team Scrum
+Characteristics of a multi-team scrum:
+- Role replication: Each team has a product owner for their work component and ScrumMaster.
+- Product architects: Each team chooses a product architect and these architects collaborate to design and evolve the overall system architecture.
+- Release alighnment: The dates of product releases from each team are aligned so that a demonstrable and complete system is produced.
+- Scrum of Scrums: A daily Scrum of Scrums where representitives from each team meet to discuss progress and plan work to be done that day.
+
+
+
 
 * EXAM QUESTION
 Why agile development is not a good choice for long-lifetime systems?

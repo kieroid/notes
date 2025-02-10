@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-03 Mon 13:46 -->
+<!-- 2025-02-05 Wed 13:39 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -193,6 +193,38 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="content" class="content">
@@ -200,12 +232,18 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org1127077">1. Packages</a></li>
+<li><a href="#org5a0db7f">1. Packages</a></li>
+<li><a href="#orgf1df633">2. Understanding static</a>
+<ul>
+<li><a href="#org537fee2">2.1. Example</a></li>
+<li><a href="#orgd6df038">2.2. Java Virtual Machine Garbage Collector</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1127077" class="outline-2">
-<h2 id="org1127077"><span class="section-number-2">1.</span> Packages</h2>
+<div id="outline-container-org5a0db7f" class="outline-2">
+<h2 id="org5a0db7f"><span class="section-number-2">1.</span> Packages</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Packages are containers for classes.
@@ -251,10 +289,74 @@ Importing packages
 </ul>
 </div>
 </div>
+<div id="outline-container-orgf1df633" class="outline-2">
+<h2 id="orgf1df633"><span class="section-number-2">2.</span> Understanding static</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Normally, a class member.
+</p>
+<ul class="org-ul">
+<li>Accessed only by means of an object of its class.</li>
+<li>`static` variable (global variable).</li>
+<li>When objects of its class are declared, no copy of a static variable is made.</li>
+<li>All instances of the class share the same static variable.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #DFDFDF; font-weight: bold;">private</span> <span style="color: #DFDFDF; font-weight: bold;">static</span> <span style="color: #DFDFDF; font-weight: bold;">double</span> <span style="color: #bbc2cf;">num</span> = <span style="color: #b4916d; font-weight: bold;">0</span>;
+
+<span style="color: #DFDFDF; font-weight: bold;">public</span> <span style="color: #DFDFDF; font-weight: bold;">double</span> <span style="color: #DFDFDF; font-weight: bold;">funnyClass</span><span style="color: #0170bf;">(</span><span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #bbc2cf;">num1</span>, <span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #bbc2cf;">num2</span><span style="color: #0170bf;">)</span> <span style="color: #0170bf;">{</span> <span style="color: #98be65;">//</span><span style="color: #98be65;">every time funnyClass gets called, `num` increases by 1.</span>
+    number1 = num1;
+    number2 = num2;
+
+    num++;
+<span style="color: #0170bf;">}</span>
+
+<span style="color: #DFDFDF; font-weight: bold;">public</span> <span style="color: #DFDFDF; font-weight: bold;">static</span> <span style="color: #DFDFDF; font-weight: bold;">void</span> <span style="color: #DFDFDF; font-weight: bold;">main</span><span style="color: #0170bf;">(</span><span style="color: #DFDFDF; font-weight: bold;">String</span><span style="color: #c678dd;">[]</span> <span style="color: #bbc2cf;">args</span><span style="color: #0170bf;">)</span> <span style="color: #0170bf;">{</span>
+    <span style="color: #DFDFDF; font-weight: bold;">funnyClass</span> <span style="color: #bbc2cf;">funny</span> = <span style="color: #DFDFDF; font-weight: bold;">new</span> <span style="color: #DFDFDF; font-weight: bold;">funnyClass</span><span style="color: #c678dd;">(</span><span style="color: #b4916d; font-weight: bold;">1</span>,<span style="color: #b4916d; font-weight: bold;">1</span><span style="color: #c678dd;">)</span>;
+    System.out.println<span style="color: #c678dd;">(</span>num<span style="color: #c678dd;">)</span>;
+<span style="color: #0170bf;">}</span>
+</pre>
+</div>
+</div>
+<div id="outline-container-org537fee2" class="outline-3">
+<h3 id="org537fee2"><span class="section-number-3">2.1.</span> Example</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Can we calculate the area of a random ractangle without creating the rectangle object?
+</p>
+<ul class="org-ul">
+<li>Shit is <span class="underline">literally</span> \(\text{length}\times\text{width}\)</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #DFDFDF; font-weight: bold;">public</span> <span style="color: #DFDFDF; font-weight: bold;">static</span> <span style="color: #DFDFDF; font-weight: bold;">double</span> <span style="color: #DFDFDF; font-weight: bold;">getCustomarea</span><span style="color: #0170bf;">(</span><span style="color: #DFDFDF; font-weight: bold;">double</span> <span style="color: #bbc2cf;">w</span>, <span style="color: #DFDFDF; font-weight: bold;">double</span> <span style="color: #bbc2cf;">l</span><span style="color: #0170bf;">)</span> <span style="color: #0170bf;">{</span>
+    <span style="color: #DFDFDF; font-weight: bold;">return</span> w*l;
+<span style="color: #0170bf;">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd6df038" class="outline-3">
+<h3 id="orgd6df038"><span class="section-number-3">2.2.</span> Java Virtual Machine Garbage Collector</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+It automatically frees up memory from objects that no longer have a reference pointing to it.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span style="color: #DFDFDF; font-weight: bold;">Rectangle</span> <span style="color: #bbc2cf;">r1</span> = <span style="color: #DFDFDF; font-weight: bold;">new</span> <span style="color: #DFDFDF; font-weight: bold;">Rectangle</span><span style="color: #0170bf;">(</span><span style="color: #b4916d; font-weight: bold;">1</span>,<span style="color: #b4916d; font-weight: bold;">1</span><span style="color: #0170bf;">)</span>;
+<span style="color: #DFDFDF; font-weight: bold;">Rectangle</span> <span style="color: #bbc2cf;">r2</span> = r1;
+r1 = <span style="color: #bbc2cf;">null</span>;
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: kiera</p>
-<p class="date">Created: 2025-02-03 Mon 13:46</p>
+<p class="date">Created: 2025-02-05 Wed 13:39</p>
 </div>
 </body>
 </html>

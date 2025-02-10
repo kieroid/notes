@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-02-05 Wed 17:24 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="kiera" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org65bfae4">1. Test-first development</a>
+<ul>
+<li><a href="#org573d47a">1.1. Customer involvment</a>
+<ul>
+<li><a href="#org2bb4482">1.1.1. Example: Dose checking</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgd2c8a49">2. Pair Programming</a></li>
+<li><a href="#orgecabe97">3. Scrum</a>
+<ul>
+<li><a href="#orge5184cb">3.1. Three phases</a></li>
+<li><a href="#org7b318dc">3.2. Benefits</a>
+<ul>
+<li><a href="#org086eb5e">3.2.1. Multi-team Scrum</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orga3dcecd">4. EXAM QUESTION</a></li>
+</ul>
+</div>
+</div>
+<p>
+Usage stories do not give you the whole picture of how your software works.
+</p>
+<ul class="org-ul">
+<li>Go to a store and watch the process happen.</li>
+<li>The customer will leave out common things and make it seem as if the uncommon issues happen more often than they do.</li>
+</ul>
+<div id="outline-container-org65bfae4" class="outline-2">
+<h2 id="org65bfae4"><span class="section-number-2">1.</span> Test-first development</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Testing is central to XP and XP has developed an approach where the program is tested after every change has been made. Development cannot proceed until test cases have been developed.
+</p>
+
+<p>
+The key features of testing in XP are:
+</p>
+<ul class="org-ul">
+<li>Test-first development</li>
+<li>&#x2026; (refer to the slides)</li>
+</ul>
+
+<p>
+All previous and new tests are run automatically when new functionality is added, thus checking that the new functionality has not introduced errors. Also known as test-driven development.
+</p>
+<ul class="org-ul">
+<li>Writing tests before code clarifies the requirements to be implemented.</li>
+<li>Each task generates one or more unit tests that check the implementation described in that task.</li>
+<li>Tests are written as programs rather than data so that they can be executed automatically. This usually relies on a testing framework such as <b>Junit</b>.</li>
+</ul>
+</div>
+<div id="outline-container-org573d47a" class="outline-3">
+<h3 id="org573d47a"><span class="section-number-3">1.1.</span> Customer involvment</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+The role of the customer in the testing process
+</p>
+<ul class="org-ul">
+<li>To help develop tests for the stories that are to be implemented in the next release.</li>
+<li>Customers who are part of the team writes tests as development proceeds.</li>
+<li>All new code is validated to ensure it is what the customer needs.</li>
+</ul>
+</div>
+<div id="outline-container-org2bb4482" class="outline-4">
+<h4 id="org2bb4482"><span class="section-number-4">1.1.1.</span> Example: Dose checking</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+A shortened description of a test case (based on a task) that has been developed to check that the perscribed dose of a drug does not fall outside known safe limits.
+</p>
+
+<p>
+Input:
+</p>
+<ol class="org-ol">
+<li>A number in mg representing a single dose of the drug.</li>
+<li>A number representing the number of single doses in a day.</li>
+</ol>
+
+<p>
+Tests:
+</p>
+<ol class="org-ol">
+<li>Test for inputs where the single dose is correct but the frequency is too high.</li>
+<li>Test for inputs where the single dose is too high and too low.</li>
+<li>Test for inputs where the single dose * frequency is too high and too low.</li>
+<li>Test for inputs where single dose * frequency is in the permitted range.</li>
+</ol>
+
+<p>
+Output:
+</p>
+<ul class="org-ul">
+<li>OK or error message indicating that the dose is outside of the safe range.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd2c8a49" class="outline-2">
+<h2 id="orgd2c8a49"><span class="section-number-2">2.</span> Pair Programming</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Pair programming has a number of advantages.
+</p>
+<ul class="org-ul">
+<li><b>Work in pairs</b>; developing code together; teamwork.</li>
+<li><b>Common ownership of code</b>; a team spreading knowledge</li>
+<li><b>Informal review process</b>; each line of code is looked at by more than 1 person.</li>
+<li><b>Encourages refactoring</b>; whole team can benefit from improving code.</li>
+</ul>
+
+<p>
+Programmers sit together, program together.
+If you pair a knowledgable person with a non-knowledgable person, the team can be more productive.
+There are benefits from Pair Programming.
+</p>
+
+<p>
+Flaws:
+</p>
+<ul class="org-ul">
+<li>Responsibility is given to the developers.</li>
+<li>Managers have no idea what is happening.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgecabe97" class="outline-2">
+<h2 id="orgecabe97"><span class="section-number-2">3.</span> Scrum</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Scrum is an agile method that focuses on managing iterative development.
+</p>
+
+<p>
+Three roles:
+</p>
+<ul class="org-ul">
+<li>Product owner (idea guy)</li>
+<li>Scrum master (keeps team from distraction)</li>
+<li>Team (the people who work. developers)</li>
+</ul>
+</div>
+<div id="outline-container-orge5184cb" class="outline-3">
+<h3 id="orge5184cb"><span class="section-number-3">3.1.</span> Three phases</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li><b>Product backlog</b>; Initial phase is an outline; Objectives for a project are outlined</li>
+<li><b>Sprint</b>; A series of sprint cycles. A time frame is set to complete work. DAILY SCRUM.</li>
+<li><b>Review</b>; Work should be potentially shippable.</li>
+</ul>
+
+<p>
+Retrospective -&gt; Sprint Planning -&gt; Sprint -&gt; Sprint Review/Preview
+</p>
+
+
+<p>
+Programmers sit together, program together.
+If you pair a knowledgable person with a non-knowledgable person, the team can be more productive.
+There are benefits from Pair Programming.
+</p>
+
+<p>
+After each sprint, the developers are reffered back to the product backlog/wishlist.
+</p>
+
+<p>
+Scrum - Daily meeting of the Scrum team
+ScrumMaster - Bug fixer clearly. Let the scrum master take care of it. (this is a joke)
+Sprint - A development interation (usually 2-4 weeks long.)
+Velocity - How much can we cover in a single sprint?
+</p>
+</div>
+</div>
+<div id="outline-container-org7b318dc" class="outline-3">
+<h3 id="org7b318dc"><span class="section-number-3">3.2.</span> Benefits</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Product is broken down into simple chunks.</li>
+<li>Unstable requirements do not hold up progress.</li>
+<li>Whole team has visibility of everything.</li>
+<li>Customers see on-time delivery of increments and gain feedback on how the product works.</li>
+<li>Trust between customers and developers is established.</li>
+<li>Positive culture is created in which everyone expects the project to succeed.</li>
+</ul>
+
+<p>
+Scaling out and scaling up:
+</p>
+<ul class="org-ul">
+<li>Scaling up: concerned using agile methods for developing large software systems that cannot be developed by a small team.</li>
+<li>Scaling out: concerned with how agile methods can be introduced across a large organization with many years of software development experience.</li>
+<li>When scaling agile methods, it is important to maintain agile fundamentals.</li>
+</ul>
+
+<p>
+Problems with agile methods:
+</p>
+<ul class="org-ul">
+<li>Good for new software rather than existing software.</li>
+<li>Majority of software costs in large companies come from maintaining their existing software systems.</li>
+<li>Agile methods are designed for small co-located teams, yet much software development now involves worldwise distributed teams.</li>
+<li>The informality of agile development is incompatabile with the legal approach to contract definition that is commonly used in large companies.</li>
+</ul>
+
+<p>
+Most software contracts for custom systems are based around specification, which sets out what has to be implemented by the system developer for the system customer.
+</p>
+<ul class="org-ul">
+<li>Precludes interleaving specification and development as is the norm in agile development.</li>
+<li>A contract that pays for developer time rather than functionality is required.</li>
+<li>High risk by many legal departments because what has to be delivered is not always guranteed.</li>
+</ul>
+
+<p>
+Most organizations spend more on maintaining existing software than on new software.
+</p>
+<ul class="org-ul">
+<li>Are systems that are developed using an agile approach maintainable given the emphasis in the development process of minimizing formal documentation?</li>
+<li>Can agile methods be used effectively for evolving a system in response to customer change requests?</li>
+<li>Problems arise if original development team cannot be maintained.</li>
+</ul>
+
+<p>
+Key problems:
+</p>
+<ul class="org-ul">
+<li>Lack of documentation.</li>
+<li>Keeping customers involved in the development process.</li>
+<li>Maintaining the continuity of the development team.</li>
+</ul>
+
+<p>
+Deciding on balance depends on:
+</p>
+<ul class="org-ul">
+<li>Is it important to have a very detailed specification and design before moving to implementation?</li>
+<li>Is incremental delivery strategy where you deliver the software to customers and get rapid feedback from them, realistic? If so, consider using agile methods.</li>
+<li>How large is the system that is being developed?</li>
+</ul>
+</div>
+<div id="outline-container-org086eb5e" class="outline-4">
+<h4 id="org086eb5e"><span class="section-number-4">3.2.1.</span> Multi-team Scrum</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+Characteristics of a multi-team scrum:
+</p>
+<ul class="org-ul">
+<li>Role replication: Each team has a product owner for their work component and ScrumMaster.</li>
+<li>Product architects: Each team chooses a product architect and these architects collaborate to design and evolve the overall system architecture.</li>
+<li>Release alighnment: The dates of product releases from each team are aligned so that a demonstrable and complete system is produced.</li>
+<li>Scrum of Scrums: A daily Scrum of Scrums where representitives from each team meet to discuss progress and plan work to be done that day.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orga3dcecd" class="outline-2">
+<h2 id="orga3dcecd"><span class="section-number-2">4.</span> EXAM QUESTION</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Why agile development is not a good choice for long-lifetime systems?
+</p>
+
+<p>
+ANSWER: For long-lifetime systems, this is a real problem as the original developers will not always work.
+</p>
+
+<p>
+Original developers will not always stay at the same job. People move around and info becomes unknown, especially with funky documentation.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: kiera</p>
+<p class="date">Created: 2025-02-05 Wed 17:24</p>
+</div>
+</body>
+</html>

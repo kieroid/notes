@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-07 Fri 19:48 -->
+<!-- 2025-02-07 Fri 17:36 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -193,6 +193,38 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="content" class="content">
@@ -200,112 +232,94 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org05cb00e">1. Java Virtual Machine</a></li>
+<li><a href="#orgb97d309">1. Requirements engineering (RE)</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org05cb00e" class="outline-2">
-<h2 id="org05cb00e"><span class="section-number-2">1.</span> Java Virtual Machine</h2>
+<div id="outline-container-orgb97d309" class="outline-2">
+<h2 id="orgb97d309"><span class="section-number-2">1.</span> Requirements engineering (RE)</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-Definition of JVM: A program emulating a microprocessor. It only executes byte code instructions. It is an interpreter, and Java would be referred to as an interpreted language.
+The process of establishing the services that a customer requires from a system and the constraints under which it operates and is developed.
 </p>
 
 <p>
-JRE = Java Runtime Enviorment
+Types of documentation:
 </p>
 <ul class="org-ul">
-<li>Contains several libraries as well as the JVM</li>
+<li>User requirements: Requirements for the general use. Natural language, diagrams, list of services, whatever. Overall, it is written for customers.</li>
+<li>System requirements: More detailed descriptions of the software system&rsquo;s functions, services, and operational constraints. Defines what should be implemented so may be part of a contract between client and contractor.</li>
 </ul>
 
 <p>
-JDK = Java Development (tool) Kit
+User requirement example:
 </p>
 <ul class="org-ul">
-<li>Contains the JRE as well as compilers, tools, etc.</li>
+<li>&ldquo;The mentcair system shall generate monthly managment reports showing the cost of drugs perscribed by each clinic.&rdquo;</li>
 </ul>
 
 <p>
-What is a compiler?
+System requirement example:
 </p>
 <ul class="org-ul">
-<li>A compiler converts <b>source code</b> into code of which is executable.</li>
-<li>Examples would be GCC compiling a C file to create a program which can run on x86<sub>64</sub>/arm64 architecture.</li>
+<li>&ldquo;1. last working day&#x2026; 2. generate report on&#x2026; 3. &#x2026;. 4&#x2026;.&rdquo;</li>
 </ul>
 
 <p>
-Java needs both:
+Stakeholder types:
 </p>
 <ul class="org-ul">
-<li>A compiler</li>
-<li>The JVM (java virtual machine)</li>
+<li>End users</li>
+<li>System managers</li>
+<li>System owners</li>
+<li>External stakeholders</li>
 </ul>
 
 <p>
-Why would anyone want to use java?
+Types of functional requirements:
 </p>
 <ul class="org-ul">
-<li>Can be used to run consumer applications.</li>
-<li>Can work on a multiple of architectures without having to compile new binaries for each architectures.</li>
-<li>Java Virtual Machine emulates a microprocessor to achieve such hardware compatability.</li>
-</ul>
-
-
-<p>
-What is in a Java program?
-</p>
-<ul class="org-ul">
-<li>A java source code file contains one or more java classes.</li>
-<li>Only one of them may be a <b>public</b> class. You cannot have more than 1 public class.</li>
+<li>Functional user requirements: Describe functionality (what the system should do.) High-level statements of what the system should do.</li>
+<li>Functional system reqirements: Describe the system services in detail.</li>
 </ul>
 
 <p>
-An example of java code (funkyburger.java) would be the following:
-</p>
-<div class="org-src-container">
-<pre class="src src-java"><span style="color: #DFDFDF; font-weight: bold;">public</span> <span style="color: #DFDFDF; font-weight: bold;">class</span> <span style="color: #DFDFDF; font-weight: bold;">funkyburger</span> <span style="color: #0170bf;">{</span><span style="color: #98be65;">//</span><span style="color: #98be65;">Public class</span>
-    <span style="color: #DFDFDF; font-weight: bold;">public</span> <span style="color: #DFDFDF; font-weight: bold;">static</span> <span style="color: #DFDFDF; font-weight: bold;">void</span> <span style="color: #DFDFDF; font-weight: bold;">main</span><span style="color: #c678dd;">(</span><span style="color: #DFDFDF; font-weight: bold;">String</span><span style="color: #98be65;">[]</span> <span style="color: #bbc2cf;">args</span><span style="color: #c678dd;">)</span> <span style="color: #c678dd;">{</span> <span style="color: #98be65;">//</span><span style="color: #98be65;">Method header for the main method. Java application begins here.</span>
-        System.out.print<span style="color: #98be65;">(</span><span style="color: #b4916d;">"burger"</span><span style="color: #98be65;">)</span>;<span style="color: #98be65;">//</span><span style="color: #98be65;">Code from the body of the main method.</span>
-    <span style="color: #c678dd;">}</span>
-<span style="color: #0170bf;">}</span>
-</pre>
-</div>
-
-<p>
-When generated/compiled (using `javac`), a class file is created.
-This is known as a bytecode instruction. With the previous example, if you ran `javac funkyburger.java`,
-`funkyburger.class` is generated.
-</p>
-
-<p>
-To run this class file, you can use the command `java`.
-</p>
-
-<p>
-The `main` <b>method</b>:
+Requirements imprecision:
 </p>
 <ul class="org-ul">
-<li>The line of code that java command will run first.</li>
+<li>Problems arise when functional requirements are not percisely stated.</li>
+<li>Ambigous requirements may be interpreted in different ways by developers and users.</li>
 </ul>
 
 <p>
-Java <b>statements</b>:
+User intention is not always the developer&rsquo;s interpretation. What makes a good requoirement?
 </p>
 <ul class="org-ul">
-<li>The statements executed within the main method.</li>
-<li>Ex: `System.out.println(&ldquo;burger&rdquo;)`</li>
+<li>Unambigous</li>
+<li>Clear</li>
+<li>Completeness (They should include descriptions of all facilities required.)</li>
+<li>Consistenty (There should be no conflicts or contradictions in the descriptions of the system facilities.)</li>
+<li>\(\dots\)</li>
 </ul>
 
+
+
 <p>
-`out` is an object of the `System` class.
-`print` and `println` are methods which are members of the `out` object.
+Non-functional requirementsL
 </p>
+<ul class="org-ul">
+<li>These define system properties and constraints (reliability, response time, storage)</li>
+<li>Constraints are I/O device capability, system representations, etc.</li>
+<li>Process reqirements may also be specified mandating a particular IDE, programming language, or development method.</li>
+<li>Non-functional requirements may be more critical than functional requirements.</li>
+<li>If these requirements are not met, the system may be useless.</li>
+</ul>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: kiera</p>
-<p class="date">Created: 2025-02-07 Fri 19:48</p>
+<p class="date">Created: 2025-02-07 Fri 17:36</p>
 </div>
 </body>
 </html>

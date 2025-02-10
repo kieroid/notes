@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-03 Mon 14:48 -->
+<!-- 2025-02-05 Wed 14:48 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -232,14 +232,14 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5d93082">1. Strategies</a>
+<li><a href="#org1cf5a3f">1. Strategies</a>
 <ul>
-<li><a href="#org51362a7">1.1. Divide &amp; Conqurer</a></li>
-<li><a href="#orgd0466f0">1.2. Factorial example</a></li>
-<li><a href="#orgc84946e">1.3. Repeated Substutition</a></li>
-<li><a href="#org1869987">1.4. Algorithms</a>
+<li><a href="#org32334c6">1.1. Divide &amp; Conqurer</a></li>
+<li><a href="#org58d5c7f">1.2. Factorial example</a></li>
+<li><a href="#orgcb3205a">1.3. Repeated Substutition</a></li>
+<li><a href="#org2b56ed8">1.4. Algorithms</a>
 <ul>
-<li><a href="#orgcb26b95">1.4.1. Example</a></li>
+<li><a href="#org1ebf852">1.4.1. Example</a></li>
 </ul>
 </li>
 </ul>
@@ -247,12 +247,12 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org5d93082" class="outline-2">
-<h2 id="org5d93082"><span class="section-number-2">1.</span> Strategies</h2>
+<div id="outline-container-org1cf5a3f" class="outline-2">
+<h2 id="org1cf5a3f"><span class="section-number-2">1.</span> Strategies</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org51362a7" class="outline-3">
-<h3 id="org51362a7"><span class="section-number-3">1.1.</span> Divide &amp; Conqurer</h3>
+<div id="outline-container-org32334c6" class="outline-3">
+<h3 id="org32334c6"><span class="section-number-3">1.1.</span> Divide &amp; Conqurer</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Given of problem of size \(n\).
@@ -302,8 +302,8 @@ How many times is it printing? \(n\) times.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd0466f0" class="outline-3">
-<h3 id="orgd0466f0"><span class="section-number-3">1.2.</span> Factorial example</h3>
+<div id="outline-container-org58d5c7f" class="outline-3">
+<h3 id="org58d5c7f"><span class="section-number-3">1.2.</span> Factorial example</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 \(n!=1\times2\times3\times\cdots\times(n-1)\times n\)
@@ -320,7 +320,7 @@ Rule: \(0! := 1\)
 <p>
 Let&rsquo;s say there&rsquo;s an algorithm \(F(n)\):
 </p>
-<pre class="example" id="orgfdc4e45">
+<pre class="example" id="org8d52c52">
 Algo F(n):
         if(n==0):
                 return 1
@@ -357,8 +357,8 @@ printf<span style="color: #0170bf;">(</span><span style="color: #b4916d;">"Total
 </p>
 </div>
 </div>
-<div id="outline-container-orgc84946e" class="outline-3">
-<h3 id="orgc84946e"><span class="section-number-3">1.3.</span> Repeated Substutition</h3>
+<div id="outline-container-orgcb3205a" class="outline-3">
+<h3 id="orgcb3205a"><span class="section-number-3">1.3.</span> Repeated Substutition</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Example:
@@ -385,8 +385,8 @@ Overall, the equation gained from this is:
 </ul>
 </div>
 </div>
-<div id="outline-container-org1869987" class="outline-3">
-<h3 id="org1869987"><span class="section-number-3">1.4.</span> Algorithms</h3>
+<div id="outline-container-org2b56ed8" class="outline-3">
+<h3 id="org2b56ed8"><span class="section-number-3">1.4.</span> Algorithms</h3>
 <div class="outline-text-3" id="text-1-4">
 <ol class="org-ol">
 <li>Identify the Input Size</li>
@@ -416,8 +416,8 @@ Pattern:
 <li>\(T(n)=F(n,k)+T(G(n,k)+H(n,k))\) where \(F(n,k)\) is some function of \(n,k\)</li>
 </ul>
 </div>
-<div id="outline-container-orgcb26b95" class="outline-4">
-<h4 id="orgcb26b95"><span class="section-number-4">1.4.1.</span> Example</h4>
+<div id="outline-container-org1ebf852" class="outline-4">
+<h4 id="org1ebf852"><span class="section-number-4">1.4.1.</span> Example</h4>
 <div class="outline-text-4" id="text-1-4-1">
 <p>
 Connect the pattern back to the initial condition.
@@ -437,7 +437,7 @@ Plug \(K(\text{value})\) back into the pattern expression from step 4.
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="orge231049"></a>Ex. 1<br />
+<li><a id="orgd7a1ece"></a>Ex. 1<br />
 <div class="outline-text-5" id="text-1-4-1-1">
 <ul class="org-ul">
 <li>\(T(n)=T(\frac{n}{2})\)</li>
@@ -454,17 +454,128 @@ Plug \(K(\text{value})\) back into the pattern expression from step 4.
 <li>\(\implies n=2^k\)</li>
 <li>\(\implies k=\log(n)\)</li>
 <li>\(T(n)=T(\frac{n}{2^{\log_2(n)}})\implies T(n)=T(1)\)</li>
-<li>\(\therefore T(n)=T(1)=c(\text{some constant more than 0.})\)</li>
+<li>\(\implies T(n)=T(1)=c(\text{some constant more than 0.})\)</li>
 
 <li>\(\therefore T(n)=\theta(1)\)</li>
 </ul>
 </div>
 </li>
-<li><a id="orgd1c699a"></a>Ex. 2<br />
+<li><a id="orgb36593e"></a>Ex. 2<br />
 <div class="outline-text-5" id="text-1-4-1-2">
 <ul class="org-ul">
 <li>\(T(n)=T(\frac{n}{2})+c_1\)</li>
 <li>\(T(1)=c_2\)</li>
+<li>\(T(n)=T(\frac{n}{2})+c_1\)</li>
+<li>\(\implies T(x)=T(\frac{x}{2})+c_1\)</li>
+<li>\(\implies T(\frac{n}{2})=T(\frac{n}{4})+c_1\)</li>
+<li>\(\implies T(n)=T(\frac{n}{4})+c_1+c_1\)</li>
+<li>\(\implies T(\frac{n}{4})=T(\frac{n}{8})+c_1\)</li>
+<li>\(\implies T(n)=T(\frac{n}{8})+c_1+c_1+c_1\)</li>
+</ul>
+
+<p>
+So now we have a pattern.
+</p>
+<ul class="org-ul">
+<li>\(T(n)=T(\frac{n}{2^k})+k\times c_1\)</li>
+<li>\(\implies T(n): T(\frac{n}{n})+\log(n)\times c_1\)</li>
+<li>\(\implies T(1)+c_1\log(n)\)</li>
+<li>\(\implies T(n)=T(1)+c_1\log(n)\)</li>
+<li>\(\therefore T(n)=c_1\log(n)+c_2\)</li>
+</ul>
+</div>
+</li>
+<li><a id="orgb5de8d2"></a>Ex. 3<br />
+<div class="outline-text-5" id="text-1-4-1-3">
+<ul class="org-ul">
+<li>\(T(n)=2\times T(\frac{n}{2})+n\) where \(T(1)=c\)</li>
+</ul>
+
+<p>
+Iteration 1:
+</p>
+<ul class="org-ul">
+<li>\(\implies T(x)=2T(\frac{x}{4})+n\)</li>
+<li>\(\implies 2T(\frac{x}{2})=4T(\frac{x}{4})+2x\)</li>
+<li>\(\implies T(n)=4T(\frac{n}{4})+2n+n\)</li>
+<li>\(\implies T(n)=4T(\frac{n}{4})+3n\)</li>
+</ul>
+
+<p>
+Iteration 2:
+</p>
+<ul class="org-ul">
+<li>\(\implies T(n)=4T(\frac{n}{4})+2n+n\)</li>
+<li>\(\implies 4T(\frac{n}{4})=8T(\frac{n}{8})+4n\)</li>
+<li>\(\implies T(n)=8T(\frac{n}{8})+4n+2n+n\)</li>
+<li>\(\implies T(n)=8T(\frac{n}{8})+7n\)</li>
+</ul>
+
+<p>
+Pattern:
+</p>
+<ul class="org-ul">
+<li>\(\implies T(n)=2^kT(\frac{n}{2^k})+(2^{k+1}-1)n\)</li>
+</ul>
+
+<p>
+WRONG!!! HAHA loser. Real answer:
+</p>
+<ul class="org-ul">
+<li>\(\implies T(n)=2^kT(\frac{n}{2^k})+kn\) where \(k=\log(n)\)</li>
+<li>\(\implies nT(\frac{n}{n})+n\log(n)\)</li>
+<li>\(\therefore T(n)=nc+n\log(n)\)</li>
+</ul>
+</div>
+</li>
+<li><a id="org1456a05"></a>Ex. 4: &ldquo;Tower of Hanoii&rdquo;<br />
+<div class="outline-text-5" id="text-1-4-1-4">
+<ul class="org-ul">
+<li>\(T(n)=2\times T(n-1)+1\)</li>
+<li>\(T(1)=1\)</li>
+</ul>
+
+<p>
+Iteration 1:
+</p>
+<ul class="org-ul">
+<li>\(\implies T(x)=2T(x-1)+1\)</li>
+<li>\(\implies T(x-1)=4T(x-1-1)+1+1\)</li>
+<li>\(\implies T(n)=4T(n-2)+2+1\)</li>
+</ul>
+
+<p>
+Iteration 2:
+</p>
+<ul class="org-ul">
+<li>\(\implies T(x)=4T(x-2)+3\)</li>
+<li>\(\implies T(x-1)=8T(x-2-1)+3+1\)</li>
+<li>\(\implies T(n)=8T(x-3)+3\)</li>
+</ul>
+
+<p>
+My educated guess:
+</p>
+<ul class="org-ul">
+<li>\(\implies T(n)=2^{k}T(x-k)+(k-1)\) where \(k=\log(n)\)</li>
+<li>\(\implies T(n)=2^{\log(n)}T(x-\log(n))+\log(n)-1\)</li>
+<li>\(\therefore T(n)=nT(x-\log(n))+\log(n)-1\)</li>
+</ul>
+
+<p>
+WRONG!!! yet again! haha loser core. loser. WHY!?:
+</p>
+<ul class="org-ul">
+<li>you aren&rsquo;t multiplying. you NEED to. it&rsquo;s ITERATIVE</li>
+<li>\(2f(x+1)\implies 2f(4f(x+2)+1)\)</li>
+<li>whereas you&rsquo;re doing \(2f(x+1)\implies 2*4f(x+2)\cdots\)</li>
+</ul>
+
+<p>
+Answer:
+</p>
+<ul class="org-ul">
+<li>\(T(n)=2^{n-1}T(1)+2^n-1\) where \(\theta(2^n)\)</li>
 </ul>
 </div>
 </li>
@@ -475,7 +586,7 @@ Plug \(K(\text{value})\) back into the pattern expression from step 4.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: kiera</p>
-<p class="date">Created: 2025-02-03 Mon 14:48</p>
+<p class="date">Created: 2025-02-05 Wed 14:48</p>
 </div>
 </body>
 </html>

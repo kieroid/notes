@@ -1,5 +1,5 @@
 
-** Packages
+* Packages
 Packages are containers for classes.
 - Keep the class name space compartmentalized.
 - `package pkg;`
@@ -25,3 +25,48 @@ import shapes.triangle; // importing `triangle` from shapes
 - Basic language functions stored in the java.lang package.
 - Implicitly imported by the compiler for all programs
 - If a class with the same name exists in two different packages you import, a compile-time error happens.
+
+
+* Understanding static
+Normally, a class member.
+- Accessed only by means of an object of its class.
+- `static` variable (global variable).
+- When objects of its class are declared, no copy of a static variable is made.
+- All instances of the class share the same static variable.
+
+#+begin_src java
+private static double num = 0;
+
+public double funnyClass(int num1, int num2) { //every time funnyClass gets called, `num` increases by 1.
+    number1 = num1;
+    number2 = num2;
+
+    num++;
+}
+
+public static void main(String[] args) {
+    funnyClass funny = new funnyClass(1,1);
+    System.out.println(num);
+}
+#+end_src
+
+
+** Example
+Can we calculate the area of a random ractangle without creating the rectangle object?
+- Shit is _literally_ $\text{length}\times\text{width}$
+
+#+begin_src java
+public static double getCustomarea(double w, double l) {
+    return w*l;
+}
+#+end_src
+
+
+** Java Virtual Machine Garbage Collector
+It automatically frees up memory from objects that no longer have a reference pointing to it.
+
+#+begin_src java
+Rectangle r1 = new Rectangle(1,1);
+Rectangle r2 = r1;
+r1 = null;
+#+end_src

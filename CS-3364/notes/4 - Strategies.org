@@ -140,10 +140,73 @@ Plug $K(\text{value})$ back into the pattern expression from step 4.
 - $\implies n=2^k$
 - $\implies k=\log(n)$
 - $T(n)=T(\frac{n}{2^{\log_2(n)}})\implies T(n)=T(1)$
-- $\therefore T(n)=T(1)=c(\text{some constant more than 0.})$
+- $\implies T(n)=T(1)=c(\text{some constant more than 0.})$
 
 - $\therefore T(n)=\theta(1)$
 
 **** Ex. 2
 - $T(n)=T(\frac{n}{2})+c_1$
 - $T(1)=c_2$
+- $T(n)=T(\frac{n}{2})+c_1$
+- $\implies T(x)=T(\frac{x}{2})+c_1$
+- $\implies T(\frac{n}{2})=T(\frac{n}{4})+c_1$
+- $\implies T(n)=T(\frac{n}{4})+c_1+c_1$
+- $\implies T(\frac{n}{4})=T(\frac{n}{8})+c_1$
+- $\implies T(n)=T(\frac{n}{8})+c_1+c_1+c_1$
+
+So now we have a pattern.
+- $T(n)=T(\frac{n}{2^k})+k\times c_1$
+- $\implies T(n): T(\frac{n}{n})+\log(n)\times c_1$
+- $\implies T(1)+c_1\log(n)$
+- $\implies T(n)=T(1)+c_1\log(n)$
+- $\therefore T(n)=c_1\log(n)+c_2$
+
+**** Ex. 3
+- $T(n)=2\times T(\frac{n}{2})+n$ where $T(1)=c$
+
+Iteration 1:
+- $\implies T(x)=2T(\frac{x}{4})+n$
+- $\implies 2T(\frac{x}{2})=4T(\frac{x}{4})+2x$
+- $\implies T(n)=4T(\frac{n}{4})+2n+n$
+- $\implies T(n)=4T(\frac{n}{4})+3n$
+
+Iteration 2:
+- $\implies T(n)=4T(\frac{n}{4})+2n+n$
+- $\implies 4T(\frac{n}{4})=8T(\frac{n}{8})+4n$
+- $\implies T(n)=8T(\frac{n}{8})+4n+2n+n$
+- $\implies T(n)=8T(\frac{n}{8})+7n$
+
+Pattern:
+- $\implies T(n)=2^kT(\frac{n}{2^k})+(2^{k+1}-1)n$
+
+WRONG!!! HAHA loser. Real answer:
+- $\implies T(n)=2^kT(\frac{n}{2^k})+kn$ where $k=\log(n)$
+- $\implies nT(\frac{n}{n})+n\log(n)$
+- $\therefore T(n)=nc+n\log(n)$
+
+**** Ex. 4: "Tower of Hanoii"
+- $T(n)=2\times T(n-1)+1$
+- $T(1)=1$
+
+Iteration 1:
+- $\implies T(x)=2T(x-1)+1$
+- $\implies T(x-1)=4T(x-1-1)+1+1$
+- $\implies T(n)=4T(n-2)+2+1$
+
+Iteration 2:
+- $\implies T(x)=4T(x-2)+3$
+- $\implies T(x-1)=8T(x-2-1)+3+1$
+- $\implies T(n)=8T(x-3)+3$
+
+My educated guess:
+- $\implies T(n)=2^{k}T(x-k)+(k-1)$ where $k=\log(n)$
+- $\implies T(n)=2^{\log(n)}T(x-\log(n))+\log(n)-1$
+- $\therefore T(n)=nT(x-\log(n))+\log(n)-1$
+
+WRONG!!! yet again! haha loser core. loser. WHY!?:
+- you aren't multiplying. you NEED to. it's ITERATIVE
+- $2f(x+1)\implies 2f(4f(x+2)+1)$
+- whereas you're doing $2f(x+1)\implies 2*4f(x+2)\cdots$
+
+Answer:
+- $T(n)=2^{n-1}T(1)+2^n-1$ where $\theta(2^n)$
