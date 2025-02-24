@@ -32,11 +32,15 @@ User intention is not always the developer's interpretation. What makes a good r
 - Consistenty (There should be no conflicts or contradictions in the descriptions of the system facilities.)
 - $\dots$
 
-
-
-Non-functional requirementsL
+Non-functional requirements:
 - These define system properties and constraints (reliability, response time, storage)
 - Constraints are I/O device capability, system representations, etc.
 - Process reqirements may also be specified mandating a particular IDE, programming language, or development method.
 - Non-functional requirements may be more critical than functional requirements.
 - If these requirements are not met, the system may be useless.
+
+** user requirements
+have to be understandable by end-users and customers who do not have a technical background
+
+** system requirements
+more detailed requirements and may include more technical info

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-14 Fri 17:08 -->
+<!-- 2025-02-21 Fri 17:40 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -193,38 +193,6 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
-<script>
-  window.MathJax = {
-    tex: {
-      ams: {
-        multlineWidth: '85%'
-      },
-      tags: 'ams',
-      tagSide: 'right',
-      tagIndent: '.8em'
-    },
-    chtml: {
-      scale: 1.0,
-      displayAlign: 'center',
-      displayIndent: '0em'
-    },
-    svg: {
-      scale: 1.0,
-      displayAlign: 'center',
-      displayIndent: '0em'
-    },
-    output: {
-      font: 'mathjax-modern',
-      displayOverflow: 'overflow'
-    }
-  };
-</script>
-
-<script
-  id="MathJax-script"
-  async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
 </head>
 <body>
 <div id="content" class="content">
@@ -232,113 +200,215 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgeb3a503">1. Requirements engineering (RE)</a>
+<li><a href="#org5ff21f0">1. Natural language specification</a>
 <ul>
-<li><a href="#org09224aa">1.1. user requirements</a></li>
-<li><a href="#org2a08a87">1.2. system requirements</a></li>
+<li><a href="#org1744cda">1.1. Examples</a></li>
+<li><a href="#org3944d07">1.2. Guidelines</a>
+<ul>
+<li><a href="#org1d3c4aa">1.2.1. Example 1 (Language-based specification)</a></li>
+<li><a href="#org2012df9">1.2.2. Example 2 (Form-based specification)</a></li>
+<li><a href="#org2873750">1.2.3. Example 3 (Tabular specification)</a></li>
+</ul>
+</li>
+<li><a href="#org3ed8755">1.3. Use cases</a></li>
+</ul>
+</li>
+<li><a href="#orga8070f8">2. Context Diagrams</a>
+<ul>
+<li><a href="#org827b509">2.1. Basic Calculator</a></li>
+<li><a href="#org71348f6">2.2. Library management system</a></li>
+<li><a href="#orgceddd28">2.3. University enrollment system</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgeb3a503" class="outline-2">
-<h2 id="orgeb3a503"><span class="section-number-2">1.</span> Requirements engineering (RE)</h2>
+<div id="outline-container-org5ff21f0" class="outline-2">
+<h2 id="org5ff21f0"><span class="section-number-2">1.</span> Natural language specification</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-The process of establishing the services that a customer requires from a system and the constraints under which it operates and is developed.
-</p>
-
-<p>
-Types of documentation:
+Requirements are written as natural language sentences supplemented by diagrams and tables.
 </p>
 <ul class="org-ul">
-<li>User requirements: Requirements for the general use. Natural language, diagrams, list of services, whatever. Overall, it is written for customers.</li>
-<li>System requirements: More detailed descriptions of the software system&rsquo;s functions, services, and operational constraints. Defines what should be implemented so may be part of a contract between client and contractor.</li>
-</ul>
-
-<p>
-User requirement example:
-</p>
-<ul class="org-ul">
-<li>&ldquo;The mentcair system shall generate monthly managment reports showing the cost of drugs perscribed by each clinic.&rdquo;</li>
-</ul>
-
-<p>
-System requirement example:
-</p>
-<ul class="org-ul">
-<li>&ldquo;1. last working day&#x2026; 2. generate report on&#x2026; 3. &#x2026;. 4&#x2026;.&rdquo;</li>
-</ul>
-
-<p>
-Stakeholder types:
-</p>
-<ul class="org-ul">
-<li>End users</li>
-<li>System managers</li>
-<li>System owners</li>
-<li>External stakeholders</li>
-</ul>
-
-<p>
-Types of functional requirements:
-</p>
-<ul class="org-ul">
-<li>Functional user requirements: Describe functionality (what the system should do.) High-level statements of what the system should do.</li>
-<li>Functional system reqirements: Describe the system services in detail.</li>
-</ul>
-
-<p>
-Requirements imprecision:
-</p>
-<ul class="org-ul">
-<li>Problems arise when functional requirements are not percisely stated.</li>
-<li>Ambigous requirements may be interpreted in different ways by developers and users.</li>
-</ul>
-
-<p>
-User intention is not always the developer&rsquo;s interpretation. What makes a good requoirement?
-</p>
-<ul class="org-ul">
-<li>Unambigous</li>
-<li>Clear</li>
-<li>Completeness (They should include descriptions of all facilities required.)</li>
-<li>Consistenty (There should be no conflicts or contradictions in the descriptions of the system facilities.)</li>
-<li>\(\dots\)</li>
-</ul>
-
-<p>
-Non-functional requirements:
-</p>
-<ul class="org-ul">
-<li>These define system properties and constraints (reliability, response time, storage)</li>
-<li>Constraints are I/O device capability, system representations, etc.</li>
-<li>Process reqirements may also be specified mandating a particular IDE, programming language, or development method.</li>
-<li>Non-functional requirements may be more critical than functional requirements.</li>
-<li>If these requirements are not met, the system may be useless.</li>
+<li>Used for writing requirements because it is expressive, intuitive, and universal.</li>
+<li>Must be understood by users and customers.</li>
+<li>Vague and ambiguous.</li>
 </ul>
 </div>
-<div id="outline-container-org09224aa" class="outline-3">
-<h3 id="org09224aa"><span class="section-number-3">1.1.</span> user requirements</h3>
+<div id="outline-container-org1744cda" class="outline-3">
+<h3 id="org1744cda"><span class="section-number-3">1.1.</span> Examples</h3>
 <div class="outline-text-3" id="text-1-1">
-<p>
-have to be understandable by end-users and customers who do not have a technical background
-</p>
+<ul class="org-ul">
+<li>&ldquo;The system should be able to quickly respond to user requests.&rdquo;</li>
+<li>&ldquo;The user interface should be user-friendly.&rdquo;</li>
+<li>&ldquo;The system should provide accurate results <del>most of the time</del>.&rdquo;</li>
+</ul>
 </div>
 </div>
-<div id="outline-container-org2a08a87" class="outline-3">
-<h3 id="org2a08a87"><span class="section-number-3">1.2.</span> system requirements</h3>
+<div id="outline-container-org3944d07" class="outline-3">
+<h3 id="org3944d07"><span class="section-number-3">1.2.</span> Guidelines</h3>
 <div class="outline-text-3" id="text-1-2">
+<ol class="org-ol">
+<li>Invent a standard format and use it for <b>all</b> requirements.</li>
+<li>Use language in a consistent way. Use <b>shall</b> for mandatory requirements, while <b>should</b> should be used for desirable requirements.</li>
+<li>Use text highlighting. (<b>bold</b>, <i>italic</i>, color) to identify key parts of the requirement.</li>
+<li>Avoid the use of computer jargon, abbreviations, and acronyms.</li>
+<li>Include an explanation (rationale) of why a requirement is necessary.</li>
+</ol>
+</div>
+<div id="outline-container-org1d3c4aa" class="outline-4">
+<h4 id="org1d3c4aa"><span class="section-number-4">1.2.1.</span> Example 1 (Language-based specification)</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li>&ldquo;The system shall measure the blood sugar and deliver insulin, if required, every 10 minutes. (<i>Changes in blood sugar are relatively slow so more frequent measurement is unnecessary; less frequent measurement could lead to unnecessarily high sugar levels.</i>)&rdquo;</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2012df9" class="outline-4">
+<h4 id="org2012df9"><span class="section-number-4">1.2.2.</span> Example 2 (Form-based specification)</h4>
+<div class="outline-text-4" id="text-1-2-2">
 <p>
-more detailed requirements and may include more technical info
+<span class="underline"><i>Insulin Pump/Control Software/SRS/3.3.2</i></span>
+<b>Function</b> &#x2026;
+<b>Description</b>
+&#x2026;
+<b>Inputs</b> &#x2026;
+<b>Source</b> &#x2026;
+<b>Outputs</b> &#x2026;
+<b>Destination</b> &#x2026;
+<b>Action</b>
+&#x2026;
+<b>Requirements</b>
+&#x2026;
+<b>Pre-condition</b>
+&#x2026;
+<b>Post-condition</b> &#x2026;
+<b>Side effects</b> &#x2026;
 </p>
+</div>
+</div>
+<div id="outline-container-org2873750" class="outline-4">
+<h4 id="org2873750"><span class="section-number-4">1.2.3.</span> Example 3 (Tabular specification)</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<!-- This HTML table template is generated by emacs 29.4 -->
+<table border="1">
+  <tr>
+    <td align="left" valign="top">
+      Condition&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      Action&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+      Sugar&nbsp;level&nbsp;falling&nbsp;(r2<r1)&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      CompDose&nbsp;=&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+      Sugar&nbsp;level&nbsp;stable&nbsp;(r2=r1)&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+      ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+      ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-org3ed8755" class="outline-3">
+<h3 id="org3ed8755"><span class="section-number-3">1.3.</span> Use cases</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+A way of describing interactions. Can be expressed in a diagram.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga8070f8" class="outline-2">
+<h2 id="orga8070f8"><span class="section-number-2">2.</span> Context Diagrams</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org827b509" class="outline-3">
+<h3 id="org827b509"><span class="section-number-3">2.1.</span> Basic Calculator</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Description:
+</p>
+<ul class="org-ul">
+<li>A program is to be developed that allows a user to enter in two different numbers. The software is to either add, subtract, multiply, or divide the numbers at the users discresion.</li>
+</ul>
+
+<p>
+The program is the <b>CIRCLE!!!</b>
+The external user of the program is the <b>SQUARE!!!</b>
+The external user puts in information (number 1 and number 2, as well as the operation)
+The program outputs the result of the calculation
+</p>
+</div>
+</div>
+<div id="outline-container-org71348f6" class="outline-3">
+<h3 id="org71348f6"><span class="section-number-3">2.2.</span> Library management system</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+The program is the <b>CIRCLE!!!!!!!!!!!!!!!!</b> (lms)
+The acting users (librarians, readers, library staff, etc) are <b>SQUARES!!!!! FUCK YEAH!!!!</b>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-graphviz">
+// relationship between member and LMS
+Members -&gt; LMS [label="library card, book info"];
+LMS -&gt; Members [label="book, due date"];
+Members -&gt; LMS [label="reserve book"];
+LMS -&gt; Members [label="notification"];
+
+// relationship between library staff and LMS
+Staff -&gt; LMS [label="add member info"];
+Staff -&gt; LMS [label="add book info"];
+Staff -&gt; LMS [label="update info"];
+LMS -&gt; Staff [label="detailed report on the system"]
+
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgceddd28" class="outline-3">
+<h3 id="orgceddd28"><span class="section-number-3">2.3.</span> University enrollment system</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Description:
+</p>
+<ul class="org-ul">
+<li>Student sends regiustration application including personal detailsgh</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Kiera Lavato</p>
-<p class="date">Created: 2025-02-14 Fri 17:08</p>
+<p class="date">Created: 2025-02-21 Fri 17:40</p>
 </div>
 </body>
 </html>

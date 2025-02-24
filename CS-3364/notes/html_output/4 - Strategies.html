@@ -3,11 +3,11 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-05 Wed 14:48 -->
+<!-- 2025-02-21 Fri 14:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
-<meta name="author" content="kiera" />
+<meta name="author" content="Kiera Lavato" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -232,27 +232,31 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org1cf5a3f">1. Strategies</a>
+<li><a href="#org35cda51">1. Strategies</a>
 <ul>
-<li><a href="#org32334c6">1.1. Divide &amp; Conqurer</a></li>
-<li><a href="#org58d5c7f">1.2. Factorial example</a></li>
-<li><a href="#orgcb3205a">1.3. Repeated Substutition</a></li>
-<li><a href="#org2b56ed8">1.4. Algorithms</a>
+<li><a href="#org249817c">1.1. Divide &amp; Conqurer</a></li>
+<li><a href="#org47c52e6">1.2. Factorial example</a></li>
+<li><a href="#org4151cf3">1.3. Repeated Substutition</a></li>
+<li><a href="#org764b124">1.4. Algorithms</a>
 <ul>
-<li><a href="#org1ebf852">1.4.1. Example</a></li>
+<li><a href="#orga811611">1.4.1. Example</a></li>
+<li><a href="#orgd6d0c92">1.4.2. Case 1</a></li>
+<li><a href="#org470296c">1.4.3. Case 2</a></li>
+<li><a href="#orgeb9ec84">1.4.4. Case 3</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li><a href="#org7a65d17">2. Strassens matrix multipication theorem</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1cf5a3f" class="outline-2">
-<h2 id="org1cf5a3f"><span class="section-number-2">1.</span> Strategies</h2>
+<div id="outline-container-org35cda51" class="outline-2">
+<h2 id="org35cda51"><span class="section-number-2">1.</span> Strategies</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org32334c6" class="outline-3">
-<h3 id="org32334c6"><span class="section-number-3">1.1.</span> Divide &amp; Conqurer</h3>
+<div id="outline-container-org249817c" class="outline-3">
+<h3 id="org249817c"><span class="section-number-3">1.1.</span> Divide &amp; Conqurer</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Given of problem of size \(n\).
@@ -285,15 +289,15 @@ Examples:
 
 
 <div class="org-src-container">
-<pre class="src src-C"><span style="color: #bbc2cf; font-weight: bold;">#include</span> <span style="color: #0170bf;">&lt;</span><span style="color: #b4916d;">stdio.h</span><span style="color: #0170bf;">&gt;</span>
-<span style="color: #DFDFDF; font-weight: bold;">void</span> <span style="color: #DFDFDF; font-weight: bold;">Test</span><span style="color: #0170bf;">(</span><span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #bbc2cf;">n</span><span style="color: #0170bf;">)</span> <span style="color: #0170bf;">{</span>
-    <span style="color: #DFDFDF; font-weight: bold;">if</span><span style="color: #c678dd;">(</span>n &gt; <span style="color: #b4916d; font-weight: bold;">0</span><span style="color: #c678dd;">){</span>
-        printf<span style="color: #98be65;">(</span><span style="color: #b4916d;">"%d\n"</span>, n<span style="color: #98be65;">)</span>;
-        Test<span style="color: #98be65;">(</span>n - <span style="color: #b4916d; font-weight: bold;">1</span><span style="color: #98be65;">)</span>;
-    <span style="color: #c678dd;">}</span>
-<span style="color: #0170bf;">}</span>
+<pre class="src src-C"><span style="color: #bbc2cf; font-weight: bold;">#include</span> <span style="color: #b4916d;">&lt;stdio.h&gt;</span>
+<span style="color: #DFDFDF; font-weight: bold;">void</span> <span style="color: #DFDFDF; font-weight: bold;">Test</span>(<span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #bbc2cf;">n</span>) {
+    <span style="color: #DFDFDF; font-weight: bold;">if</span>(n &gt; <span style="color: #b4916d; font-weight: bold;">0</span>){
+        printf(<span style="color: #b4916d;">"%d\n"</span>, n);
+        Test(n - <span style="color: #b4916d; font-weight: bold;">1</span>);
+    }
+}
 
-Test<span style="color: #0170bf;">(</span><span style="color: #b4916d; font-weight: bold;">3</span><span style="color: #0170bf;">)</span>;
+Test(<span style="color: #b4916d; font-weight: bold;">3</span>);
 </pre>
 </div>
 
@@ -302,8 +306,8 @@ How many times is it printing? \(n\) times.
 </p>
 </div>
 </div>
-<div id="outline-container-org58d5c7f" class="outline-3">
-<h3 id="org58d5c7f"><span class="section-number-3">1.2.</span> Factorial example</h3>
+<div id="outline-container-org47c52e6" class="outline-3">
+<h3 id="org47c52e6"><span class="section-number-3">1.2.</span> Factorial example</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 \(n!=1\times2\times3\times\cdots\times(n-1)\times n\)
@@ -320,7 +324,7 @@ Rule: \(0! := 1\)
 <p>
 Let&rsquo;s say there&rsquo;s an algorithm \(F(n)\):
 </p>
-<pre class="example" id="org8d52c52">
+<pre class="example" id="org6b75889">
 Algo F(n):
         if(n==0):
                 return 1
@@ -332,19 +336,19 @@ Algo F(n):
 In C:
 </p>
 <div class="org-src-container">
-<pre class="src src-C"><span style="color: #bbc2cf; font-weight: bold;">#include</span> <span style="color: #0170bf;">&lt;</span><span style="color: #b4916d;">stdio.h</span><span style="color: #0170bf;">&gt;</span>
+<pre class="src src-C"><span style="color: #bbc2cf; font-weight: bold;">#include</span> <span style="color: #b4916d;">&lt;stdio.h&gt;</span>
 <span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #bbc2cf;">numOfMult</span>;
-<span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #DFDFDF; font-weight: bold;">F</span><span style="color: #0170bf;">(</span><span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #bbc2cf;">n</span><span style="color: #0170bf;">){</span>
+<span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #DFDFDF; font-weight: bold;">F</span>(<span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #bbc2cf;">n</span>){
     numOfMult++;
-    <span style="color: #DFDFDF; font-weight: bold;">if</span><span style="color: #c678dd;">(</span>n == <span style="color: #b4916d; font-weight: bold;">0</span><span style="color: #c678dd;">){</span>
-        <span style="color: #DFDFDF; font-weight: bold;">return</span><span style="color: #98be65;">(</span><span style="color: #b4916d; font-weight: bold;">1</span><span style="color: #98be65;">)</span>;
-    <span style="color: #c678dd;">}</span> <span style="color: #DFDFDF; font-weight: bold;">else</span> <span style="color: #c678dd;">{</span>
-        <span style="color: #DFDFDF; font-weight: bold;">return</span><span style="color: #98be65;">(</span>n * F<span style="color: #a9a1e1;">(</span>n - <span style="color: #b4916d; font-weight: bold;">1</span><span style="color: #a9a1e1;">)</span><span style="color: #98be65;">)</span>;
-    <span style="color: #c678dd;">}</span>
-<span style="color: #0170bf;">}</span>
+    <span style="color: #DFDFDF; font-weight: bold;">if</span>(n == <span style="color: #b4916d; font-weight: bold;">0</span>){
+        <span style="color: #DFDFDF; font-weight: bold;">return</span>(<span style="color: #b4916d; font-weight: bold;">1</span>);
+    } <span style="color: #DFDFDF; font-weight: bold;">else</span> {
+        <span style="color: #DFDFDF; font-weight: bold;">return</span>(n * F(n - <span style="color: #b4916d; font-weight: bold;">1</span>));
+    }
+}
 
-<span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #bbc2cf;">factorial</span> = F<span style="color: #0170bf;">(</span><span style="color: #b4916d; font-weight: bold;">3</span><span style="color: #0170bf;">)</span>;
-printf<span style="color: #0170bf;">(</span><span style="color: #b4916d;">"Total: %d, Number of Multipications: %d"</span>, factorial, numOfMult<span style="color: #0170bf;">)</span>;
+<span style="color: #DFDFDF; font-weight: bold;">int</span> <span style="color: #bbc2cf;">factorial</span> = F(<span style="color: #b4916d; font-weight: bold;">3</span>);
+printf(<span style="color: #b4916d;">"Total: %d, Number of Multipications: %d"</span>, factorial, numOfMult);
 </pre>
 </div>
 
@@ -357,8 +361,8 @@ printf<span style="color: #0170bf;">(</span><span style="color: #b4916d;">"Total
 </p>
 </div>
 </div>
-<div id="outline-container-orgcb3205a" class="outline-3">
-<h3 id="orgcb3205a"><span class="section-number-3">1.3.</span> Repeated Substutition</h3>
+<div id="outline-container-org4151cf3" class="outline-3">
+<h3 id="org4151cf3"><span class="section-number-3">1.3.</span> Repeated Substutition</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Example:
@@ -385,8 +389,8 @@ Overall, the equation gained from this is:
 </ul>
 </div>
 </div>
-<div id="outline-container-org2b56ed8" class="outline-3">
-<h3 id="org2b56ed8"><span class="section-number-3">1.4.</span> Algorithms</h3>
+<div id="outline-container-org764b124" class="outline-3">
+<h3 id="org764b124"><span class="section-number-3">1.4.</span> Algorithms</h3>
 <div class="outline-text-3" id="text-1-4">
 <ol class="org-ol">
 <li>Identify the Input Size</li>
@@ -416,8 +420,8 @@ Pattern:
 <li>\(T(n)=F(n,k)+T(G(n,k)+H(n,k))\) where \(F(n,k)\) is some function of \(n,k\)</li>
 </ul>
 </div>
-<div id="outline-container-org1ebf852" class="outline-4">
-<h4 id="org1ebf852"><span class="section-number-4">1.4.1.</span> Example</h4>
+<div id="outline-container-orga811611" class="outline-4">
+<h4 id="orga811611"><span class="section-number-4">1.4.1.</span> Example</h4>
 <div class="outline-text-4" id="text-1-4-1">
 <p>
 Connect the pattern back to the initial condition.
@@ -437,7 +441,7 @@ Plug \(K(\text{value})\) back into the pattern expression from step 4.
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="orgd7a1ece"></a>Ex. 1<br />
+<li><a id="orgcf6861f"></a>Ex. 1<br />
 <div class="outline-text-5" id="text-1-4-1-1">
 <ul class="org-ul">
 <li>\(T(n)=T(\frac{n}{2})\)</li>
@@ -460,7 +464,7 @@ Plug \(K(\text{value})\) back into the pattern expression from step 4.
 </ul>
 </div>
 </li>
-<li><a id="orgb36593e"></a>Ex. 2<br />
+<li><a id="org2397a19"></a>Ex. 2<br />
 <div class="outline-text-5" id="text-1-4-1-2">
 <ul class="org-ul">
 <li>\(T(n)=T(\frac{n}{2})+c_1\)</li>
@@ -485,7 +489,7 @@ So now we have a pattern.
 </ul>
 </div>
 </li>
-<li><a id="orgb5de8d2"></a>Ex. 3<br />
+<li><a id="orgdf38477"></a>Ex. 3<br />
 <div class="outline-text-5" id="text-1-4-1-3">
 <ul class="org-ul">
 <li>\(T(n)=2\times T(\frac{n}{2})+n\) where \(T(1)=c\)</li>
@@ -528,7 +532,7 @@ WRONG!!! HAHA loser. Real answer:
 </ul>
 </div>
 </li>
-<li><a id="org1456a05"></a>Ex. 4: &ldquo;Tower of Hanoii&rdquo;<br />
+<li><a id="orgbcc0606"></a>Ex. 4: &ldquo;Tower of Hanoii&rdquo;<br />
 <div class="outline-text-5" id="text-1-4-1-4">
 <ul class="org-ul">
 <li>\(T(n)=2\times T(n-1)+1\)</li>
@@ -581,12 +585,103 @@ Answer:
 </li>
 </ol>
 </div>
+<div id="outline-container-orgd6d0c92" class="outline-4">
+<h4 id="orgd6d0c92"><span class="section-number-4">1.4.2.</span> Case 1</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<p>
+Overhead is dominant.
+</p>
+<ul class="org-ul">
+<li>\(f(n)\in \omega(n^c)\) which is overhead dominating. (\(T(n)\in\theta(f(n))\))</li>
+<li>What if \(a\) is smaller relative to \(f(n)\)?</li>
+<li>\(T(n)=2T(\frac{n}{2})+n^3\) where \(a=2,b=2,f(n)=n^3\)</li>
+<li>If \(f(n)\in \Omega (n^d), d>c \equiv d>\log_b a \equiv  b^d > a\), then \(T(n)=\theta(f(n))\)</li>
+</ul>
+
+<p>
+Process:
+</p>
+<ul class="org-ul">
+<li>\(\cdot\cdot\cdot\cdot\cdot\cdot\cdot\cdot \implies 8^3=512\)</li>
+<li>\((\cdot\cdot\cdot\cdot)(\cdot\cdot\cdot\cdot) \implies 2(\frac{n}{2})^3\implies 2(\frac{8}{2})^3\implies 128\)</li>
+<li>\((\cdot\cdot)(\cdot\cdot)(\cdot\cdot)(\cdot\cdot)\implies 4(\frac{\frac{n}{2}}{2})^3\implies 32\)</li>
+<li>\((\cdot)(\cdot)(\cdot)(\cdot)(\cdot)(\cdot)(\cdot)(\cdot)\implies 8(\frac{\frac{\frac{n}{2}}{2}}{2})^3\implies 8\)</li>
+<li>\(n:\) linear number of recursions</li>
+<li>\(n^3:\) overhead</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org470296c" class="outline-4">
+<h4 id="org470296c"><span class="section-number-4">1.4.3.</span> Case 2</h4>
+<div class="outline-text-4" id="text-1-4-3">
+<p>
+Recusrion is domanint.
+</p>
+<ul class="org-ul">
+<li>\(f(n)\in O(n^c)\) which is recursion domanating. (\(T(n)\in\theta(n^c)\))</li>
+</ul>
+
+<p>
+If recursion is donminating relative to overhead, what if \(f(n)\) is small?
+</p>
+<ul class="org-ul">
+<li>\(T(n)=3T(\frac{n}{2})+1\)</li>
+<li>\(\cdot\cdot\cdot\cdot\cdot\cdot\cdot\cdot \implies 3^0 \implies 1\). This is 8 recursive calls.</li>
+<li>\((\cdot\cdot\cdot\cdot)(\cdot\cdot\cdot\cdot)(\cdot\cdot\cdot\cdot)\implies 3^1\implies3\). 3 4 element recursive calls.</li>
+<li>\((\cdot\cdot)(\cdot\cdot)(\cdot\cdot)(\cdot\cdot)(\cdot\cdot)(\cdot\cdot)(\cdot\cdot)(\cdot\cdot)(\cdot\cdot)\implies 3^2\implies 9\). 9 2 element recursive calls.</li>
+<li>\((\cdot)\times 27 \implies 3^3 \implies 27\). 27 one element recursive calls.</li>
+<li>There is an exponential increase of recursive calls as \(n\) increases.</li>
+<li>\(\therefore T(n)\in \theta (n^{\log_2(3)})\approxeq \theta(n^{1.58})\).</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgeb9ec84" class="outline-4">
+<h4 id="orgeb9ec84"><span class="section-number-4">1.4.4.</span> Case 3</h4>
+<div class="outline-text-4" id="text-1-4-4">
+<p>
+Balanced case.
+</p>
+<ul class="org-ul">
+<li>\(T(n)=2T(\frac{n}{2})+n\) which is balanced. (\(T(n)=\theta(n^c\log_b(n))\))</li>
+<li>\(T(n)=\theta(n\log(n))\)</li>
+<li>If \(f(n)\in \theta(n^c(\log n)^{k+1}), k\geq 0\), then \(T(n) = \theta(n^c(\log n)^{k+1})\)</li>
+<li>In other words, if \(f(n)\) is tuned exactly right, then overall reoccurance is same overhead with merely a log slow down.</li>
+</ul>
+
+<p>
+Master theorem:
+</p>
+<ul class="org-ul">
+<li>Let \(T(n)=aT(\frac{n}{b})+f(n)\) where \(a \geq 1, b > 1, c=\log_b(a)\)</li>
+<li>Critical component, where threshold is between the overhead and recursion dominating.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org7a65d17" class="outline-2">
+<h2 id="org7a65d17"><span class="section-number-2">2.</span> Strassens matrix multipication theorem</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>\(P_1=A_{11}\times (B_{12} - B_{22})\)</li>
+<li>\(P_2=(A_{11}+A_{12})\times B_{22}\)</li>
+<li>\(P_3=(A_{21}+A_{22})\times B_{11}\)</li>
+<li>\(P_4=A_{22}\times (B_{21}-B_{11})\)</li>
+<li>\(P_5=(A_{12}+A_{22})\times(B_{11}+B_{22})\)</li>
+<li>\(P_6=(A_{12}-A_{22})\times(B_{21}+B_{22})\)</li>
+<li>\(P_7=(A_{11}-A_{21})\times(B_{11}+B_{12})\)</li>
+
+<li>\(C_{11}=\)</li>
+<li>\(C_{12}=\)</li>
+<li>\(C_{21}=\)</li>
+<li>\(C_{22}=\)</li>
+</ul>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: kiera</p>
-<p class="date">Created: 2025-02-05 Wed 14:48</p>
+<p class="author">Author: Kiera Lavato</p>
+<p class="date">Created: 2025-02-21 Fri 14:45</p>
 </div>
 </body>
 </html>

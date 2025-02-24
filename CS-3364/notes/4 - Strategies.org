@@ -210,3 +210,58 @@ WRONG!!! yet again! haha loser core. loser. WHY!?:
 
 Answer:
 - $T(n)=2^{n-1}T(1)+2^n-1$ where $\theta(2^n)$
+
+*** Case 1
+Overhead is dominant.
+- $f(n)\in \omega(n^c)$ which is overhead dominating. ($T(n)\in\theta(f(n))$)
+- What if $a$ is smaller relative to $f(n)$?
+- $T(n)=2T(\frac{n}{2})+n^3$ where $a=2,b=2,f(n)=n^3$
+- If $f(n)\in \Omega (n^d), d>c \equiv d>\log_b a \equiv  b^d > a$, then $T(n)=\theta(f(n))$
+
+Process:
+- $\cdot\cdot\cdot\cdot\cdot\cdot\cdot\cdot \implies 8^3=512$
+- $(\cdot\cdot\cdot\cdot)(\cdot\cdot\cdot\cdot) \implies 2(\frac{n}{2})^3\implies 2(\frac{8}{2})^3\implies 128$
+- $(\cdot\cdot)(\cdot\cdot)(\cdot\cdot)(\cdot\cdot)\implies 4(\frac{\frac{n}{2}}{2})^3\implies 32$
+- $(\cdot)(\cdot)(\cdot)(\cdot)(\cdot)(\cdot)(\cdot)(\cdot)\implies 8(\frac{\frac{\frac{n}{2}}{2}}{2})^3\implies 8$
+- $n:$ linear number of recursions
+- $n^3:$ overhead
+
+
+*** Case 2
+Recusrion is domanint.
+- $f(n)\in O(n^c)$ which is recursion domanating. ($T(n)\in\theta(n^c)$)
+
+If recursion is donminating relative to overhead, what if $f(n)$ is small?
+- $T(n)=3T(\frac{n}{2})+1$
+- $\cdot\cdot\cdot\cdot\cdot\cdot\cdot\cdot \implies 3^0 \implies 1$. This is 8 recursive calls.
+- $(\cdot\cdot\cdot\cdot)(\cdot\cdot\cdot\cdot)(\cdot\cdot\cdot\cdot)\implies 3^1\implies3$. 3 4 element recursive calls.
+- $(\cdot\cdot)(\cdot\cdot)(\cdot\cdot)(\cdot\cdot)(\cdot\cdot)(\cdot\cdot)(\cdot\cdot)(\cdot\cdot)(\cdot\cdot)\implies 3^2\implies 9$. 9 2 element recursive calls.
+- $(\cdot)\times 27 \implies 3^3 \implies 27$. 27 one element recursive calls.
+- There is an exponential increase of recursive calls as $n$ increases.
+- $\therefore T(n)\in \theta (n^{\log_2(3)})\approxeq \theta(n^{1.58})$.
+
+*** Case 3
+Balanced case.
+- $T(n)=2T(\frac{n}{2})+n$ which is balanced. ($T(n)=\theta(n^c\log_b(n))$)
+- $T(n)=\theta(n\log(n))$
+- If $f(n)\in \theta(n^c(\log n)^{k+1}), k\geq 0$, then $T(n) = \theta(n^c(\log n)^{k+1})$
+- In other words, if $f(n)$ is tuned exactly right, then overall reoccurance is same overhead with merely a log slow down.
+
+Master theorem:
+- Let $T(n)=aT(\frac{n}{b})+f(n)$ where $a \geq 1, b > 1, c=\log_b(a)$
+- Critical component, where threshold is between the overhead and recursion dominating.
+
+
+* Strassens matrix multipication theorem
+- $P_1=A_{11}\times (B_{12} - B_{22})$
+- $P_2=(A_{11}+A_{12})\times B_{22}$
+- $P_3=(A_{21}+A_{22})\times B_{11}$
+- $P_4=A_{22}\times (B_{21}-B_{11})$
+- $P_5=(A_{12}+A_{22})\times(B_{11}+B_{22})$
+- $P_6=(A_{12}-A_{22})\times(B_{21}+B_{22})$
+- $P_7=(A_{11}-A_{21})\times(B_{11}+B_{12})$
+
+- $C_{11}=$
+- $C_{12}=$
+- $C_{21}=$
+- $C_{22}=$

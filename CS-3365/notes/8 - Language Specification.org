@@ -1,0 +1,94 @@
+* Natural language specification
+Requirements are written as natural language sentences supplemented by diagrams and tables.
+- Used for writing requirements because it is expressive, intuitive, and universal.
+- Must be understood by users and customers.
+- Vague and ambiguous.
+
+** Examples
+- "The system should be able to quickly respond to user requests."
+- "The user interface should be user-friendly."
+- "The system should provide accurate results +most of the time+."
+
+** Guidelines
+1. Invent a standard format and use it for *all* requirements.
+2. Use language in a consistent way. Use *shall* for mandatory requirements, while *should* should be used for desirable requirements.
+3. Use text highlighting. (*bold*, /italic/, color) to identify key parts of the requirement.
+4. Avoid the use of computer jargon, abbreviations, and acronyms.
+5. Include an explanation (rationale) of why a requirement is necessary.
+
+*** Example 1 (Language-based specification)
+- "The system shall measure the blood sugar and deliver insulin, if required, every 10 minutes. (/Changes in blood sugar are relatively slow so more frequent measurement is unnecessary; less frequent measurement could lead to unnecessarily high sugar levels./)"
+
+*** Example 2 (Form-based specification)
+_/Insulin Pump/Control Software/SRS/3.3.2/_
+*Function* ...
+*Description*
+...
+*Inputs* ...
+*Source* ...
+*Outputs* ...
+*Destination* ...
+*Action*
+...
+*Requirements*
+...
+*Pre-condition*
+...
+*Post-condition* ...
+*Side effects* ...
+
+*** Example 3 (Tabular specification)
+
++------------------------------+------------------------------+
+|Condition                     |Action                        |
++------------------------------+------------------------------+
+|Sugar level falling (r2<r1)   |CompDose = 0                  |
++------------------------------+------------------------------+
+|Sugar level stable (r2=r1)    |...                           |
++------------------------------+------------------------------+
+|...                           |...                           |
++------------------------------+------------------------------+
+|...                           |...                           |
++------------------------------+------------------------------+
+
+** Use cases
+A way of describing interactions. Can be expressed in a diagram.
+
+
+* Context Diagrams
+** Basic Calculator
+
+
+Description:
+- A program is to be developed that allows a user to enter in two different numbers. The software is to either add, subtract, multiply, or divide the numbers at the users discresion.
+
+The program is the *CIRCLE!!!*
+The external user of the program is the *SQUARE!!!*
+The external user puts in information (number 1 and number 2, as well as the operation)
+The program outputs the result of the calculation
+
+** Library management system
+
+The program is the *CIRCLE!!!!!!!!!!!!!!!!* (lms)
+The acting users (librarians, readers, library staff, etc) are *SQUARES!!!!! FUCK YEAH!!!!*
+
+#+BEGIN_SRC graphviz
+
+// relationship between member and LMS
+Members -> LMS [label="library card, book info"];
+LMS -> Members [label="book, due date"];
+Members -> LMS [label="reserve book"];
+LMS -> Members [label="notification"];
+
+// relationship between library staff and LMS
+Staff -> LMS [label="add member info"];
+Staff -> LMS [label="add book info"];
+Staff -> LMS [label="update info"];
+LMS -> Staff [label="detailed report on the system"]
+
+#+END_SRC
+
+** University enrollment system
+
+Description:
+- Student sends regiustration application including personal detailsgh
