@@ -1,0 +1,59 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{textcomp}
+\usepackage{parskip}
+
+\title{CS-3383-002 Assignment 3}
+\author{Kiera Lavato | R11808006}
+\date{\today}
+
+\begin{document}
+    \maketitle
+    
+    \begin{enumerate}
+        \item Draw a state diagram for nondeterministic finite automata that accepts the following languages:
+        
+        \begin{enumerate}
+            \item $((ab)^*(ba)^*)\cup aa^*$
+            
+            \includegraphics[scale=0.4]{/home/kiki/Downloads/1.png}
+            
+            \item $(ba\cup b)^* \cup (bb\cup a)^*$
+            
+            \includegraphics[scale=0.4]{/home/kiki/Downloads/2.png}
+        \end{enumerate}
+        
+        \newpage
+        \item Give the regular expression for the language accepted by the following finite automaton:
+        \begin{enumerate}
+            \item $(ba^*ba^*)^*(a^*ba^*)$
+            \item $a(ba)*$
+        \end{enumerate}
+
+        \item Write the regular expression for the following sets
+        \begin{enumerate}
+            \item All strings over $\{ a,b \}$ that are odd in length.
+            
+            $(a\cup b)((a\cup b)(a\cup b))^*$
+            
+            \item All strings over $\{ a,b \}$ that end with $bb$.
+            
+            $(a\cup b)^*bb$
+            
+        \end{enumerate}
+    \end{enumerate}
+    
+
+
+
+\end{document}
